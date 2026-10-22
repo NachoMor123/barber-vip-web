@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10100f">
+  <meta name="description" content="Barber VIP convierte cada visita en un motivo para volver. Fidelización digital, ciclos de cortes y premios para tus clientes.">
+  <title>Barber VIP — Que vuelvan por cómo los hacés sentir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#10100f;--panel:#171816;--panel2:#1d1f1c;--text:#f5f3ed;--muted:#a5a69e;--line:rgba(255,255,255,.1);--lime:#d4ff55;--lime2:#b9ed35;--red:#ff5555;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}body.modal-open{overflow:hidden}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}::selection{background:var(--lime);color:#111}
+    .grain{position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:8;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+    .wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:10}.brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;letter-spacing:-.7px;font-size:20px}.brand-mark{width:33px;height:33px;border-radius:10px;background:var(--lime);color:#151611;display:grid;place-items:center;font-size:18px;transform:rotate(-5deg)}.brand span small{display:block;font-size:8px;letter-spacing:2.8px;color:var(--muted);font-family:'DM Sans';margin-top:1px}.nav-links{display:flex;gap:28px;color:#c5c6bd;font-size:13px}.nav-links a:hover{color:var(--lime)}.nav-cta{border:1px solid #55594a;padding:11px 16px;border-radius:999px;font-size:12px;font-weight:700;transition:.2s}.nav-cta:hover{border-color:var(--lime);color:var(--lime)}
+    .hero{min-height:660px;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:34px;padding:76px 0 68px;position:relative}.hero:before{content:"";position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(212,255,85,.1),transparent 68%);right:10%;top:5%;pointer-events:none}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2.6px;color:var(--lime);font-weight:700;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:24px;height:1px;background:var(--lime)}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-1.8px}h1{font-size:clamp(44px,5.8vw,76px);line-height:.99;margin:22px 0 24px;max-width:680px}h1 em{font-style:normal;color:var(--lime)}.hero-copy{color:#b8b9b1;line-height:1.7;font-size:16px;max-width:480px}.hero-actions{display:flex;align-items:center;gap:16px;margin-top:30px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:15px 20px;border-radius:9px;border:0;font-weight:700;font-size:13px;transition:transform .2s,background .2s,border-color .2s}.btn:hover{transform:translateY(-3px)}.btn-primary{background:var(--lime);color:#171812;box-shadow:0 8px 30px rgba(212,255,85,.13)}.btn-primary:hover{background:#e0ff80}.btn-ghost{border:1px solid var(--line);color:#d8d9d2;background:rgba(255,255,255,.025)}.btn-ghost:hover{border-color:#6a6d60}.tiny-note{font-size:11px;color:#888a82;margin-top:15px}.tiny-note span{color:var(--lime);margin-right:5px}
+    .hero-visual{min-height:475px;position:relative;display:grid;place-items:center;isolation:isolate}.orbit{position:absolute;width:min(100%,465px);aspect-ratio:1;border:1px solid rgba(212,255,85,.13);border-radius:50%;animation:spin 42s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;border-radius:50%;border:1px dashed rgba(255,255,255,.12);inset:30px}.orbit:after{inset:72px;border-style:solid;opacity:.7}.orbit-dot{position:absolute;top:12%;left:17%;width:10px;height:10px;border-radius:50%;background:var(--lime);box-shadow:0 0 24px var(--lime)}@keyframes spin{to{transform:rotate(360deg)}}
+    .pole{position:absolute;right:7%;top:6%;width:54px;height:240px;border-radius:30px;background:#22231f;border:1px solid #55564b;overflow:hidden;transform:rotate(13deg);box-shadow:0 20px 55px #0008}.pole:before{content:"";position:absolute;inset:-35px -5px;background:repeating-linear-gradient(135deg,#f3f0e7 0 17px,#e84e49 17px 34px,#f3f0e7 34px 51px,#438bde 51px 68px);animation:poleMove 2.8s linear infinite}.pole:after{content:"";position:absolute;inset:0;border-radius:30px;box-shadow:inset 0 0 0 7px #272823, inset 0 0 15px #000}.pole-cap{position:absolute;right:2%;top:0;width:64px;height:18px;border-radius:8px;background:linear-gradient(#e8e7dc,#696b60);z-index:2;transform:rotate(13deg)}.pole-cap.bottom{top:auto;bottom:4%;right:0}@keyframes poleMove{to{transform:translateY(68px)}}
+    .mock-phone{position:relative;z-index:3;width:270px;padding:10px;border-radius:31px;background:linear-gradient(145deg,#45463f,#171815 40%,#35362f);border:1px solid #6b6d61;box-shadow:0 35px 90px #000b,0 0 0 7px #171815;transform:rotate(-5deg);animation:float 5s ease-in-out infinite}.phone-screen{background:#11120f;border-radius:23px;padding:20px 15px 16px;min-height:410px;overflow:hidden}.phone-top{display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#a5a79d}.phone-logo{display:flex;align-items:center;gap:7px;font-family:'Space Grotesk';font-weight:700;font-size:12px;color:#fff;margin:19px 0 22px}.mini-mark{width:23px;height:23px;background:var(--lime);color:#171812;border-radius:7px;display:grid;place-items:center}.hello{font-size:10px;color:#a4a69a}.client-name{font-family:'Space Grotesk';font-size:22px;font-weight:700;margin:3px 0 16px}.reward-card{background:linear-gradient(135deg,#d7ff69,#a8d938);color:#1b1d13;border-radius:15px;padding:14px;margin-bottom:12px;box-shadow:0 8px 24px #c5f94b1a}.reward-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px}.reward-title{font-family:'Space Grotesk';font-size:19px;font-weight:700;line-height:1.05;margin:8px 0}.reward-sub{font-size:9px}.progress-row{display:flex;justify-content:space-between;font-size:9px;margin:13px 0 7px}.progress{height:5px;background:#7da3265c;border-radius:99px;overflow:hidden}.progress i{display:block;width:66%;height:100%;background:#25281c;border-radius:99px;transition:width .3s}.cut-dots{display:flex;gap:7px;margin-top:9px}.cut-dots span{flex:1;height:22px;border-radius:6px;border:1px solid #7b9b36;display:grid;place-items:center;font-size:9px}.cut-dots span.done{background:#27291f;color:var(--lime);border-color:#27291f}.phone-row{display:flex;gap:9px;margin-top:12px}.phone-tile{flex:1;background:#1b1d18;border:1px solid #2f3129;border-radius:11px;padding:10px}.phone-tile b{display:block;font-size:11px}.phone-tile small{color:#9fa196;font-size:8px}.toast{position:absolute;z-index:4;right:-1%;bottom:14%;background:#1b1e18;border:1px solid #444a34;border-radius:13px;padding:13px 16px;box-shadow:0 15px 40px #0008;display:flex;gap:11px;align-items:center;animation:float 4s ease-in-out infinite reverse}.toast-icon{width:34px;height:34px;border-radius:10px;background:#d4ff5520;color:var(--lime);display:grid;place-items:center;font-size:18px}.toast b{font-size:11px;display:block}.toast small{font-size:9px;color:#a5a79d}.floating-tag{position:absolute;z-index:4;left:0;top:19%;background:#20221c;border:1px solid #3c4030;border-radius:999px;padding:10px 13px;font-size:10px;color:#e9ebdf;transform:rotate(-5deg)}.floating-tag strong{color:var(--lime)}@keyframes float{0%,100%{translate:0 0}50%{translate:0 -11px}}
+    .ticker{border-block:1px solid var(--line);overflow:hidden;background:#141512}.ticker-track{display:flex;width:max-content;animation:marquee 28s linear infinite;padding:17px 0;gap:30px;color:#8e9086;font-family:'Space Grotesk';font-size:11px;text-transform:uppercase;letter-spacing:2px}.ticker-track span{display:flex;align-items:center;gap:30px}.ticker-track i{font-style:normal;color:var(--lime);font-size:17px}@keyframes marquee{to{transform:translateX(-50%)}}
+    section{padding:105px 0}.section-head{max-width:690px;margin-bottom:42px}.section-head h2{font-size:clamp(34px,4.5vw,53px);line-height:1.05;margin:16px 0}.section-head p{color:var(--muted);line-height:1.7;max-width:550px}.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.problem-card{background:linear-gradient(145deg,#1b1d19,#141512);border:1px solid var(--line);border-radius:16px;padding:25px;min-height:210px;transition:.25s;position:relative;overflow:hidden}.problem-card:hover{transform:translateY(-5px);border-color:#515b34}.problem-icon{width:42px;height:42px;border-radius:12px;background:#d4ff5512;color:var(--lime);display:grid;place-items:center;font-size:20px;margin-bottom:28px}.problem-card h3{font-size:20px;letter-spacing:-.6px;margin-bottom:9px}.problem-card p{font-size:13px;line-height:1.6;color:var(--muted);margin:0}.problem-card:after{content:"";position:absolute;right:-40px;bottom:-60px;width:120px;height:120px;border-radius:50%;background:#d4ff5507}
+    .manifesto{padding:65px 0;background:var(--lime);color:#171812;overflow:hidden;position:relative}.manifesto .wrap{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px}.manifesto h2{font-size:clamp(34px,5vw,57px);line-height:1.02;max-width:780px;margin:0}.manifesto h2 span{opacity:.48}.manifesto .stamp{width:105px;height:105px;border:1px solid #1c2114;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:10px;font-weight:700;letter-spacing:1.5px;transform:rotate(12deg);animation:spin 30s linear infinite}.stamp b{font-size:30px;display:block}
+    .demo-section{background:#151613;border-block:1px solid var(--line)}.demo-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}.demo-copy h2{font-size:clamp(36px,4.5vw,52px);line-height:1.03}.demo-copy p{color:var(--muted);line-height:1.7;font-size:14px}.demo-step{display:flex;gap:12px;align-items:flex-start;margin:23px 0}.step-num{flex:0 0 28px;height:28px;border:1px solid #55594a;border-radius:50%;display:grid;place-items:center;color:var(--lime);font-size:11px}.demo-step b{font-size:13px;display:block;margin:1px 0 5px}.demo-step small{color:#989a91;font-size:12px;line-height:1.5;display:block}.demo-card{background:#1c1e19;border:1px solid #41443a;border-radius:21px;padding:25px;box-shadow:0 30px 70px #0004}.demo-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.demo-card-top span{font-size:10px;color:#a6a99c;text-transform:uppercase;letter-spacing:1.7px}.demo-live{font-size:10px;color:var(--lime);display:flex;align-items:center;gap:7px}.demo-live:before{content:"";width:6px;height:6px;background:var(--lime);border-radius:50%;box-shadow:0 0 10px var(--lime)}.demo-profile{display:flex;align-items:center;gap:13px;margin-bottom:22px}.avatar{width:47px;height:47px;background:linear-gradient(135deg,#d4ff55,#77962d);border-radius:14px;display:grid;place-items:center;color:#151711;font-family:'Space Grotesk';font-weight:700;font-size:18px}.demo-profile b{display:block;font-size:15px}.demo-profile small{display:block;color:#999c90;font-size:11px;margin-top:4px}.demo-reward{background:#11120f;border:1px solid #3d4330;border-radius:14px;padding:18px}.demo-reward-head{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.demo-reward h3{font-size:20px;letter-spacing:-.7px;margin:0 0 5px}.demo-reward p{font-size:11px;color:#a6a99c;margin:0}.reward-chip{background:#d4ff551a;color:var(--lime);border:1px solid #d4ff5540;border-radius:7px;padding:7px 9px;font-size:10px;white-space:nowrap}.demo-progress-line{display:flex;justify-content:space-between;font-size:11px;margin:22px 0 9px}.demo-progress-line strong{color:var(--lime)}.big-progress{height:8px;border-radius:99px;background:#33362c;overflow:hidden}.big-progress span{height:100%;width:50%;display:block;background:linear-gradient(90deg,#b6e53a,var(--lime));border-radius:99px;transition:width .3s}.demo-stamps{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:15px 0 20px}.demo-stamps button{aspect-ratio:1;border:1px solid #42463a;background:#1b1d18;color:#a9ab9f;border-radius:10px;font-size:14px;transition:.2s}.demo-stamps button.done{background:var(--lime);border-color:var(--lime);color:#171812}.demo-stamps button.next{border-color:var(--lime);box-shadow:0 0 0 2px #d4ff551b}.demo-controls{display:flex;align-items:center;justify-content:space-between;gap:10px}.demo-controls small{font-size:10px;color:#96998d;line-height:1.5}.demo-controls .btn{padding:11px 14px;font-size:11px;white-space:nowrap}.demo-result{margin-top:14px;min-height:20px;color:var(--lime);font-size:12px}
+    .features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.feature{border:1px solid var(--line);border-radius:16px;padding:25px;background:#151613;display:flex;gap:18px;align-items:flex-start}.feature-symbol{flex:0 0 44px;height:44px;border-radius:12px;background:#d4ff5513;color:var(--lime);display:grid;place-items:center;font-size:20px}.feature h3{font-size:19px;letter-spacing:-.5px;margin:2px 0 8px}.feature p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:step}.step-card{padding:26px;border-top:1px solid #55594a;position:relative}.step-card:before{counter-increment:step;content:"0" counter(step);display:block;font-family:'Space Grotesk';font-size:12px;color:var(--lime);letter-spacing:2px;margin-bottom:28px}.step-card h3{font-size:22px;letter-spacing:-.8px;margin-bottom:9px}.step-card p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+    .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.fit-card{border-radius:16px;padding:27px;border:1px solid var(--line);background:#171815}.fit-card.good{border-color:#59633a;background:linear-gradient(145deg,#20251a,#171815)}.fit-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--lime);font-weight:700}.fit-card:not(.good) .fit-label{color:#b1b2a9}.fit-card h3{font-size:24px;margin:15px 0}.fit-card ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}.fit-card li{display:flex;gap:10px;color:#c0c2b8;font-size:13px;line-height:1.5}.fit-card li span{color:var(--lime);font-weight:700}.fit-card:not(.good) li span{color:#96988f}
+    .faq-wrap{max-width:820px}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:18px;text-align:left;background:none;color:var(--text);border:0;font-family:'Space Grotesk';font-weight:600;font-size:17px;letter-spacing:-.3px}.faq-q .plus{font-size:22px;color:var(--lime);transition:transform .2s}.faq-item.open .plus{transform:rotate(45deg)}.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}.faq-a p{color:var(--muted);font-size:13px;line-height:1.75;padding:0 35px 20px 0;margin:0;max-width:700px}
+    .final-cta{padding:80px 0 90px}.final-box{border:1px solid #464b36;border-radius:22px;padding:clamp(28px,5vw,60px);background:radial-gradient(ellipse at 90% 0%,#d4ff5513,transparent 45%),#171815;position:relative;overflow:hidden}.final-box h2{font-size:clamp(37px,5vw,62px);line-height:1.02;max-width:720px;margin:17px 0}.final-box p{color:var(--muted);font-size:14px;line-height:1.7;max-width:520px}.final-box .btn{margin-top:12px}.final-orbit{position:absolute;width:300px;height:300px;border:1px solid #d4ff5514;border-radius:50%;right:-70px;bottom:-160px}.final-orbit:after{content:"";position:absolute;inset:30px;border:1px dashed #d4ff5522;border-radius:50%}
+    footer{border-top:1px solid var(--line);padding:28px 0 35px;color:#888b80;font-size:11px}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-brand{color:#e7e8df;font-family:'Space Grotesk';font-weight:700;font-size:15px}.footer-note{max-width:470px;text-align:right;line-height:1.6}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.76);backdrop-filter:blur(12px);z-index:30;display:none;align-items:center;justify-content:center;padding:20px}.modal-backdrop.show{display:flex;animation:fadeIn .18s ease}.modal{width:min(100%,460px);background:#1a1c17;border:1px solid #4a4f3b;border-radius:22px;padding:30px;box-shadow:0 30px 100px #000b;position:relative;animation:modalIn .25s ease}.modal-close{position:absolute;right:15px;top:14px;background:#2b2d26;border:1px solid #414439;color:#e7e8df;border-radius:50%;width:32px;height:32px;font-size:18px}.modal .brand{font-size:17px}.modal .brand-mark{width:29px;height:29px}.modal h2{font-size:31px;line-height:1.05;margin:27px 0 10px;letter-spacing:-1px}.modal p{font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:22px}.modal-actions{display:grid;gap:10px}.modal-actions .btn{width:100%;padding:15px}.modal-foot{text-align:center;font-size:10px;color:#898c80;margin-top:17px}.modal-foot span{color:var(--lime)}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes modalIn{from{transform:translateY(12px) scale(.98);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:65px;gap:12px}.hero-copy{max-width:600px}.hero-visual{min-height:470px}.hero:before{right:20%;top:45%}.demo-grid{grid-template-columns:1fr;gap:35px}.demo-copy{max-width:640px}.nav-links{gap:16px}.nav-links a:nth-child(2){display:none}}
+    @media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 30px))}.nav{height:68px}.nav-links{display:none}.nav-cta{font-size:11px;padding:10px 12px}.brand{font-size:18px}.hero{padding:54px 0 38px;min-height:auto}.hero h1{font-size:clamp(44px,12vw,63px)}.hero-copy{font-size:14px}.hero-actions{align-items:stretch;flex-direction:column;max-width:340px}.hero-actions .btn{width:100%}.hero-visual{min-height:400px;transform:scale(.92);margin:-4px -15px 0}.mock-phone{width:248px}.phone-screen{min-height:385px}.pole{right:1%;height:210px}.floating-tag{left:0;top:17%}.toast{right:-1%;bottom:10%;padding:10px}.ticker-track{font-size:10px;padding:14px 0}section{padding:75px 0}.section-head{margin-bottom:28px}.problem-grid{grid-template-columns:1fr}.problem-card{min-height:auto;padding:21px}.problem-icon{margin-bottom:20px}.manifesto{padding:45px 0}.manifesto .wrap{grid-template-columns:1fr}.manifesto .stamp{width:75px;height:75px;position:absolute;right:20px;bottom:18px;opacity:.5}.manifesto h2{max-width:88%;font-size:37px}.features-grid{grid-template-columns:1fr}.feature{padding:21px;gap:13px}.steps{grid-template-columns:1fr;gap:10px}.step-card{padding:21px;border-top:1px solid var(--line)}.step-card:before{margin-bottom:16px}.fit-grid{grid-template-columns:1fr}.fit-card{padding:22px}.demo-card{padding:17px}.demo-stamps{gap:5px}.demo-stamps button{border-radius:7px}.demo-controls{align-items:flex-start;flex-direction:column}.demo-controls .btn{width:100%}.faq-q{font-size:15px;padding:19px 0}.faq-a p{font-size:12px}.final-cta{padding:55px 0 65px}.final-box{padding:27px 21px}.final-box h2{font-size:40px}.footer-row{align-items:flex-start;flex-direction:column}.footer-note{text-align:left}.modal{padding:26px 21px}.modal h2{font-size:28px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="wrap nav">
+    <a class="brand" href="#inicio" aria-label="Barber VIP, inicio"><span class="brand-mark">✦</span><span>BARBER VIP<small>FIDELIZACIÓN DIGITAL</small></span></a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#como-funciona">Cómo funciona</a><a href="#beneficios">Qué conseguís</a><a href="#preguntas">Preguntas</a>
+    </nav>
+    <button class="nav-cta" data-open-modal>Probar 14 días gratis ↗</button>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="inicio">
+      <div>
+        <div class="eyebrow">No es solo un corte</div>
+        <h1>Que vuelvan por cómo los <em>hacés sentir.</em></h1>
+        <p class="hero-copy">Convertí cada visita en una razón para volver. Tus clientes tienen su espacio digital, ven cuánto les falta para su premio y sienten que ser clientes tuyos vale la pena.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-open-modal>Quiero probar Barber VIP <span>↗</span></button>
+          <a class="btn btn-ghost" href="#demo">Ver cómo lo vive tu cliente <span>↓</span></a>
+        </div>
+        <div class="tiny-note"><span>✦</span>Para barberos y barberas que quieren cuidar a sus clientes.</div>
+      </div>
+      <div class="hero-visual" aria-label="Vista ilustrativa de la experiencia digital del cliente">
+        <div class="orbit"><span class="orbit-dot"></span></div>
+        <div class="pole"><div class="pole-cap"></div><div class="pole-cap bottom"></div></div>
+        <div class="floating-tag">Cada visita cuenta <strong>✦</strong></div>
+        <div class="mock-phone">
+          <div class="phone-screen">
+            <div class="phone-top"><span>9:41</span><span>● ● ●</span></div>
+            <div class="phone-logo"><span class="mini-mark">✦</span> BARBER VIP</div>
+            <div class="hello">TU ESPACIO, TU BARBERO</div>
+            <div class="client-name">¡Qué hacés, Nico!</div>
+            <div class="reward-card">
+              <div class="reward-label">Tu próximo premio</div>
+              <div class="reward-title">30% OFF<br>en tu próximo corte</div>
+              <div class="reward-sub">Un beneficio por seguir eligiéndonos.</div>
+              <div class="progress-row"><span>Tu ciclo de cortes</span><b>4 de 6</b></div>
+              <div class="progress"><i></i></div>
+              <div class="cut-dots"><span class="done">✓</span><span class="done">✓</span><span class="done">✓</span><span class="done">✓</span><span>5</span><span>6</span></div>
+            </div>
+            <div class="phone-row"><div class="phone-tile"><b>Tu barbero</b><small>Información y horarios</small></div><div class="phone-tile"><b>Tu progreso</b><small>Cada corte cuenta</small></div></div>
+          </div>
+        </div>
+        <div class="toast"><div class="toast-icon">✦</div><div><b>Premio desbloqueado</b><small>Un motivo más para volver</small></div></div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker-track">
+      <span>Más que un corte <i>✳</i> Clientes que vuelven <i>✳</i> Premios con sentido <i>✳</i> Tu estilo, tu comunidad <i>✳</i> Más que un corte <i>✳</i> Clientes que vuelven <i>✳</i> Premios con sentido <i>✳</i> Tu estilo, tu comunidad <i>✳</i></span>
+      <span>Más que un corte <i>✳</i> Clientes que vuelven <i>✳</i> Premios con sentido <i>✳</i> Tu estilo, tu comunidad <i>✳</i> Más que un corte <i>✳</i> Clientes que vuelven <i>✳</i> Premios con sentido <i>✳</i> Tu estilo, tu comunidad <i>✳</i></span>
+    </div></div>
+
+    <section class="wrap" id="por-que">
+      <div class="section-head">
+        <div class="eyebrow">La diferencia se nota</div>
+        <h2>Un buen corte atrae.<br><em style="color:var(--lime);font-style:normal">Una buena experiencia hace volver.</em></h2>
+        <p>No necesitás competir solo por precio. Podés hacer que tus clientes sientan que forman parte de algo.</p>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-card"><div class="problem-icon">↻</div><h3>Que no se olviden de vos</h3><p>Ayudá a mantener vivo el vínculo incluso cuando ya salieron de la barbería.</p></article>
+        <article class="problem-card"><div class="problem-icon">✦</div><h3>Que cada visita cuente</h3><p>Un ciclo de cortes convierte la frecuencia en progreso visible y un premio esperado.</p></article>
+        <article class="problem-card"><div class="problem-icon">♡</div><h3>Que se sientan valorados</h3><p>Un beneficio pensado por vos puede hacer que la próxima elección seas vos otra vez.</p></article>
+      </div>
+    </section>
+
+    <div class="manifesto"><div class="wrap"><h2>No regalás un descuento.<br><span>Reconocés a quien te elige.</span></h2><div class="stamp"><div><b>✦</b>EL CLIENTE<br>IMPORTA</div></div></div></div>
+
+    <section class="demo-section" id="demo">
+      <div class="wrap demo-grid">
+        <div class="demo-copy">
+          <div class="eyebrow">Probalo acá mismo</div>
+          <h2>Tu cliente ve su progreso. <em style="color:var(--lime);font-style:normal">Y quiere llegar al premio.</em></h2>
+          <p>Imaginá que cada corte suma al ciclo que vos configurás. El cliente puede ver cuántos lleva y qué beneficio le espera. Tocá los cortes de la tarjeta para probar la experiencia.</p>
+          <div class="demo-step"><span class="step-num">01</span><div><b>Vos definís el ciclo</b><small>Elegís cada cuántos cortes premiar y qué beneficio ofrecer.</small></div></div>
+          <div class="demo-step"><span class="step-num">02</span><div><b>El cliente ve su avance</b><small>Su espacio digital le muestra el progreso y los beneficios disponibles.</small></div></div>
+          <div class="demo-step"><span class="step-num">03</span><div><b>La próxima visita tiene un motivo más</b><small>El premio acompaña la relación; no reemplaza la calidad de tu trabajo.</small></div></div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-card-top"><span>Vista de cliente · demo interactiva</span><div class="demo-live">EN VIVO</div></div>
+          <div class="demo-profile"><div class="avatar">N</div><div><b>Nicolás G.</b><small>Cliente de Estudio Norte</small></div></div>
+          <div class="demo-reward">
+            <div class="demo-reward-head"><div><h3 id="demoRewardTitle">Tu próximo premio</h3><p id="demoRewardText">Seguí sumando cortes para desbloquearlo.</p></div><span class="reward-chip" id="demoChip">30% OFF</span></div>
+            <div class="demo-progress-line"><span>Tu ciclo de cortes</span><strong id="demoCount">3 de 6</strong></div>
+            <div class="big-progress"><span id="demoBar"></span></div>
+            <div class="demo-stamps" id="demoStamps" aria-label="Tocá un corte para cambiar el progreso">
+              <button type="button" data-cut="1" aria-label="Ver 1 corte">✓</button><button type="button" data-cut="2" aria-label="Ver 2 cortes">✓</button><button type="button" data-cut="3" aria-label="Ver 3 cortes">✓</button><button type="button" data-cut="4" aria-label="Ver 4 cortes">4</button><button type="button" data-cut="5" aria-label="Ver 5 cortes">5</button><button type="button" data-cut="6" aria-label="Ver 6 cortes">6</button>
+            </div>
+            <div class="demo-controls"><small>Probá cómo cambia el avance<br>tocando cualquiera de los cortes.</small><button class="btn btn-primary" id="addCut" type="button">Sumar un corte +</button></div>
+            <div class="demo-result" id="demoResult" aria-live="polite">¡Vas por la mitad! Te faltan 3 para tu premio.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="beneficios">
+      <div class="section-head">
+        <div class="eyebrow">Tu relación con cada cliente</div>
+        <h2>Pequeños detalles.<br><span style="color:var(--lime)">Una experiencia más completa.</span></h2>
+        <p>Barber VIP acompaña la relación entre vos y tus clientes, antes y después del corte.</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature"><div class="feature-symbol">✂</div><div><h3>Ciclos de cortes y premios</h3><p>Definí los hitos y beneficios que tengan sentido para tu forma de trabajar.</p></div></article>
+        <article class="feature"><div class="feature-symbol">▣</div><div><h3>Un espacio para cada cliente</h3><p>Tu cliente puede consultar su progreso y la información de su barbero desde su propia experiencia digital.</p></div></article>
+        <article class="feature"><div class="feature-symbol">◷</div><div><h3>Tu comunidad, más presente</h3><p>Tené a tus clientes organizados y una referencia para entender cuándo fue su última visita.</p></div></article>
+        <article class="feature"><div class="feature-symbol">⌁</div><div><h3>Tu identidad, también online</h3><p>Compartí los datos importantes de tu perfil: horarios, WhatsApp, Instagram y ubicación, si los configuraste.</p></div></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="como-funciona">
+      <div class="section-head"><div class="eyebrow">Sin vueltas</div><h2>Empezar es más simple<br>de lo que parece.</h2></div>
+      <div class="steps">
+        <article class="step-card"><h3>Armá tu espacio</h3><p>Configurá tu perfil y definí cómo querés reconocer la fidelidad de tus clientes.</p></article>
+        <article class="step-card"><h3>Sumá a tus clientes</h3><p>Creá sus accesos para que cada persona pueda entrar a su espacio digital.</p></article>
+        <article class="step-card"><h3>Hacé que cada visita cuente</h3><p>Registrá los cortes y dejá que vean cómo avanzan hacia su próximo beneficio.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="section-head"><div class="eyebrow">Una idea clara</div><h2>Barber VIP no es para cualquiera.<br><span style="color:var(--lime)">Y eso está bien.</span></h2><p>Es para quienes creen que el vínculo con el cliente también se trabaja.</p></div>
+      <div class="fit-grid">
+        <article class="fit-card good"><div class="fit-label">Te puede servir si…</div><h3>Querés premiar la confianza.</h3><ul><li><span>✓</span> Te interesa que tus clientes tengan ganas de volver.</li><li><span>✓</span> Querés ofrecer beneficios con una intención clara.</li><li><span>✓</span> Te importa que la experiencia siga después del corte.</li></ul></article>
+        <article class="fit-card"><div class="fit-label">Quizás no es para vos si…</div><h3>Solo querés cortar y listo.</h3><ul><li><span>—</span> No te interesa trabajar la fidelidad de tus clientes.</li><li><span>—</span> No querés ofrecer ningún tipo de reconocimiento o beneficio.</li><li><span>—</span> Preferís no sumar una experiencia digital a tu servicio.</li></ul></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="preguntas">
+      <div class="section-head"><div class="eyebrow">Preguntas frecuentes</div><h2>Lo importante,<br>sin letra chica.</h2><p>¿Te queda alguna duda? Acá van las respuestas rápidas.</p></div>
+      <div class="faq-wrap">
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Qué es Barber VIP? <span class="plus">+</span></button><div class="faq-a"><p>Es una aplicación de fidelización para barberos y barberas. Te ayuda a organizar clientes, registrar cortes y ofrecer ciclos de beneficios, mientras cada cliente puede consultar su propio progreso y la información de su barbero.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Tengo que hacer descuentos sí o sí? <span class="plus">+</span></button><div class="faq-a"><p>La idea de Barber VIP es que elijas cómo reconocer a quienes te eligen. Si no querés ofrecer promociones, descuentos ni ningún tipo de premio, probablemente no sea la herramienta adecuada para vos. El beneficio lo definís según tu negocio.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Mis clientes también tienen un espacio propio? <span class="plus">+</span></button><div class="faq-a"><p>Sí. La experiencia contempla un acceso para el cliente, donde puede ver su información, el ciclo de cortes y los beneficios que tenga disponibles, según la configuración de su barbero.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Tengo que cambiar mi forma de trabajar? <span class="plus">+</span></button><div class="faq-a"><p>No necesitás convertir tu barbería en otra cosa. Barber VIP está pensado para acompañar la relación que ya tenés con tus clientes y sumar una forma digital de hacer visible su fidelidad.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Cómo pruebo la aplicación? <span class="plus">+</span></button><div class="faq-a"><p>El botón de prueba te lleva directamente a la aplicación Barber VIP. Allí vas a continuar el proceso. Esta web comercial es independiente y no interfiere con el inicio de sesión ni con el funcionamiento de la aplicación.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Esta página es la aplicación? <span class="plus">+</span></button><div class="faq-a"><p>No. Esta es la página comercial para conocer Barber VIP. La aplicación funciona en una dirección separada y los botones de acceso te llevan a ella.</p></div></div>
+      </div>
+    </section>
+
+    <section class="wrap final-cta">
+      <div class="final-box"><div class="eyebrow">Tu próximo paso</div><h2>Que tu cliente no solo recuerde el corte. <span style="color:var(--lime)">Que recuerde cómo lo tratás.</span></h2><p>Conocé Barber VIP y empezá a construir una experiencia que premie a quienes vuelven.</p><button class="btn btn-primary" data-open-modal>Probar 14 días gratis <span>↗</span></button><div class="final-orbit"></div></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-row"><div><div class="footer-brand">✦ BARBER VIP</div><div style="margin-top:7px">Fidelización digital para barberos y barberas.</div></div><div class="footer-note">Esta web presenta el producto. El acceso, registro y uso de la aplicación se realizan en la plataforma Barber VIP independiente.</div></div></footer>
+
+  <div class="modal-backdrop" id="accessModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="closeModal" aria-label="Cerrar">×</button>
+      <a class="brand" href="#inicio"><span class="brand-mark">✦</span><span>BARBER VIP<small>FIDELIZACIÓN DIGITAL</small></span></a>
+      <h2 id="modalTitle">Tu próxima etapa empieza acá.</h2>
+      <p>Elegí una opción para continuar en Barber VIP. Los dos botones te llevan a la misma aplicación.</p>
+      <div class="modal-actions">
+        <a class="btn btn-primary" href="https://barber-vip-three.vercel.app/">Probar 14 días gratis <span>↗</span></a>
+        <a class="btn btn-ghost" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta <span>↗</span></a>
+      </div>
+      <div class="modal-foot"><span>↗</span> Vas a abrir la aplicación en otra página.</div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const modal = document.getElementById('accessModal');
+      const close = document.getElementById('closeModal');
+      const openers = document.querySelectorAll('[data-open-modal]');
+      const showModal = () => { modal.classList.add('show'); document.body.classList.add('modal-open'); close.focus(); };
+      const hideModal = () => { modal.classList.remove('show'); document.body.classList.remove('modal-open'); };
+      openers.forEach(button => button.addEventListener('click', showModal));
+      close.addEventListener('click', hideModal);
+      modal.addEventListener('click', e => { if (e.target === modal) hideModal(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('show')) hideModal(); });
+
+      const questions = document.querySelectorAll('.faq-q');
+      questions.forEach(question => question.addEventListener('click', () => {
+        const item = question.closest('.faq-item');
+        const answer = item.querySelector('.faq-a');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(other => {
+          other.classList.remove('open');
+          other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          other.querySelector('.faq-a').style.maxHeight = null;
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          question.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      }));
+
+      let cuts = 3;
+      const count = document.getElementById('demoCount');
+      const bar = document.getElementById('demoBar');
+      const result = document.getElementById('demoResult');
+      const stamps = [...document.querySelectorAll('#demoStamps button')];
+      const rewardTitle = document.getElementById('demoRewardTitle');
+      const rewardText = document.getElementById('demoRewardText');
+      const chip = document.getElementById('demoChip');
+      function renderDemo() {
+        count.textContent = `${cuts} de 6`;
+        bar.style.width = `${cuts / 6 * 100}%`;
+        stamps.forEach((stamp, index) => {
+          stamp.classList.toggle('done', index < cuts);
+          stamp.classList.toggle('next', index === cuts && cuts < 6);
+          stamp.textContent = index < cuts ? '✓' : String(index + 1);
+          stamp.setAttribute('aria-pressed', String(index + 1 === cuts));
+        });
+        if (cuts >= 6) {
+          rewardTitle.textContent = '¡Premio desbloqueado!';
+          rewardText.textContent = 'Llegaste al final del ciclo. ¡Gracias por volver!';
+          chip.textContent = 'LISTO ✦';
+          result.textContent = '¡Lo lograste! En este ejemplo, ya llegaste a tu beneficio.';
+        } else {
+          rewardTitle.textContent = 'Tu próximo premio';
+          rewardText.textContent = 'Seguí sumando cortes para desbloquearlo.';
+          chip.textContent = '30% OFF';
+          const remaining = 6 - cuts;
+          result.textContent = cuts < 3 ? `¡Ya arrancaste! Te ${remaining === 1 ? 'falta' : 'faltan'} ${remaining} para tu premio.` : cuts === 3 ? '¡Vas por la mitad! Te faltan 3 para tu premio.' : `¡Cada vez más cerca! Te ${remaining === 1 ? 'falta' : 'faltan'} ${remaining} para tu premio.`;
+        }
+      }
+      stamps.forEach(stamp => stamp.addEventListener('click', () => { cuts = Number(stamp.dataset.cut); renderDemo(); }));
+      document.getElementById('addCut').addEventListener('click', () => { cuts = cuts >= 6 ? 1 : cuts + 1; renderDemo(); });
+      renderDemo();
+    })();
+  </script>
+</body>
+</html>
