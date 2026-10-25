@@ -71,6 +71,31 @@
 .customer-mini-stats span{font-size:8px;line-height:1.35;color:#9ab0c9}
 .customer-mini-stats strong{font:700 12px 'Space Grotesk',sans-serif;color:#eff6ff;overflow-wrap:anywhere}
 @media(max-width:520px){.customer-mini-stats span{font-size:7px}.customer-mini-stats strong{font-size:11px}.admin-register-cta{padding:10px}.customer-attendance{font-size:7px}}
+
+/* Product story: real capabilities, no fictional app screenshots */
+.visual.product-summary{min-height:0;display:flex;align-items:center;justify-content:center;padding:12px 0}
+.product-summary-card{position:relative;width:100%;max-width:450px;margin-left:auto;padding:26px;border:1px solid #285987;border-radius:22px;background:radial-gradient(ellipse at 100% 0,#10335a55,transparent 52%),linear-gradient(145deg,#0c1d31,#07111f);box-shadow:0 22px 65px #0005}
+.summary-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.summary-pill{flex:0 0 auto;padding:7px 10px;border:1px solid #2b5b89;border-radius:99px;color:#9bceff;font-size:10px}
+.product-summary-card h2{font:700 clamp(23px,2.8vw,31px)/1.12 'Space Grotesk',sans-serif;letter-spacing:-.9px;margin:21px 0 22px;color:#f0f7ff}
+.product-summary-card h2 span{color:#84c6ff}
+.summary-item{display:flex;align-items:flex-start;gap:12px;padding:15px 0;border-top:1px solid #ffffff12}
+.summary-index{display:grid;place-items:center;flex:0 0 31px;width:31px;height:31px;border-radius:10px;background:#1689ff18;border:1px solid #2c6398;color:#8bcaff;font-size:10px;font-weight:800}
+.summary-item strong{display:block;color:#e8f3ff;font-size:12px;margin:1px 0 5px}
+.summary-item small{display:block;color:#9bb1ca;font-size:11px;line-height:1.55}
+.summary-note{border-top:1px solid #ffffff12;padding-top:15px;margin:7px 0 0;color:#88a2bf;font-size:10px;line-height:1.6}
+.product-preview-grid.explainer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.feature-panel{min-width:0;padding:24px;border:1px solid #254b6e;border-radius:17px;background:linear-gradient(145deg,#0e2137,#081421);box-shadow:0 16px 42px #0002}
+.feature-overline{display:flex;align-items:center;gap:9px;color:#8ccaff;font-size:9px;font-weight:850;letter-spacing:1.3px}
+.feature-overline span{display:grid;place-items:center;width:27px;height:27px;border-radius:8px;border:1px solid #2e5e8c;background:#123050;color:#b8ddff;letter-spacing:0}
+.feature-panel h3{font:700 clamp(19px,2.1vw,24px)/1.2 'Space Grotesk',sans-serif;letter-spacing:-.6px;color:#f0f7ff;margin:20px 0 11px}
+.feature-panel p{font-size:12px;line-height:1.75;color:#a8bad0;margin:0}
+.feature-list{display:grid;gap:10px;list-style:none;padding:17px 0 0;margin:17px 0 0;border-top:1px solid #ffffff12}
+.feature-list li{position:relative;padding-left:20px;color:#d2e2f3;font-size:11px;line-height:1.6}
+.feature-list li:before{content:"✓";position:absolute;left:0;top:0;color:#78bfff;font-weight:900}
+@media(max-width:780px){.visual.product-summary{padding:0}.product-summary-card{max-width:none;margin:0;padding:23px}.product-preview-grid.explainer-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.product-summary-card{padding:20px;border-radius:18px}.product-summary-card h2{font-size:24px}.feature-panel{padding:20px}.feature-panel h3{font-size:21px}}
+
 </style>
 </head>
 <body>
@@ -87,10 +112,27 @@
 <div class="actions"><a class="btn primary" href="https://barber-vip-three.vercel.app/">Crear cuenta · 7 días gratis <span>↗</span></a><a class="btn secondary" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta</a></div>
 <div class="micro">7 días de prueba gratis · Entrás directo a Barber VIP</div>
 </div>
-<div class="visual" aria-label="Vista ilustrativa del sistema de fidelización">
-<div class="halo"></div><div class="float-tag">✦ <b>Tu barbería,</b> tu programa</div>
-<div class="phone"><div class="screen"><div class="appname"><i>✦</i> BARBER VIP</div><div class="subtle">Buenas tardes, Nico</div><div class="client">Tu próximo descuento</div><div class="reward"><small>BENEFICIO CONFIGURADO POR TU BARBERO</small><b>20% OFF</b><span style="font-size:10px">Te faltan 2 visitas para alcanzar tu beneficio.</span></div><div class="progresslabel"><span>Tu ciclo actual</span><b>4 de 6</b></div><div class="progress"><span></span></div><div class="stamps"><i class="done">✓</i><i class="done">✓</i><i class="done">✓</i><i class="done">✓</i><i>5</i><i>6</i></div><div class="mini-cta">Agendar turno por WhatsApp</div><p class="subtle" style="margin:12px 0 0">Tu progreso y los beneficios, desde el celular.</p></div></div>
-<div class="float-card"><strong>Tu programa, tus reglas</strong>Vos definís premios y descuentos.</div>
+<div class="visual product-summary" aria-label="Resumen de las funciones de Barber VIP">
+  <div class="product-summary-card">
+    <div class="summary-heading">
+      <span class="eyebrow">ASÍ FUNCIONA</span>
+      <span class="summary-pill">Para barberos</span>
+    </div>
+    <h2>Vos registrás la visita.<br><span>Tu cliente ve su progreso.</span></h2>
+    <div class="summary-item">
+      <span class="summary-index">01</span>
+      <div><strong>El barbero gestiona</strong><small>Registra cortes, configura beneficios y crea promociones.</small></div>
+    </div>
+    <div class="summary-item">
+      <span class="summary-index">02</span>
+      <div><strong>El cliente consulta</strong><small>Ve sus visitas, el avance de su ciclo y los beneficios disponibles.</small></div>
+    </div>
+    <div class="summary-item">
+      <span class="summary-index">03</span>
+      <div><strong>Cada uno tiene su espacio</strong><small>Los beneficios se vinculan al profesional que atiende al cliente.</small></div>
+    </div>
+    <p class="summary-note">Acceso desde el navegador del celular. Sin instalar otra app para tus clientes.</p>
+  </div>
 </div>
 </div>
 <div class="strip"><div class="wrap strip-inner"><span><b>01</b> Fidelización</span><span><b>02</b> Descuentos</span><span><b>03</b> Premios configurables</span><span><b>04</b> Simple de usar</span></div></div>
@@ -117,36 +159,29 @@
 </section>
 <section class="wrap" id="experiencia">
 <div class="section-head"><div class="eyebrow">Así se usa en la práctica</div><h2>Una herramienta para vos.<br>Beneficios claros para tus clientes.</h2><p>Barber VIP tiene dos espacios conectados: vos gestionás las visitas y los premios; cada cliente puede consultar su avance desde el celular.</p></div>
-<div class="product-preview-grid">
-  <article class="app-preview admin-preview">
-    <div class="preview-top"><div><span class="eyebrow">ADMINISTRADOR</span><h3>Resumen de tu actividad</h3></div><span class="preview-pill">Tu panel</span></div>
-    <p class="preview-greeting">Buenas tardes, Nico</p>
-    <div class="admin-status-banner"><span><i></i> ESTADO DE CUENTA</span><strong>Prueba gratuita</strong><small>Ejemplo de estado en pantalla</small></div>
-    <div class="admin-register-cta"><span>✂</span><div><strong>Registrar visita</strong><small>Elegí un cliente y registrá su visita.</small></div><b>→</b></div>
-    <div class="preview-section-label">ACCESOS RÁPIDOS</div>
-    <div class="preview-actions"><span>＋ Crear cliente</span><span>✂ Registrar visita</span><span>✦ Promociones</span><span>⚙ Configuración</span></div>
-    <p class="preview-caption">Tu panel está preparado para que las acciones habituales queden a mano.</p>
+<div class="product-preview-grid explainer-grid">
+  <article class="feature-panel">
+    <div class="feature-overline"><span>01</span> ESPACIO DEL BARBERO</div>
+    <h3>Tu programa de fidelización, bajo tus reglas.</h3>
+    <p>Configurás el funcionamiento según tu manera de atender y los beneficios que podés sostener.</p>
+    <ul class="feature-list">
+      <li>Registrar las visitas de cada cliente.</li>
+      <li>Definir hitos, descuentos y premios.</li>
+      <li>Crear promociones para clientes seleccionados.</li>
+    </ul>
   </article>
-  <article class="app-preview customer-preview">
-    <div class="preview-top"><div><span class="eyebrow">CLIENTE</span><h3>Su espacio VIP</h3></div><span class="preview-pill">En el celular</span></div>
-    <p class="preview-greeting">Buenas tardes, Nico</p>
-    <div class="customer-attendance"><i></i> TU PROFESIONAL ESTÁ ATENDIENDO</div>
-    <div class="customer-mini-stats"><div><span>Visitas totales</span><strong>18</strong></div><div><span>Última visita</span><strong>Hace 4 días</strong></div><div><span>Ciclo actual</span><strong>4/6</strong></div></div>
-    <div class="customer-reward">
-      <span class="preview-section-label">TU PRÓXIMO DESCUENTO</span>
-      <strong>30% OFF</strong>
-      <p>Te faltan 2 visitas para alcanzar tu beneficio.</p>
-      <div class="customer-progress"><span></span></div>
-      <div class="customer-progress-label"><span>Ciclo actual: 4 de 6</span><b>67%</b></div>
-    </div>
-    <div class="customer-applied-reward"><span>✓ DESCUENTO APLICADO</span><strong>20% OFF · hito 4</strong><small>El progreso continúa hacia el próximo beneficio.</small></div>
-    <div class="customer-detail"><span>Datos de tu profesional</span><strong>Contacto directo</strong></div>
-    <div class="customer-whatsapp">↗ Agendar turno por WhatsApp</div>
-    <p class="preview-caption">Cada cliente consulta sus visitas, su progreso y los datos de su propio profesional.</p>
+  <article class="feature-panel">
+    <div class="feature-overline"><span>02</span> ESPACIO DEL CLIENTE</div>
+    <h3>El cliente sabe cuánto avanzó y qué beneficio tiene.</h3>
+    <p>Desde el celular puede consultar su progreso y los datos del profesional que lo atiende.</p>
+    <ul class="feature-list">
+      <li>Ver visitas totales y ciclo actual.</li>
+      <li>Consultar el beneficio aplicado y el siguiente.</li>
+      <li>Encontrar las vías de contacto de su barbero.</li>
+    </ul>
   </article>
 </div>
 <div class="promo-highlight"><div class="promo-icon">✦</div><div><strong>También podés crear promociones puntuales</strong><p>Elegí a quiénes llegan, definí condiciones y prepará acciones para días específicos. Vos decidís qué ofrecer y cuándo.</p></div></div>
-<p class="preview-note">Vistas de ejemplo para explicar el funcionamiento. Los nombres, cantidades, premios y descuentos son ilustrativos; el profesional configura los suyos dentro de la aplicación.</p>
 </section>
 <section class="wrap" id="para-quien">
 <div class="section-head"><div class="eyebrow">Transparente desde el principio</div><h2>¿Es para vos?</h2></div>
