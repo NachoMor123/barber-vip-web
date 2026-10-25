@@ -15,6 +15,40 @@
 @media(max-width:780px){.hero{grid-template-columns:1fr;padding:60px 0 30px;gap:0}.hero-copy{max-width:650px}.visual{min-height:380px}.halo{width:310px}.float-card{right:2%}.float-tag{left:3%}.how{grid-template-columns:1fr;gap:22px}.pain-grid{grid-template-columns:1fr 1fr}.tile:last-child{grid-column:1/-1}.nav-note{display:none}}
 @media(max-width:520px){.wrap{width:calc(100% - 28px)}.nav{height:65px}.brand{font-size:17px}.hero{padding-top:43px}.hero h1{font-size:43px}.lead{font-size:14px}.actions{display:grid;grid-template-columns:1fr;gap:9px}.btn{width:100%}.visual{min-height:345px}.phone{width:225px}.screen{min-height:340px;padding:16px 12px}.halo{width:270px}.float-card{right:-1%;bottom:4%;padding:9px 11px}.float-tag{top:10%;left:-1%}section{padding:57px 0}.pain-grid{grid-template-columns:1fr}.tile,.tile:last-child{grid-column:auto;min-height:0}.strip-inner{gap:10px 17px;font-size:10px}.ideas{grid-template-columns:1fr}.fit-grid{grid-template-columns:1fr}.faq-q{font-size:15px}.foot{align-items:flex-start;flex-direction:column}.foot span:last-child{text-align:left}.final-card .actions{display:grid}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* Product previews: close to the real admin/client flows and fully responsive */
+.product-preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:28px;align-items:stretch}
+.app-preview{min-width:0;border:1px solid #28517a;border-radius:17px;padding:22px;background:linear-gradient(145deg,#10243b,#091625);box-shadow:0 18px 50px #0003;overflow:hidden}
+.preview-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-bottom:16px;border-bottom:1px solid #ffffff12}
+.preview-top h3{font-size:19px;letter-spacing:-.5px;margin:7px 0 0}
+.preview-pill{flex:0 0 auto;padding:5px 9px;border:1px solid #2f5b84;border-radius:99px;color:#a9d6ff;font-size:10px}
+.preview-greeting{font:600 14px 'Space Grotesk',sans-serif;margin:17px 0 13px;color:#eaf4ff}
+.preview-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.preview-stat{border:1px solid #244361;border-radius:10px;background:#081522;padding:11px 9px;min-width:0}
+.preview-stat span,.preview-stat small{display:block;color:#9ab0c9;font-size:10px}
+.preview-stat strong{display:block;font:700 23px 'Space Grotesk',sans-serif;color:#f4f8ff;margin:3px 0}
+.preview-section-label{font-size:9px;letter-spacing:1.3px;font-weight:800;color:#80c5ff}
+.preview-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.preview-actions span{display:block;padding:10px 9px;border:1px solid #2a4c6c;border-radius:9px;background:#0b1c2d;color:#dcecff;font-size:11px;font-weight:700}
+.preview-caption{font-size:11px;line-height:1.65;color:#9fb2c9;margin:15px 0 0}
+.customer-reward{padding:16px;border:1px solid #2e6ba0;border-radius:13px;background:linear-gradient(145deg,#133a60,#0b2137);margin-top:3px}
+.customer-reward>strong{display:block;font:700 31px 'Space Grotesk',sans-serif;color:#83c9ff;margin:6px 0 2px}
+.customer-reward p{font-size:11px;line-height:1.5;color:#d2e5f8;margin:0 0 12px}
+.customer-progress{height:7px;border-radius:99px;background:#1b3854;overflow:hidden}
+.customer-progress span{display:block;width:67%;height:100%;border-radius:99px;background:linear-gradient(90deg,#398ff2,#7dc7ff)}
+.customer-progress-label{display:flex;justify-content:space-between;gap:8px;margin-top:7px;color:#b7cee5;font-size:10px}
+.customer-progress-label b{color:#7dc7ff}
+.customer-detail{display:flex;justify-content:space-between;gap:10px;padding:12px 0 10px;border-bottom:1px solid #ffffff12;font-size:11px;color:#9eb4cc}
+.customer-detail strong{color:#e5f1ff;text-align:right}
+.customer-whatsapp{margin-top:11px;text-align:center;padding:11px 12px;border-radius:9px;background:#12345a;border:1px solid #2b608e;color:#b8ddff;font-size:11px;font-weight:700}
+.mini-cta{margin-top:12px;border:1px solid #2d5e89;border-radius:8px;background:#102a45;color:#bcdfff;text-align:center;font-size:10px;font-weight:700;padding:9px 7px}
+.promo-highlight{display:flex;align-items:flex-start;gap:14px;padding:19px 21px;margin-top:17px;border:1px solid #254a6b;border-radius:13px;background:#0c1d30}
+.promo-icon{width:35px;height:35px;flex:0 0 35px;border-radius:10px;background:#1689ff20;color:#82c7ff;display:grid;place-items:center}
+.promo-highlight strong{font:700 16px 'Space Grotesk',sans-serif;color:#eff7ff}
+.promo-highlight p{font-size:12px;color:#aebfd3;margin:5px 0 0;line-height:1.65}
+.preview-note{font-size:10px;color:#849bb5;margin:11px 2px 0;line-height:1.6}
+@media(max-width:780px){.product-preview-grid{grid-template-columns:1fr}.app-preview{padding:19px}}
+@media(max-width:520px){.product-preview-grid{gap:12px}.preview-top h3{font-size:17px}.preview-stat{padding:10px 7px}.preview-stat strong{font-size:20px}.preview-stat small{font-size:9px}.promo-highlight{padding:15px}.customer-reward{padding:13px}}
 </style>
 </head>
 <body>
@@ -28,13 +62,13 @@
 <div class="eyebrow">Más clientes que vuelven</div>
 <h1>Un buen corte los trae.<br><em>Un motivo para volver</em> los fideliza.</h1>
 <p class="lead">Convertí los cortes habituales en una experiencia con premios y descuentos. Sin turnos, sin caja y sin cambiar tu forma de trabajar.</p>
-<div class="actions"><a class="btn primary" href="https://barber-vip-three.vercel.app/">Ir a la aplicación <span>↗</span></a></div>
-<div class="micro">Sin compromiso durante la prueba · Entrás directo a Barber VIP</div>
+<div class="actions"><a class="btn primary" href="https://barber-vip-three.vercel.app/">Crear cuenta · 7 días gratis <span>↗</span></a><a class="btn secondary" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta</a></div>
+<div class="micro">7 días de prueba gratis · Entrás directo a Barber VIP</div>
 </div>
 <div class="visual" aria-label="Vista ilustrativa del sistema de fidelización">
 <div class="halo"></div><div class="float-tag">✦ <b>Tu barbería,</b> tu programa</div>
-<div class="phone"><div class="screen"><div class="appname"><i>✦</i> BARBER VIP</div><div class="subtle">Hola, Nico</div><div class="client">Tus beneficios</div><div class="reward"><small>PRÓXIMO BENEFICIO</small><b>30% OFF</b><span style="font-size:10px">Cada visita te acerca a tu premio.</span></div><div class="progresslabel"><span>Tu ciclo de cortes</span><b>4 de 6</b></div><div class="progress"><span></span></div><div class="stamps"><i class="done">✓</i><i class="done">✓</i><i class="done">✓</i><i class="done">✓</i><i>5</i><i>6</i></div><p class="subtle" style="margin:18px 0 0">Un beneficio claro. Una razón más para volver.</p></div></div>
-<div class="float-card"><strong>Cliente fiel = valor a largo plazo</strong>Premiá que te elijan otra vez.</div>
+<div class="phone"><div class="screen"><div class="appname"><i>✦</i> BARBER VIP</div><div class="subtle">Buenas tardes, Nico</div><div class="client">Tu próximo descuento</div><div class="reward"><small>BENEFICIO CONFIGURADO POR TU BARBERO</small><b>20% OFF</b><span style="font-size:10px">Te faltan 2 visitas para alcanzar tu beneficio.</span></div><div class="progresslabel"><span>Tu ciclo actual</span><b>4 de 6</b></div><div class="progress"><span></span></div><div class="stamps"><i class="done">✓</i><i class="done">✓</i><i class="done">✓</i><i class="done">✓</i><i>5</i><i>6</i></div><div class="mini-cta">Agendar turno por WhatsApp</div><p class="subtle" style="margin:12px 0 0">Tu progreso y los beneficios, desde el celular.</p></div></div>
+<div class="float-card"><strong>Tu programa, tus reglas</strong>Vos definís premios y descuentos.</div>
 </div>
 </div>
 <div class="strip"><div class="wrap strip-inner"><span><b>01</b> Fidelización</span><span><b>02</b> Descuentos</span><span><b>03</b> Premios configurables</span><span><b>04</b> Simple de usar</span></div></div>
@@ -59,31 +93,38 @@
 </div>
 </div>
 </section>
-<section class="wrap" id="ideas">
-<div class="section-head"><div class="eyebrow">Ideas para sacarle provecho</div><h2>20 formas de darle vida a tu programa.</h2><p>No hace falta hacerlas todas. Elegí una o dos, probá y quedate con las que te funcionen.</p></div>
-<div class="idea-box"><h3>Pequeñas acciones, más motivos para volver.</h3><p>Los descuentos son una herramienta: usalos con intención y cuidá siempre tu margen.</p>
-<div class="ideas">
-<div class="idea"><b>01 · Tu perfil de Instagram</b>Dejá el acceso en tu bio y explicá en una historia cómo sumarse.</div>
-<div class="idea"><b>02 · Estado de WhatsApp</b>Publicá una invitación breve para que tus clientes activen su cuenta.</div>
-<div class="idea"><b>03 · Google Maps</b>Agregá el enlace de registro a tu perfil si el campo está disponible.</div>
-<div class="idea"><b>04 · En el espejo</b>Mostrá un QR en el local para que se registren mientras esperan.</div>
-<div class="idea"><b>05 · Al terminar el corte</b>Invitalos en persona en diez segundos; no hace falta un discurso.</div>
-<div class="idea"><b>06 · Mensaje posvisita</b>Mandá el enlace una sola vez a clientes que ya te conocen.</div>
-<div class="idea"><b>07 · Viernes selectivos</b>Activá un beneficio extra solo en viernes puntuales que quieras mover.</div>
-<div class="idea"><b>08 · Horarios tranquilos</b>Probá una promo en un día flojo, no cuando ya estás lleno.</div>
-<div class="idea"><b>09 · Cupos limitados</b>Definí una cantidad real de usos para no comprometer tu agenda ni tu margen.</div>
-<div class="idea"><b>10 · Semana especial</b>Elegí una semana concreta para un beneficio adicional y comunicá la fecha.</div>
-<div class="idea"><b>11 · Premiar constancia</b>Hacé que el próximo descuento sea fácil de entender y recordar.</div>
-<div class="idea"><b>12 · Meta visible</b>Recordales que pueden ver cuántos cortes les faltan para el premio.</div>
-<div class="idea"><b>13 · Clientes habituales</b>Invitá primero a tus clientes más fieles: pueden ayudarte a explicar cómo funciona.</div>
-<div class="idea"><b>14 · Reactivación amable</b>Escribí a clientes que hace tiempo no vienen, sin insistir ni culpabilizar.</div>
-<div class="idea"><b>15 · Historias de Instagram</b>Subí una captura demostrativa sin datos personales de clientes reales.</div>
-<div class="idea"><b>16 · Explicación en 3 pasos</b>“Entrás, creás tu cuenta, acumulás cortes y consultás tus beneficios”.</div>
-<div class="idea"><b>17 · Promoción con fecha</b>Indicá claramente cuándo empieza y termina para evitar confusiones.</div>
-<div class="idea"><b>18 · Beneficio sostenible</b>Calculá el descuento sobre tus números; no prometas algo que no podés sostener.</div>
-<div class="idea"><b>19 · Pedí opinión</b>Preguntá a clientes de confianza si entendieron el programa y qué les resultó útil.</div>
-<div class="idea"><b>20 · Medí lo que importa</b>Observá si los clientes vuelven y qué promociones generan visitas, no solo clics.</div>
-</div></div>
+<section class="wrap" id="experiencia">
+<div class="section-head"><div class="eyebrow">Así se usa en la práctica</div><h2>Una herramienta para vos.<br>Beneficios claros para tus clientes.</h2><p>Barber VIP tiene dos espacios conectados: vos gestionás las visitas y los premios; cada cliente puede consultar su avance desde el celular.</p></div>
+<div class="product-preview-grid">
+  <article class="app-preview admin-preview">
+    <div class="preview-top"><div><span class="eyebrow">ADMINISTRADOR</span><h3>Resumen de tu barbería</h3></div><span class="preview-pill">Tu panel</span></div>
+    <p class="preview-greeting">Buenas tardes, Nico</p>
+    <div class="preview-stats">
+      <div class="preview-stat"><span>Clientes</span><strong>24</strong><small>Tu comunidad</small></div>
+      <div class="preview-stat"><span>Visitas</span><strong>68</strong><small>Registradas</small></div>
+      <div class="preview-stat"><span>Promos</span><strong>2</strong><small>En actividad</small></div>
+    </div>
+    <div class="preview-section-label">ACCESOS RÁPIDOS</div>
+    <div class="preview-actions"><span>＋ Crear cliente</span><span>✂ Registrar visita</span><span>✦ Promociones</span><span>⚙ Configuración</span></div>
+    <p class="preview-caption">Sumá clientes, registrá los cortes y configurá los beneficios a tu manera.</p>
+  </article>
+  <article class="app-preview customer-preview">
+    <div class="preview-top"><div><span class="eyebrow">CLIENTE</span><h3>Su espacio VIP</h3></div><span class="preview-pill">En el celular</span></div>
+    <p class="preview-greeting">Buenas tardes, Nico</p>
+    <div class="customer-reward">
+      <span class="preview-section-label">TU PRÓXIMO DESCUENTO</span>
+      <strong>20% OFF</strong>
+      <p>Te faltan 2 visitas para alcanzar tu beneficio.</p>
+      <div class="customer-progress"><span></span></div>
+      <div class="customer-progress-label"><span>Ciclo actual: 4 de 6</span><b>67%</b></div>
+    </div>
+    <div class="customer-detail"><span>Tu profesional</span><strong>Datos y contacto directo</strong></div>
+    <div class="customer-whatsapp">↗ Agendar turno por WhatsApp</div>
+    <p class="preview-caption">Cada cliente consulta sus visitas, su progreso y los datos de su propio profesional.</p>
+  </article>
+</div>
+<div class="promo-highlight"><div class="promo-icon">✦</div><div><strong>También podés crear promociones puntuales</strong><p>Elegí a quiénes llegan, definí condiciones y prepará acciones para días específicos. Vos decidís qué ofrecer y cuándo.</p></div></div>
+<p class="preview-note">Vistas de ejemplo para explicar el funcionamiento. Los nombres, cantidades, premios y descuentos son ilustrativos; el profesional configura los suyos dentro de la aplicación.</p>
 </section>
 <section class="wrap" id="para-quien">
 <div class="section-head"><div class="eyebrow">Transparente desde el principio</div><h2>¿Es para vos?</h2></div>
@@ -100,13 +141,13 @@
 <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Cómo se usa en el día a día?<span class="plus">+</span></button><div class="faq-a"><p>Configurás tu programa, invitás a tus clientes y registrás el corte cuando los atendés. Ellos pueden entrar a su espacio y consultar su progreso y los beneficios disponibles.</p></div></div>
 <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Puedo hacer promociones extra algunos días?<span class="plus">+</span></button><div class="faq-a"><p>Podés usar promociones puntuales para dar un impulso en días específicos, siempre revisando las condiciones, las fechas y cuánto descuento podés sostener. No hace falta regalar margen todos los días.</p></div></div>
 <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Cómo invito a mis clientes?<span class="plus">+</span></button><div class="faq-a"><p>Compartí el acceso o el código que te da la aplicación, por ejemplo en tu bio de Instagram, un estado de WhatsApp, un QR en el local o tu perfil de Google Maps si permite añadir un enlace.</p></div></div>
-<div class="faq-item"><button class="faq-q" aria-expanded="false">¿Qué pasa con la prueba y el pago?<span class="plus">+</span></button><div class="faq-a"><p>Tenés 14 días de prueba. Al activar el plan pago durante la prueba, se suman 30 días de servicio según las condiciones de tu cuenta. Cuando vence el período pago, hay 5 días de gracia antes de la suspensión. Revisá siempre la fecha y el estado que muestra la aplicación.</p></div></div>
+<div class="faq-item"><button class="faq-q" aria-expanded="false">¿Cuánto dura la prueba gratuita?<span class="plus">+</span></button><div class="faq-a"><p>Tenés 7 días para conocer la aplicación y evaluar si encaja con tu forma de trabajar. La prueba comienza al terminar el registro. Desde la aplicación podés consultar el estado de tu cuenta y las opciones para continuar.</p></div></div>
 <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Es difícil de instalar o usar en el celular?<span class="plus">+</span></button><div class="faq-a"><p>Podés entrar desde el navegador del celular. Si tu dispositivo ofrece instalarla, vas a poder agregarla a la pantalla de inicio para abrirla como una app.</p></div></div>
 <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Me garantiza más clientes?<span class="plus">+</span></button><div class="faq-a"><p>No sería honesto prometerte eso. Barber VIP te da una herramienta para organizar beneficios y fomentar que tus clientes vuelvan; el resultado depende también de tu servicio, tus precios y cómo comuniques el programa.</p></div></div>
 </div>
-<div class="paynote"><strong>Prueba, pago y continuidad</strong><p>14 días para conocerla. Al pagar durante la prueba, se agregan 30 días de servicio. Al terminar el período pago, hay 5 días de gracia antes de la suspensión. El estado de tu suscripción se consulta dentro de la aplicación.</p></div>
+<div class="paynote"><strong>Probala y decidí con experiencia propia</strong><p>Tenés 7 días para explorar las funciones principales. No prometemos resultados automáticos: Barber VIP es una herramienta para ayudarte a organizar beneficios y fomentar que tus clientes vuelvan.</p></div>
 </section>
-<section class="wrap final"><div class="final-card"><div class="eyebrow" style="justify-content:center">Tu próximo paso</div><h2>Probala con tus clientes.<br><span style="color:var(--blue)">Decidí con experiencia propia.</span></h2><p>Entrá a Barber VIP, conocé cómo funciona y pensá qué beneficio podrías ofrecer sin comprometer tu margen.</p><div class="actions"><a class="btn primary" href="https://barber-vip-three.vercel.app/">Probar gratis 14 días ↗</a><a class="btn secondary" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta ↗</a></div></div></section>
+<section class="wrap final"><div class="final-card"><div class="eyebrow" style="justify-content:center">Tu próximo paso</div><h2>Probala con tus clientes.<br><span style="color:var(--blue)">Decidí con experiencia propia.</span></h2><p>Entrá a Barber VIP, conocé cómo funciona y pensá qué beneficio podrías ofrecer sin comprometer tu margen.</p><div class="actions"><a class="btn primary" href="https://barber-vip-three.vercel.app/">Crear cuenta · 7 días gratis ↗</a><a class="btn secondary" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta ↗</a></div></div></section>
 </main>
 <footer><div class="wrap foot"><b>✦ BARBER VIP</b><span>Fidelización digital para barberos. Sin promesas mágicas: una herramienta para premiar la constancia.</span></div></footer>
 <script>
