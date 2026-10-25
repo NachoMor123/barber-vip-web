@@ -53,6 +53,24 @@
 .customer-applied-reward span{font-size:9px;letter-spacing:.12em;font-weight:900;color:#91c5ff}
 .customer-applied-reward strong{font-size:13px;color:#e7f2ff}
 .customer-applied-reward small{font-size:10px;line-height:1.5;color:#a9bdd8}
+.admin-status-banner{display:grid;gap:7px;padding:12px 13px;border:1px solid #2a5b93;border-radius:11px;background:linear-gradient(145deg,#0b2038,#071323);margin:13px 0 9px}
+.admin-status-banner>span{font-size:8px;letter-spacing:1.2px;color:#8abfff;font-weight:850;display:flex;align-items:center;gap:7px}
+.admin-status-banner i,.customer-attendance i{display:inline-block;width:7px;height:7px;background:#5eacff;border-radius:50%;box-shadow:0 0 9px rgba(68,145,255,.65)}
+.admin-status-banner strong{font:700 14px 'Space Grotesk',sans-serif;color:#eef6ff}
+.admin-status-banner small{font-size:9px;color:#93abc9}
+.admin-register-cta{display:flex;align-items:center;gap:10px;padding:13px;border-radius:11px;border:1px solid #3c85ce;background:linear-gradient(110deg,#1457bd,#12315c);margin-bottom:16px}
+.admin-register-cta>span{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;border:1px solid rgba(185,220,255,.28);background:rgba(255,255,255,.07);color:#c6e3ff;font-size:17px}
+.admin-register-cta div{display:grid;gap:3px;flex:1}
+.admin-register-cta strong{font:700 13px 'Space Grotesk',sans-serif;color:#f4f9ff}
+.admin-register-cta small{font-size:9px;line-height:1.45;color:#d0e4ff}
+.admin-register-cta>b{color:#b9ddff;font-size:18px}
+.customer-attendance{display:flex;align-items:center;gap:7px;width:max-content;max-width:100%;padding:7px 9px;border:1px solid rgba(67,209,145,.3);border-radius:99px;background:rgba(21,130,86,.08);font-size:8px;font-weight:850;letter-spacing:.05em;color:#94e8c1;margin:0 0 11px}
+.customer-attendance i{background:#4ee0a0;box-shadow:0 0 8px rgba(78,224,160,.65)}
+.customer-mini-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0 0 11px}
+.customer-mini-stats>div{display:grid;align-content:start;gap:5px;min-width:0;padding:9px 7px;border:1px solid #244361;border-radius:9px;background:#081522}
+.customer-mini-stats span{font-size:8px;line-height:1.35;color:#9ab0c9}
+.customer-mini-stats strong{font:700 12px 'Space Grotesk',sans-serif;color:#eff6ff;overflow-wrap:anywhere}
+@media(max-width:520px){.customer-mini-stats span{font-size:7px}.customer-mini-stats strong{font-size:11px}.admin-register-cta{padding:10px}.customer-attendance{font-size:7px}}
 </style>
 </head>
 <body>
@@ -101,20 +119,19 @@
 <div class="section-head"><div class="eyebrow">Así se usa en la práctica</div><h2>Una herramienta para vos.<br>Beneficios claros para tus clientes.</h2><p>Barber VIP tiene dos espacios conectados: vos gestionás las visitas y los premios; cada cliente puede consultar su avance desde el celular.</p></div>
 <div class="product-preview-grid">
   <article class="app-preview admin-preview">
-    <div class="preview-top"><div><span class="eyebrow">ADMINISTRADOR</span><h3>Resumen de tu barbería</h3></div><span class="preview-pill">Tu panel</span></div>
+    <div class="preview-top"><div><span class="eyebrow">ADMINISTRADOR</span><h3>Resumen de tu actividad</h3></div><span class="preview-pill">Tu panel</span></div>
     <p class="preview-greeting">Buenas tardes, Nico</p>
-    <div class="preview-stats">
-      <div class="preview-stat"><span>Clientes</span><strong>24</strong><small>Tu comunidad</small></div>
-      <div class="preview-stat"><span>Visitas</span><strong>68</strong><small>Registradas</small></div>
-      <div class="preview-stat"><span>Promos</span><strong>2</strong><small>En actividad</small></div>
-    </div>
+    <div class="admin-status-banner"><span><i></i> ESTADO DE CUENTA</span><strong>Prueba gratuita</strong><small>Ejemplo de estado en pantalla</small></div>
+    <div class="admin-register-cta"><span>✂</span><div><strong>Registrar visita</strong><small>Elegí un cliente y registrá su visita.</small></div><b>→</b></div>
     <div class="preview-section-label">ACCESOS RÁPIDOS</div>
     <div class="preview-actions"><span>＋ Crear cliente</span><span>✂ Registrar visita</span><span>✦ Promociones</span><span>⚙ Configuración</span></div>
-    <p class="preview-caption">Sumá clientes, registrá los cortes y configurá los beneficios a tu manera.</p>
+    <p class="preview-caption">Tu panel está preparado para que las acciones habituales queden a mano.</p>
   </article>
   <article class="app-preview customer-preview">
     <div class="preview-top"><div><span class="eyebrow">CLIENTE</span><h3>Su espacio VIP</h3></div><span class="preview-pill">En el celular</span></div>
     <p class="preview-greeting">Buenas tardes, Nico</p>
+    <div class="customer-attendance"><i></i> TU PROFESIONAL ESTÁ ATENDIENDO</div>
+    <div class="customer-mini-stats"><div><span>Visitas totales</span><strong>18</strong></div><div><span>Última visita</span><strong>Hace 4 días</strong></div><div><span>Ciclo actual</span><strong>4/6</strong></div></div>
     <div class="customer-reward">
       <span class="preview-section-label">TU PRÓXIMO DESCUENTO</span>
       <strong>30% OFF</strong>
@@ -123,7 +140,7 @@
       <div class="customer-progress-label"><span>Ciclo actual: 4 de 6</span><b>67%</b></div>
     </div>
     <div class="customer-applied-reward"><span>✓ DESCUENTO APLICADO</span><strong>20% OFF · hito 4</strong><small>El progreso continúa hacia el próximo beneficio.</small></div>
-    <div class="customer-detail"><span>Tu profesional</span><strong>Datos y contacto directo</strong></div>
+    <div class="customer-detail"><span>Datos de tu profesional</span><strong>Contacto directo</strong></div>
     <div class="customer-whatsapp">↗ Agendar turno por WhatsApp</div>
     <p class="preview-caption">Cada cliente consulta sus visitas, su progreso y los datos de su propio profesional.</p>
   </article>
