@@ -261,7 +261,7 @@
   .bv-client-grid{gap:clamp(24px,4vw,44px)}
   .bv-screenshot-figure{align-self:center}
   .bv-screenshot-frame{width:min(100%,460px);max-width:460px;padding:7px;border:1px solid #3482c7;border-radius:25px;background:linear-gradient(145deg,#102e52 0%,#071629 44%,#020712 100%);box-shadow:0 0 0 4px #0a1930,0 0 0 5px #2766a04a,0 24px 58px #0009,0 0 35px #1685ff20;overflow:hidden}
-  .bv-screenshot-frame img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;object-position:center;image-rendering:auto;border-radius:18px;background:#020713}
+  .bv-screenshot-frame img,.bv-screenshot-frame .bv-screenshot-image{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;object-position:center;image-rendering:auto;border-radius:18px;background:#020713}
   .bv-screenshot-figure figcaption{color:#8eadd0;font-size:11px}
   .bv-client-benefits article{border-color:#ffffff15}
   .bv-client-benefits article:first-child{border-color:#ffffff15}
@@ -358,7 +358,7 @@
   </div>
   <div class="bv-client-grid">
     <figure class="bv-screenshot-figure">
-      <div class="bv-screenshot-frame"><img src="/assets/cliente.webp" alt="Captura real de Barber VIP en el espacio del cliente, con visitas, ciclo actual y descuentos." width="240" height="495" loading="lazy" decoding="async"></div>
+      <div class="bv-screenshot-frame"><svg class="bv-screenshot-image" viewBox="0 0 483 996" role="img" aria-label="Captura real de Barber VIP en el espacio del cliente, con visitas, ciclo actual y descuentos." xmlns="http://www.w3.org/2000/svg"><defs><filter id="bv-client-image-sharpen" x="-2%" y="-2%" width="104%" height="104%" color-interpolation-filters="sRGB"><feConvolveMatrix order="3" kernelMatrix="0 -0.15 0 -0.15 1.6 -0.15 0 -0.15 0" divisor="1" bias="0" preserveAlpha="true"/></filter></defs><image href="/assets/cliente.webp" x="0" y="0" width="483" height="996" preserveAspectRatio="none" filter="url(#bv-client-image-sharpen)"/></svg></div>
       <figcaption>Captura real del apartado de cliente de Barber VIP.</figcaption>
     </figure>
     <div class="bv-client-benefits">
