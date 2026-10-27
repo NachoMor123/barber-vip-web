@@ -300,6 +300,110 @@
     .bv-final-card{box-shadow:inset 0 1px #ffffff15,0 18px 40px #0005}
   }
 </style>
+
+<style id="responsive-screen-preview">
+  /* Espacio de lectura mejor aprovechado en notebook, PC y móvil */
+  :root { --max: 1240px; }
+  .wrap {
+    width: min(var(--max), calc(100% - clamp(24px, 5vw, 88px)));
+    margin-inline: auto;
+  }
+
+  /* Captura del cliente: sin marco decorativo ni relleno exterior.
+     La anchura se adapta a la altura útil de la pantalla y conserva el
+     formato vertical original de la interfaz móvil. */
+  .bv-client-section .bv-client-grid {
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    gap: clamp(22px, 3.5vw, 46px);
+    align-items: center;
+  }
+  .bv-client-section .bv-screenshot-figure {
+    width: 100%;
+    min-width: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .bv-client-section .bv-screenshot-frame {
+    width: min(100%, 48svh, 483px);
+    max-width: 483px;
+    padding: 0;
+    margin-inline: auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    overflow: visible;
+  }
+  .bv-client-section .bv-screenshot-frame .bv-screenshot-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 483 / 996;
+    object-fit: contain;
+    object-position: center;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+  .bv-client-section .bv-screenshot-figure figcaption {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  /* Vista intermedia de notebooks y tablets apaisadas */
+  @media (min-width: 781px) and (max-width: 1100px) {
+    .bv-client-section .bv-client-grid {
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: clamp(18px, 2.5vw, 30px);
+    }
+    .bv-client-section .bv-screenshot-frame {
+      width: min(100%, 48svh, 430px);
+    }
+    .bv-client-section .bv-client-benefits h3 {
+      font-size: clamp(15px, 1.6vw, 17px);
+    }
+    .bv-client-section .bv-client-benefits p {
+      font-size: clamp(11px, 1.2vw, 12px);
+    }
+  }
+
+  /* En móvil, la captura ocupa prácticamente toda la altura útil,
+     sin perder anchura por bordes, sombra o marco falso. */
+  @media (max-width: 780px) {
+    .wrap { width: calc(100% - 32px); }
+    .bv-client-section .bv-client-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 24px;
+    }
+    .bv-client-section .bv-screenshot-frame {
+      width: min(100%, 48svh, 483px);
+      max-width: 483px;
+    }
+    .bv-client-section .bv-screenshot-frame .bv-screenshot-image {
+      width: 100%;
+      height: auto;
+    }
+    .bv-client-section .bv-client-benefits {
+      max-width: 650px;
+      width: 100%;
+      margin-inline: auto;
+    }
+  }
+  @media (max-width: 520px) {
+    .wrap { width: calc(100% - 24px); }
+    .bv-client-section .bv-screenshot-frame {
+      width: min(100%, 48svh, 483px);
+    }
+    .bv-client-section .bv-screenshot-figure figcaption {
+      font-size: 10px;
+    }
+  }
+</style>
+
 </head>
 <body>
 <header class="wrap nav" id="inicio">
