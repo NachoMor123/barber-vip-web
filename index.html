@@ -301,106 +301,133 @@
   }
 </style>
 
-<style id="responsive-screen-preview">
-  /* Espacio de lectura mejor aprovechado en notebook, PC y móvil */
+<style id="dynamic-client-story">
   :root { --max: 1240px; }
-  .wrap {
-    width: min(var(--max), calc(100% - clamp(24px, 5vw, 88px)));
-    margin-inline: auto;
-  }
+  .wrap { width: min(var(--max), calc(100% - clamp(24px, 5vw, 88px))); margin-inline: auto; }
 
-  /* Captura del cliente: sin marco decorativo ni relleno exterior.
-     La anchura se adapta a la altura útil de la pantalla y conserva el
-     formato vertical original de la interfaz móvil. */
-  .bv-client-section .bv-client-grid {
-    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
-    gap: clamp(22px, 3.5vw, 46px);
-    align-items: center;
-  }
-  .bv-client-section .bv-screenshot-figure {
-    width: 100%;
-    min-width: 0;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  .bv-client-section .bv-screenshot-frame {
-    width: min(100%, 48svh, 483px);
-    max-width: 483px;
-    padding: 0;
-    margin-inline: auto;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-    overflow: visible;
-  }
-  .bv-client-section .bv-screenshot-frame .bv-screenshot-image {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 483 / 996;
-    object-fit: contain;
-    object-position: center;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-  }
-  .bv-client-section .bv-screenshot-figure figcaption {
-    max-width: 100%;
-    text-align: center;
-    margin-top: 2px;
-  }
+  .bv-dynamic-section { width: min(1240px, calc(100% - clamp(24px, 5vw, 88px))); }
+  .bv-dynamic-intro { max-width: 830px; margin: 0 auto clamp(28px, 4vw, 48px); text-align: center; }
+  .bv-dynamic-intro .bv-eyebrow { justify-content: center; }
+  .bv-dynamic-intro .bv-eyebrow:before { display: none; }
+  .bv-dynamic-intro h2 { font-size: clamp(34px, 4.6vw, 54px); line-height: 1.04; letter-spacing: -2px; margin: 16px 0; }
+  .bv-dynamic-intro h2 span { color: #70bdff; }
+  .bv-dynamic-intro > p { max-width: 710px; margin: 0 auto; color: #b0c5df; font-size: clamp(13px, 1.25vw, 16px); line-height: 1.8; }
 
-  /* Vista intermedia de notebooks y tablets apaisadas */
-  @media (min-width: 781px) and (max-width: 1100px) {
-    .bv-client-section .bv-client-grid {
-      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-      gap: clamp(18px, 2.5vw, 30px);
-    }
-    .bv-client-section .bv-screenshot-frame {
-      width: min(100%, 48svh, 430px);
-    }
-    .bv-client-section .bv-client-benefits h3 {
-      font-size: clamp(15px, 1.6vw, 17px);
-    }
-    .bv-client-section .bv-client-benefits p {
-      font-size: clamp(11px, 1.2vw, 12px);
-    }
-  }
+  .bv-dynamic-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5.5vw, 76px); align-items: center; }
+  .bv-dynamic-copy { min-width: 0; max-width: 510px; }
+  .bv-demo-kicker { display: flex; align-items: center; gap: 9px; font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #89c9ff; }
+  .bv-live-dot { width: 8px; height: 8px; flex: 0 0 8px; border-radius: 50%; background: #69c5ff; box-shadow: 0 0 12px #309aff; animation: bv-live-pulse 2s ease-in-out infinite; }
+  .bv-dynamic-copy > h3 { font: 700 clamp(26px, 3.4vw, 40px)/1.1 'Space Grotesk', sans-serif; letter-spacing: -1.4px; margin: 18px 0 14px; color: #f1f7ff; }
+  .bv-dynamic-copy > p { margin: 0; font-size: 14px; line-height: 1.85; color: #aebfd4; }
+  .bv-dynamic-points { display: grid; gap: 0; margin-top: 24px; }
+  .bv-dynamic-points article { display: flex; align-items: flex-start; gap: 13px; padding: 17px 0; border-top: 1px solid #ffffff12; }
+  .bv-dynamic-number { display: grid; place-items: center; flex: 0 0 34px; width: 34px; height: 34px; border: 1px solid #2d659d; border-radius: 10px; background: #0b2441; color: #8dceff; font: 800 10px 'Space Grotesk', sans-serif; }
+  .bv-dynamic-points strong { display: block; font: 700 15px 'Space Grotesk', sans-serif; color: #eaf4ff; margin: 1px 0 5px; }
+  .bv-dynamic-points p { margin: 0; font-size: 12px; line-height: 1.7; color: #9fb3cc; }
 
-  /* En móvil, la captura ocupa prácticamente toda la altura útil,
-     sin perder anchura por bordes, sombra o marco falso. */
+  .bv-demo-wrap { position: relative; min-width: 0; isolation: isolate; }
+  .bv-demo-glow { position: absolute; inset: 12% -8%; z-index: -1; pointer-events: none; background: radial-gradient(ellipse at 50% 46%, #167dff1d, transparent 68%); filter: blur(14px); }
+  .bv-demo-card { position: relative; overflow: hidden; border: 1px solid #2c5f91; border-radius: 22px; padding: clamp(18px, 2.4vw, 29px); background: radial-gradient(ellipse at 100% 0, #1456a328, transparent 45%), linear-gradient(145deg, #0d2038 0%, #081629 70%, #050d19 100%); box-shadow: inset 0 1px #ffffff13, 0 24px 65px #0006; }
+  .bv-demo-card:before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #7acbff, #327bff, transparent); opacity: .9; }
+  .bv-demo-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 17px; border-bottom: 1px solid #ffffff12; }
+  .bv-demo-brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
+  .bv-demo-mark { display: grid; place-items: center; flex: 0 0 33px; width: 33px; height: 33px; border-radius: 10px; background: linear-gradient(145deg,#94d8ff,#2780f5); color: #041428; box-shadow: 0 0 22px #218aff32; }
+  .bv-demo-brand b,.bv-demo-brand small { display: block; }
+  .bv-demo-brand b { font: 700 12px 'Space Grotesk',sans-serif; letter-spacing: .3px; color: #f0f7ff; }
+  .bv-demo-brand small { font-size: 10px; color: #91a9c6; margin-top: 3px; }
+  .bv-demo-badge { flex: 0 0 auto; border: 1px solid #2c5d8e; border-radius: 99px; padding: 6px 9px; color: #9bcfff; font-size: 8px; font-weight: 800; letter-spacing: .7px; }
+  .bv-demo-welcome { margin: 22px 0 15px; }
+  .bv-demo-welcome > small { font-size: 9px; font-weight: 800; letter-spacing: 1.6px; color: #72baff; }
+  .bv-demo-welcome h4 { font: 700 clamp(22px, 2.5vw, 28px)/1.1 'Space Grotesk',sans-serif; letter-spacing: -.7px; color: #f3f8ff; margin: 7px 0 5px; }
+  .bv-demo-welcome p { margin: 0; font-size: 11px; color: #9eb2cb; }
+  .bv-demo-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .bv-demo-stats > div { min-width: 0; padding: 13px 14px; border: 1px solid #224160; border-radius: 12px; background: #061321a8; }
+  .bv-demo-stats > div > span { display: block; font-size: 10px; color: #9bb1ca; }
+  .bv-demo-stats strong { display: block; margin-top: 5px; color: #f3f8ff; font: 700 25px 'Space Grotesk',sans-serif; }
+  .bv-demo-stats strong i { color: #91a8c1; font: 500 13px 'DM Sans',sans-serif; font-style: normal; }
+  .bv-demo-progress { height: 8px; margin-top: 17px; border-radius: 99px; background: #1a3552; overflow: hidden; }
+  .bv-demo-progress > span { display: block; height: 100%; width: 66.67%; border-radius: inherit; background: linear-gradient(90deg,#277dff,#75caff); box-shadow: 0 0 18px #2789ff65; transition: width .42s cubic-bezier(.2,.8,.2,1); }
+  .bv-demo-milestones { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 7px; margin-top: 10px; }
+  .bv-demo-milestones > span { display: grid; place-items: center; min-width: 0; height: 30px; border: 1px solid #25415f; border-radius: 8px; background: #081525; color: #6f87a4; font: 700 10px 'Space Grotesk',sans-serif; transition: background .25s,border-color .25s,color .25s,transform .25s; }
+  .bv-demo-milestones > span.is-done { border-color: #286bb4; background: #123d6d; color: #d6edff; }
+  .bv-demo-milestones > span.is-reward { border-color: #72c6ff; background: linear-gradient(145deg,#86d2ff,#2b89f7); color: #03162c; box-shadow: 0 0 18px #188bff24; }
+  .bv-demo-milestones > span.just-reached { transform: translateY(-3px); }
+  .bv-demo-reward { display: flex; align-items: center; gap: 12px; margin-top: 19px; padding: 14px; border: 1px solid #2d5d8c; border-radius: 13px; background: linear-gradient(110deg,#103354,#0b1e33); transition: border-color .25s,background .25s; }
+  .bv-demo-reward.is-complete { border-color: #68baff; background: linear-gradient(110deg,#144778,#0d2544); }
+  .bv-demo-reward-icon { display: grid; place-items: center; flex: 0 0 43px; width: 43px; height: 43px; border: 1px solid #3a79b0; border-radius: 12px; background: #174774; color: #9cd5ff; font: 700 23px 'Space Grotesk',sans-serif; }
+  .bv-demo-reward small,.bv-demo-reward strong { display: block; }
+  .bv-demo-reward small { font-size: 8px; line-height: 1.5; font-weight: 800; letter-spacing: .7px; color: #a0d4ff; }
+  .bv-demo-reward strong { font: 700 21px 'Space Grotesk',sans-serif; color: #f1f8ff; margin: 2px 0; }
+  .bv-demo-reward p { font-size: 10px; line-height: 1.5; margin: 0; color: #b2c9e2; }
+  .bv-demo-next { display: flex; align-items: center; gap: 9px; margin-top: 13px; font-size: 11px; line-height: 1.6; color: #b7cce2; }
+  .bv-next-icon { display: grid; place-items: center; flex: 0 0 25px; width: 25px; height: 25px; border-radius: 8px; background: #102a45; color: #8acbff; }
+  .bv-demo-button { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; min-height: 45px; margin-top: 15px; border: 1px solid #78c8ff; border-radius: 10px; background: linear-gradient(120deg,#83d2ff,#388dff 60%,#2464ff); color: #031126; font: 800 12px 'DM Sans',sans-serif; box-shadow: 0 8px 28px #167dff30,inset 0 1px #ffffff82; transition: filter .2s,transform .2s,box-shadow .2s; }
+  .bv-demo-button:hover { filter: brightness(1.07); transform: translateY(-1px); box-shadow: 0 10px 32px #167dff45; }
+  .bv-demo-button:focus-visible { outline: 3px solid #e0f3ff; outline-offset: 3px; }
+  .bv-demo-disclaimer { margin: 11px 0 0; color: #758da9; font-size: 9px; text-align: center; line-height: 1.55; }
+  .bv-dynamic-bottom { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 13px; margin-top: clamp(26px, 4vw, 44px); }
+  .bv-dynamic-bottom > div { min-width: 0; position: relative; padding: 20px; border: 1px solid #214469; border-radius: 14px; background: linear-gradient(145deg,#0b1d34,#06111e); }
+  .bv-bottom-icon { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; margin-bottom: 14px; border: 1px solid #2b659a; background: #0e2d4d; color: #8bcaff; }
+  .bv-dynamic-bottom strong { display: block; font: 700 14px 'Space Grotesk',sans-serif; color: #ebf5ff; }
+  .bv-dynamic-bottom p { margin: 6px 0 0; color: #95acc6; font-size: 11px; line-height: 1.65; }
+  @keyframes bv-live-pulse { 50% { opacity: .48; box-shadow: 0 0 3px #309aff; } }
+
+  @media (min-width: 1400px) {
+    .bv-dynamic-layout { gap: 76px; }
+    .bv-demo-card { padding: 30px; }
+  }
+  @media (max-width: 1100px) {
+    .bv-dynamic-section { width: calc(100% - 52px); }
+    .bv-dynamic-layout { grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); gap: 26px; }
+    .bv-demo-card { padding: 20px; }
+    .bv-demo-stats > div { padding: 11px; }
+    .bv-demo-stats strong { font-size: 23px; }
+    .bv-dynamic-bottom > div { padding: 17px; }
+  }
   @media (max-width: 780px) {
-    .wrap { width: calc(100% - 32px); }
-    .bv-client-section .bv-client-grid {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 24px;
-    }
-    .bv-client-section .bv-screenshot-frame {
-      width: min(100%, 48svh, 483px);
-      max-width: 483px;
-    }
-    .bv-client-section .bv-screenshot-frame .bv-screenshot-image {
-      width: 100%;
-      height: auto;
-    }
-    .bv-client-section .bv-client-benefits {
-      max-width: 650px;
-      width: 100%;
-      margin-inline: auto;
-    }
+    .wrap, .bv-dynamic-section { width: calc(100% - 32px); }
+    .bv-dynamic-intro { text-align: left; margin-bottom: 27px; }
+    .bv-dynamic-intro .bv-eyebrow { justify-content: flex-start; }
+    .bv-dynamic-intro .bv-eyebrow:before { display: block; }
+    .bv-dynamic-intro h2 { font-size: clamp(33px, 6vw, 43px); letter-spacing: -1.4px; }
+    .bv-dynamic-layout { grid-template-columns: minmax(0,1fr); gap: 27px; }
+    .bv-dynamic-copy { max-width: 680px; }
+    .bv-dynamic-copy > h3 { font-size: clamp(27px,5vw,36px); }
+    .bv-demo-wrap { width: 100%; max-width: 620px; margin-inline: auto; }
+    .bv-demo-card { padding: clamp(18px, 4vw, 26px); }
+    .bv-dynamic-bottom { grid-template-columns: 1fr; gap: 10px; }
+    .bv-dynamic-bottom > div { display: grid; grid-template-columns: 34px minmax(0,1fr); column-gap: 12px; align-items: center; padding: 15px; }
+    .bv-bottom-icon { grid-row: span 2; margin: 0; }
+    .bv-dynamic-bottom strong { align-self: end; }
+    .bv-dynamic-bottom p { align-self: start; margin-top: 3px; }
   }
   @media (max-width: 520px) {
-    .wrap { width: calc(100% - 24px); }
-    .bv-client-section .bv-screenshot-frame {
-      width: min(100%, 48svh, 483px);
-    }
-    .bv-client-section .bv-screenshot-figure figcaption {
-      font-size: 10px;
-    }
+    .wrap, .bv-dynamic-section { width: calc(100% - 24px); }
+    .bv-dynamic-intro h2 { font-size: clamp(30px, 8vw, 37px); line-height: 1.08; letter-spacing: -.9px; }
+    .bv-dynamic-intro > p { font-size: 13px; }
+    .bv-dynamic-copy > p { font-size: 13px; }
+    .bv-dynamic-points article { padding: 14px 0; }
+    .bv-dynamic-points p { font-size: 11px; }
+    .bv-demo-card { padding: 16px 13px; border-radius: 17px; }
+    .bv-demo-top { gap: 7px; }
+    .bv-demo-mark { flex-basis: 29px; width: 29px; height: 29px; }
+    .bv-demo-brand b { font-size: 11px; }
+    .bv-demo-brand small { font-size: 9px; }
+    .bv-demo-badge { padding: 5px 7px; font-size: 7px; letter-spacing: .35px; }
+    .bv-demo-stats { gap: 7px; }
+    .bv-demo-stats > div { padding: 10px; }
+    .bv-demo-stats strong { font-size: 22px; }
+    .bv-demo-milestones { gap: 5px; }
+    .bv-demo-milestones > span { height: 27px; }
+    .bv-demo-reward { gap: 10px; padding: 12px 10px; }
+    .bv-demo-reward-icon { flex-basis: 37px; width: 37px; height: 37px; }
+    .bv-demo-reward strong { font-size: 19px; }
+    .bv-demo-next { font-size: 10px; }
+    .bv-demo-disclaimer { font-size: 8px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bv-live-dot { animation: none; }
+    .bv-demo-progress > span, .bv-demo-milestones > span, .bv-demo-reward { transition: none; }
   }
 </style>
 
@@ -454,22 +481,73 @@
   </div>
 </section>
 
-<section class="bv-section wrap bv-client-section" id="vista-cliente">
-  <div class="bv-section-head">
-    <div class="bv-eyebrow">Así lo ve tu cliente</div>
-    <h2>Su tarjeta digital,<br><span>en el celular.</span></h2>
-    <p>La primera vez, la instala desde el navegador del celular. Después la abre desde su ícono para consultar sus visitas, beneficios y los datos de su barbero.</p>
+<section class="bv-section wrap bv-client-section bv-dynamic-section" id="vista-cliente">
+  <div class="bv-dynamic-intro">
+    <div class="bv-eyebrow">La experiencia del cliente</div>
+    <h2>Cada visita lo acerca<br><span>a su próximo beneficio.</span></h2>
+    <p>El cliente puede seguir su progreso, saber qué beneficio alcanzó y consultar los datos de su barbero, todo desde su celular.</p>
   </div>
-  <div class="bv-client-grid">
-    <figure class="bv-screenshot-figure">
-      <div class="bv-screenshot-frame"><svg class="bv-screenshot-image" viewBox="0 0 483 996" role="img" aria-label="Captura real de Barber VIP en el espacio del cliente, con visitas, ciclo actual y descuentos." xmlns="http://www.w3.org/2000/svg"><defs><filter id="bv-client-image-sharpen" x="-2%" y="-2%" width="104%" height="104%" color-interpolation-filters="sRGB"><feConvolveMatrix order="3" kernelMatrix="0 -0.15 0 -0.15 1.6 -0.15 0 -0.15 0" divisor="1" bias="0" preserveAlpha="true"/></filter></defs><image href="/assets/cliente.webp" x="0" y="0" width="483" height="996" preserveAspectRatio="none" filter="url(#bv-client-image-sharpen)"/></svg></div>
-      <figcaption>Captura real del apartado de cliente de Barber VIP.</figcaption>
-    </figure>
-    <div class="bv-client-benefits">
-      <article><span class="bv-list-number">01</span><div><h3>Ve dónde está parado</h3><p>Visitas registradas, última visita y avance del ciclo actual.</p></div></article>
-      <article><span class="bv-list-number">02</span><div><h3>Sabe qué descuento tiene</h3><p>El beneficio alcanzado queda visible mientras sigue avanzando hacia el próximo hito.</p></div></article>
-      <article><span class="bv-list-number">03</span><div><h3>Encuentra tus datos</h3><p>Puede consultar la información y las vías de contacto de su propio barbero.</p></div></article>
+
+  <div class="bv-dynamic-layout">
+    <div class="bv-dynamic-copy">
+      <div class="bv-demo-kicker"><span class="bv-live-dot"></span> Un sistema fácil de entender</div>
+      <h3>La fidelización se vuelve visible.</h3>
+      <p>Cuando el avance es claro, el cliente sabe cuánto recorrió y qué le falta para llegar al siguiente hito. Vos definís las visitas y los beneficios.</p>
+      <div class="bv-dynamic-points">
+        <article>
+          <span class="bv-dynamic-number">01</span>
+          <div><strong>Progreso a la vista</strong><p>Consulta sus visitas registradas y el avance de su ciclo.</p></div>
+        </article>
+        <article>
+          <span class="bv-dynamic-number">02</span>
+          <div><strong>Beneficios claros</strong><p>Puede ver el descuento que alcanzó y el siguiente objetivo.</p></div>
+        </article>
+        <article>
+          <span class="bv-dynamic-number">03</span>
+          <div><strong>Contacto directo</strong><p>Encuentra los datos y las vías de contacto de su propio barbero.</p></div>
+        </article>
+      </div>
     </div>
+
+    <div class="bv-demo-wrap" data-loyalty-demo>
+      <div class="bv-demo-card">
+        <div class="bv-demo-top">
+          <div class="bv-demo-brand"><span class="bv-demo-mark">✦</span><span><b>BARBER VIP</b><small>Tu tarjeta de fidelización</small></span></div>
+          <span class="bv-demo-badge">DEMO INTERACTIVA</span>
+        </div>
+
+        <div class="bv-demo-welcome"><small>HOLA, SANTIAGO</small><h4>Tu progreso</h4><p>Un ejemplo de cómo se muestran las visitas.</p></div>
+
+        <div class="bv-demo-stats">
+          <div><span>Visitas del ciclo</span><strong><span data-demo-count>4</span><i>/ 6</i></strong></div>
+          <div><span>Progreso</span><strong data-demo-percent>67%</strong></div>
+        </div>
+
+        <div class="bv-demo-progress" role="progressbar" aria-label="Progreso ilustrativo del ciclo" aria-valuemin="0" aria-valuemax="6" aria-valuenow="4">
+          <span data-demo-bar></span>
+        </div>
+        <div class="bv-demo-milestones" aria-label="Visitas del ejemplo">
+          <span class="is-done">1</span><span class="is-done">2</span><span class="is-done">3</span><span class="is-done is-reward">4</span><span>5</span><span>6</span>
+        </div>
+
+        <div class="bv-demo-reward" data-demo-reward>
+          <div class="bv-demo-reward-icon">%</div>
+          <div><small data-demo-reward-label>BENEFICIO ALCANZADO · EJEMPLO</small><strong data-demo-reward-value>20% OFF</strong><p data-demo-reward-description>Un descuento de ejemplo configurado para un hito anterior.</p></div>
+        </div>
+
+        <div class="bv-demo-next" aria-live="polite"><span class="bv-next-icon">↗</span><span data-demo-status>Te faltan 2 visitas para llegar al hito de ejemplo.</span></div>
+
+        <button class="bv-demo-button" type="button" data-demo-next>Simular próxima visita <span>＋</span></button>
+        <p class="bv-demo-disclaimer">Simulación ilustrativa: no modifica datos reales. Cada barbero configura sus propios hitos y descuentos.</p>
+      </div>
+      <div class="bv-demo-glow" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="bv-dynamic-bottom">
+    <div><span class="bv-bottom-icon">↗</span><strong>Vos registrás la visita.</strong><p>El avance se actualiza en el programa.</p></div>
+    <div><span class="bv-bottom-icon">◎</span><strong>El cliente ve su avance.</strong><p>No tiene que llevar la cuenta de memoria.</p></div>
+    <div><span class="bv-bottom-icon">✦</span><strong>Vos definís el premio.</strong><p>Los beneficios se adaptan a tu forma de trabajar.</p></div>
   </div>
 </section>
 
@@ -525,5 +603,67 @@
  window.addEventListener('resize',()=>{const open=document.querySelector('.faq-item.open .faq-a');if(open)open.style.maxHeight=open.scrollHeight+'px'});
 })();
 </script>
+
+<script>
+(() => {
+  const demo = document.querySelector('[data-loyalty-demo]');
+  if (!demo) return;
+
+  let visits = 4;
+  const goal = 6;
+  const count = demo.querySelector('[data-demo-count]');
+  const percent = demo.querySelector('[data-demo-percent]');
+  const bar = demo.querySelector('[data-demo-bar]');
+  const progress = demo.querySelector('[role="progressbar"]');
+  const milestones = [...demo.querySelectorAll('.bv-demo-milestones > span')];
+  const status = demo.querySelector('[data-demo-status]');
+  const button = demo.querySelector('[data-demo-next]');
+  const reward = demo.querySelector('[data-demo-reward]');
+  const rewardLabel = demo.querySelector('[data-demo-reward-label]');
+  const rewardValue = demo.querySelector('[data-demo-reward-value]');
+  const rewardDescription = demo.querySelector('[data-demo-reward-description]');
+
+  const render = () => {
+    const value = Math.min(visits, goal);
+    const ratio = (value / goal) * 100;
+    count.textContent = String(value);
+    percent.textContent = Math.round(ratio) + '%';
+    bar.style.width = ratio + '%';
+    progress.setAttribute('aria-valuenow', String(value));
+
+    milestones.forEach((item, index) => {
+      const visit = index + 1;
+      item.classList.toggle('is-done', visit <= value);
+      item.classList.toggle('is-reward', visit === 4 && value >= 4);
+      item.classList.toggle('just-reached', visit === value && value > 4);
+    });
+
+    if (value >= goal) {
+      reward.classList.add('is-complete');
+      rewardLabel.textContent = 'HITO ALCANZADO · EJEMPLO';
+      rewardValue.textContent = '¡Llegaste a 6!';
+      rewardDescription.textContent = 'El barbero define qué beneficio corresponde a este hito.';
+      status.textContent = '¡Objetivo alcanzado! Reiniciá el ejemplo para volver a probarlo.';
+      button.innerHTML = 'Reiniciar ejemplo <span>↻</span>';
+      button.setAttribute('aria-label', 'Reiniciar demostración de fidelización');
+    } else {
+      reward.classList.remove('is-complete');
+      rewardLabel.textContent = 'BENEFICIO ALCANZADO · EJEMPLO';
+      rewardValue.textContent = '20% OFF';
+      rewardDescription.textContent = 'Un descuento de ejemplo configurado para un hito anterior.';
+      status.textContent = 'Te faltan ' + (goal - value) + ' ' + ((goal - value) === 1 ? 'visita' : 'visitas') + ' para llegar al hito de ejemplo.';
+      button.innerHTML = 'Simular próxima visita <span>＋</span>';
+      button.setAttribute('aria-label', 'Simular una visita más en la demostración');
+    }
+  };
+
+  button.addEventListener('click', () => {
+    visits = visits >= goal ? 1 : visits + 1;
+    render();
+  });
+  render();
+})();
+</script>
+
 </body>
 </html>
