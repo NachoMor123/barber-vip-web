@@ -3,379 +3,349 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050b17">
-<meta name="description" content="Barber VIP ayuda a los barberos a fidelizar clientes con visitas, beneficios y promociones que cada barbero configura.">
-<title>Barber VIP — Un motivo más para volver</title>
+<meta name="theme-color" content="#030815">
+<meta name="description" content="Barber VIP: fidelizá clientes con visitas, hitos y descuentos que vos configurás. 7 días gratis.">
+<title>Barber VIP — Fidelización para barberos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   color-scheme: dark;
-  --bg: #050b17;
-  --panel: #0a1728;
-  --panel2: #0d2037;
-  --line: #203c5e;
-  --blue: #68bdff;
-  --blue-bright: #388aff;
+  --bg: #030815;
+  --bg2: #061226;
+  --panel: #09172a;
+  --panel2: #0b2039;
+  --line: #1b3d61;
+  --blue: #73c2ff;
+  --blue2: #347fff;
   --text: #f4f8ff;
-  --muted: #a6bad3;
-  --soft: #7f96b2;
-  --max: 1180px;
+  --muted: #a8bbd4;
+  --quiet: #8097b4;
+  --max: 1160px;
+  --scroll-progress: 0%;
+  --scroll-shift: 0px;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+html { scroll-behavior: smooth; scroll-padding-top: 82px; }
 body {
-  margin: 0;
-  color: var(--text);
+  margin: 0; min-width: 320px; overflow-x: hidden;
   background:
-    radial-gradient(ellipse at 78% 5%, #0d3c7629 0, transparent 33rem),
-    radial-gradient(ellipse at 15% 35%, #10295218 0, transparent 30rem),
+    radial-gradient(ellipse at 80% -8%, #123d7626 0, transparent 36rem),
+    radial-gradient(ellipse at 0% 38%, #0b2a501c 0, transparent 42rem),
     var(--bg);
-  font: 400 16px/1.6 'DM Sans', sans-serif;
-  overflow-x: hidden;
+  color: var(--text); font: 400 16px/1.6 'DM Sans', sans-serif;
 }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
-.wrap { width: min(var(--max), calc(100% - clamp(28px, 6vw, 96px))); margin-inline: auto; }
+::selection { color: #031020; background: #80caff; }
+.wrap { width: min(var(--max), calc(100% - clamp(28px, 6vw, 88px))); margin-inline: auto; }
 h1,h2,h3,p { margin-top: 0; }
-h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; line-height: 1.08; letter-spacing: -.045em; }
-a:focus-visible,button:focus-visible { outline: 3px solid #b8e2ff; outline-offset: 4px; }
-::selection { background: #63b4ff; color: #041020; }
+h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; line-height: 1.06; letter-spacing: -.055em; }
+a:focus-visible,button:focus-visible { outline: 3px solid #d0eeff; outline-offset: 4px; }
 
+#scroll-line {
+  position: fixed; z-index: 50; inset: 0 auto auto 0; width: var(--scroll-progress); height: 2px;
+  background: linear-gradient(90deg,#3988ff,#94deff); box-shadow: 0 0 14px #459cff80;
+  pointer-events: none;
+}
+.ambient {
+  position: fixed; z-index: -1; width: min(62vw,760px); height: min(62vw,760px); top: 4vh; right: -25vw;
+  border: 1px solid #2469a51c; border-radius: 50%; pointer-events: none;
+  transform: translate3d(0,var(--scroll-shift),0) rotate(-15deg);
+  background: radial-gradient(circle at 50% 50%,#0b36721a 0,transparent 66%);
+  will-change: transform;
+}
+.ambient:before,.ambient:after { content:''; position:absolute; border:1px solid #357db81b; border-radius:50%; inset:10%; }
+.ambient:after { inset:23%; border-color:#76c4ff12; }
 .nav {
-  height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
-  border-bottom: 1px solid #ffffff12;
+  position: relative; display:flex; align-items:center; justify-content:space-between; gap:18px;
+  min-height:76px; border-bottom:1px solid #ffffff10;
 }
-.brand { display: inline-flex; align-items: center; gap: 11px; font: 700 18px 'Space Grotesk', sans-serif; letter-spacing: -.5px; }
-.brand-mark {
-  display: grid; place-items: center; width: 35px; height: 35px; border-radius: 11px;
-  color: #051226; background: linear-gradient(145deg,#9cddff,#3988ff);
-  box-shadow: 0 0 28px #288fff30; font-size: 18px;
-}
-.nav-right { display: flex; align-items: center; gap: 20px; }
-.nav-label { color: var(--soft); font-size: 12px; }
-.nav-login {
-  display: inline-flex; align-items: center; justify-content: center; padding: 9px 13px;
-  border: 1px solid #315a83; border-radius: 10px; color: #c9e7ff;
-  background: #0a1a2d; font-size: 12px; font-weight: 800; transition: .2s ease;
-}
-.nav-login:hover { border-color: #7bc9ff; background: #102947; }
+.brand { display:inline-flex; align-items:center; gap:10px; font:700 18px 'Space Grotesk',sans-serif; letter-spacing:-.04em; }
+.brand-star { display:grid; place-items:center; width:33px; height:33px; border:1px solid #8ed3ff8c; border-radius:10px; color:#031124; background:linear-gradient(145deg,#a7e3ff,#428aff); box-shadow:0 0 22px #2b84ff2c; }
+.nav-right { display:flex; align-items:center; gap:19px; }
+.nav-note { color:var(--quiet); font-size:11px; }
+.nav-link { padding:9px 13px; border:1px solid #2a5278; border-radius:9px; color:#cce8ff; background:#071529; font-size:12px; font-weight:800; transition:border-color .2s,background .2s; }
+.nav-link:hover { border-color:#83ceff; background:#0d2340; }
 
-.hero { position: relative; padding: clamp(56px,8vw,104px) 0 clamp(46px,6vw,78px); }
-.hero-grid { display: grid; grid-template-columns: minmax(0,1.08fr) minmax(360px,.92fr); align-items: center; gap: clamp(38px,6vw,84px); }
-.hero-copy { max-width: 650px; }
-.eyebrow { display: inline-flex; align-items: center; gap: 10px; color: #83c9ff; font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
-.eyebrow:before { content: ''; display: block; width: 23px; height: 1px; background: currentColor; box-shadow: 0 0 12px #59adff70; }
-h1 { margin: 20px 0 18px; font-size: clamp(42px,5.8vw,72px); letter-spacing: -.065em; }
-h1 span, .section-title span { color: var(--blue); text-shadow: 0 0 32px #328bff30; }
-.hero-lead { max-width: 550px; margin-bottom: 0; color: #c0d0e4; font-size: clamp(15px,1.4vw,18px); line-height: 1.8; }
-.hero-lead strong { color: #f4f8ff; font-weight: 700; }
-.actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 28px; }
+.hero { padding:clamp(52px,8vw,96px) 0 clamp(48px,6.5vw,76px); }
+.hero-grid { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr); align-items:center; gap:clamp(36px,6vw,82px); }
+.hero-copy { max-width:680px; }
+.eyebrow { display:inline-flex; align-items:center; gap:9px; color:#80c9ff; font-size:10px; font-weight:800; letter-spacing:.17em; text-transform:uppercase; }
+.eyebrow:before { content:''; width:22px; height:1px; background:currentColor; box-shadow:0 0 12px #6dbdff6b; }
+.hero h1 { margin:20px 0 18px; font-size:clamp(43px,6.2vw,76px); letter-spacing:-.067em; }
+.hero h1 span,.section-title span,.closing h2 span { color:var(--blue); text-shadow:0 0 35px #248cff26; }
+.hero-lead { max-width:580px; margin-bottom:0; color:#c0d0e3; font-size:clamp(15px,1.5vw,18px); line-height:1.82; }
+.hero-lead strong { color:#fff; font-weight:700; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
 .btn {
-  display: inline-flex; min-height: 49px; align-items: center; justify-content: center; gap: 10px;
-  padding: 13px 19px; border: 1px solid transparent; border-radius: 11px; font-size: 13px;
-  line-height: 1.2; font-weight: 800; transition: transform .2s, box-shadow .2s, border-color .2s, background .2s;
+  min-height:48px; display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:13px 18px;
+  border:1px solid transparent; border-radius:10px; font-size:13px; font-weight:800; line-height:1.1;
+  transition:transform .2s,box-shadow .2s,border-color .2s,background .2s;
 }
-.btn:hover { transform: translateY(-2px); }
-.btn-primary {
-  color: #031126; background: linear-gradient(120deg,#9bdcff,#50a5ff 48%,#337cff);
-  border-color: #a1dcff; box-shadow: 0 8px 28px #147dff30, inset 0 1px #ffffffb0;
-}
-.btn-primary:hover { box-shadow: 0 12px 36px #147dff4a, 0 0 0 3px #4ea5ff1b; }
-.btn-secondary { color: #d4e9ff; background: #0a1728; border-color: #294c70; }
-.btn-secondary:hover { border-color: #69bfff; background: #0e2239; }
-.microcopy { display: flex; align-items: center; gap: 8px; margin: 15px 0 0; color: #859db8; font-size: 11px; }
-.microcopy span { color: #8ccaff; font-size: 14px; }
+.btn:hover { transform:translateY(-2px); }
+.btn-primary { color:#031022; background:linear-gradient(120deg,#a0e0ff,#4ca2ff 52%,#377bff); border-color:#a5e0ff; box-shadow:0 8px 28px #1878ff31,inset 0 1px #ffffffa8; }
+.btn-primary:hover { box-shadow:0 11px 34px #1878ff52,0 0 0 3px #3d91ff1a; }
+.btn-secondary { color:#d4e9ff; background:#08162a; border-color:#294a6b; }
+.btn-secondary:hover { border-color:#7dc7ff; background:#0c213a; }
+.hero-note { margin:13px 0 0; display:flex; gap:8px; align-items:center; color:#829ab6; font-size:11px; }
+.hero-note span { color:#7fcaff; font-weight:800; }
 
-.reward-visual { position: relative; min-width: 0; }
-.reward-halo {
-  position: absolute; inset: 5% -8%; z-index: -1; pointer-events: none;
-  background: radial-gradient(ellipse at 50% 48%,#177fff32 0, #1375ff0d 42%,transparent 70%);
-  filter: blur(10px); animation: halo-breathe 6s ease-in-out infinite;
+.price-card {
+  position:relative; overflow:hidden; padding:clamp(22px,3vw,32px); border:1px solid #2d6191; border-radius:20px;
+  background:radial-gradient(ellipse at 100% 0,#1556a62b,transparent 48%),linear-gradient(145deg,#0b1c31,#06101f 72%);
+  box-shadow:inset 0 1px #ffffff12,0 25px 65px #0005;
 }
-.reward-card {
-  position: relative; padding: clamp(22px,3vw,32px); overflow: hidden; isolation: isolate;
-  border: 1px solid #2b5f92; border-radius: 24px;
-  background: radial-gradient(ellipse at 100% 0,#2059a32d 0,transparent 48%),linear-gradient(145deg,#10243d,#091628 70%,#06101e);
-  box-shadow: inset 0 1px #ffffff16, 0 26px 70px #0006;
-  animation: card-arrive .8s cubic-bezier(.2,.75,.25,1) both;
-}
-.reward-card:before { content:''; position:absolute; left:0; top:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#a4e1ff,#3687ff,transparent); opacity:.9; }
-.reward-top { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-bottom:18px; border-bottom:1px solid #ffffff12; }
-.reward-brand { display:flex; align-items:center; gap:9px; }
-.reward-logo { width:32px; height:32px; display:grid; place-items:center; border-radius:10px; background:linear-gradient(145deg,#9de0ff,#398bff); color:#031226; }
-.reward-brand b { display:block; font:700 12px 'Space Grotesk',sans-serif; letter-spacing:.04em; }
-.reward-brand small { display:block; margin-top:2px; color:#91a9c5; font-size:10px; }
-.example-tag { padding:6px 9px; border:1px solid #2f5b84; border-radius:99px; color:#a5d8ff; font-size:8px; font-weight:800; letter-spacing:.1em; white-space:nowrap; }
-.reward-intro { padding:22px 0 16px; }
-.reward-intro small { color:#72bdff; font-size:9px; font-weight:800; letter-spacing:.16em; }
-.reward-intro h3 { margin:6px 0 5px; font-size:27px; letter-spacing:-.05em; }
-.reward-intro p { margin:0; color:#98adc6; font-size:11px; }
-.reward-stats { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.reward-stat { padding:13px 14px; border:1px solid #254664; border-radius:12px; background:#050f1d9c; }
-.reward-stat small { display:block; color:#91a7c2; font-size:10px; }
-.reward-stat strong { display:block; margin-top:3px; color:#f6faff; font:700 25px 'Space Grotesk',sans-serif; }
-.reward-stat strong em { color:#8aa2be; font:500 13px 'DM Sans',sans-serif; font-style:normal; }
-.progress-label { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:19px; color:#a5bad3; font-size:10px; }
-.progress-label strong { color:#a6d9ff; }
-.progress-track { height:8px; margin-top:9px; overflow:hidden; border-radius:99px; background:#1a3451; }
-.progress-fill { display:block; width:66.666%; height:100%; border-radius:inherit; background:linear-gradient(90deg,#2a7dff,#8cd7ff); box-shadow:0 0 18px #329aff80; transform-origin:left; animation:progress-arrive 1.2s .3s cubic-bezier(.18,.78,.2,1) both; }
-.stamps { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:7px; margin-top:11px; }
-.stamp { display:grid; place-items:center; height:30px; min-width:0; border:1px solid #25415f; border-radius:8px; color:#7a91ad; background:#071321; font:700 10px 'Space Grotesk',sans-serif; }
-.stamp.done { border-color:#286bb4; background:#123d6d; color:#d5edff; }
-.stamp.reward { border-color:#8dd6ff; color:#06152a; background:linear-gradient(145deg,#9ce0ff,#3788fa); box-shadow:0 0 20px #278dff38; }
-.reward-result { display:flex; align-items:center; gap:12px; margin-top:19px; padding:14px; border:1px solid #2b6497; border-radius:13px; background:linear-gradient(110deg,#12395e,#0a1d32); }
-.percent-icon { display:grid; place-items:center; flex:0 0 43px; width:43px; height:43px; border:1px solid #397cb4; border-radius:12px; color:#a9ddff; background:#174572; font:700 22px 'Space Grotesk',sans-serif; }
-.reward-result small { display:block; color:#9dcefa; font-size:8px; font-weight:800; letter-spacing:.1em; }
-.reward-result strong { display:block; margin:2px 0; color:#f2f8ff; font:700 22px 'Space Grotesk',sans-serif; }
-.reward-result p { margin:0; color:#aec6df; font-size:10px; line-height:1.5; }
-.reward-note { margin:11px 0 0; color:#748da9; text-align:center; font-size:9px; }
+.price-card:before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#92d9ff,#367fff,transparent); }
+.price-eyebrow { color:#8dceff; font-size:10px; font-weight:900; letter-spacing:.18em; text-transform:uppercase; }
+.price-card h2 { margin:11px 0 4px; font-size:clamp(30px,4vw,43px); letter-spacing:-.06em; }
+.price-card h2 small { color:#9aafc8; font:500 13px 'DM Sans',sans-serif; letter-spacing:0; }
+.price-intro { margin:0; color:#a9bdd4; font-size:12px; }
+.price-divider { height:1px; margin:20px 0 17px; background:#ffffff15; }
+.price-features { list-style:none; display:grid; gap:11px; margin:0; padding:0; }
+.price-features li { display:flex; align-items:flex-start; gap:10px; color:#d1e2f4; font-size:12px; line-height:1.5; }
+.price-features li:before { content:'✓'; flex:0 0 16px; width:16px; height:16px; display:grid; place-items:center; margin-top:1px; border-radius:50%; color:#9bdaff; background:#103459; font-size:10px; font-weight:900; }
+.price-card .btn { width:100%; margin-top:22px; }
+.price-foot { margin:11px 0 0; text-align:center; color:#91a8c2; font-size:10px; }
+.price-foot strong { color:#cce8ff; font-weight:700; }
 
-.value-strip { border-block:1px solid #ffffff12; background:linear-gradient(90deg,#081323,#0b1b30,#081323); }
-.value-strip-inner { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; padding:20px 0; }
-.value-item { display:flex; align-items:center; justify-content:center; gap:10px; color:#c9dced; font-size:12px; font-weight:700; }
-.value-icon { display:grid; place-items:center; flex:0 0 29px; width:29px; height:29px; border:1px solid #284f78; border-radius:9px; background:#102844; color:#81c8ff; font-size:14px; }
+.qualifier { padding:22px 0; border-block:1px solid #ffffff12; background:linear-gradient(90deg,#061225,#0a1b2e,#061225); }
+.qualifier-inner { display:flex; align-items:center; justify-content:center; gap:14px; text-align:left; }
+.qualifier-mark { display:grid; place-items:center; flex:0 0 34px; width:34px; height:34px; border:1px solid #3a709e; border-radius:10px; color:#a4dcff; background:#0b2947; font-weight:900; }
+.qualifier p { margin:0; color:#aebfd5; font-size:12px; line-height:1.7; }
+.qualifier strong { color:#f5f9ff; }
 
-.section { padding: clamp(54px,7vw,88px) 0; }
-.section-head { max-width:730px; margin-bottom:clamp(25px,4vw,38px); }
+.section { padding:clamp(56px,7.5vw,88px) 0; }
+.section-head { max-width:720px; margin-bottom:clamp(24px,3.5vw,36px); }
 .section-head.center { margin-inline:auto; text-align:center; }
 .section-head.center .eyebrow { justify-content:center; }
 .section-head.center .eyebrow:before { display:none; }
-.section-title { margin:14px 0 12px; font-size:clamp(31px,4.6vw,49px); letter-spacing:-.06em; }
-.section-description { max-width:630px; margin:0; color:var(--muted); font-size:14px; line-height:1.8; }
+.section-title { margin:13px 0 12px; font-size:clamp(32px,4.8vw,52px); letter-spacing:-.065em; }
+.section-description { max-width:640px; margin:0; color:var(--muted); font-size:14px; line-height:1.8; }
 .section-head.center .section-description { margin-inline:auto; }
 
-.steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
-.step-card { min-width:0; padding:clamp(20px,2.6vw,29px); border:1px solid #203f60; border-radius:17px; background:linear-gradient(145deg,#0d2036,#081320); box-shadow:inset 0 1px #ffffff09; transition:transform .25s,border-color .25s,box-shadow .25s; }
-.step-card:hover { transform:translateY(-4px); border-color:#397bb4; box-shadow:0 15px 35px #0003,0 0 23px #1b75ff0b; }
-.step-top { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:23px; }
-.step-number { color:#84caff; font:700 12px 'Space Grotesk',sans-serif; letter-spacing:.12em; }
-.step-symbol { display:grid; place-items:center; width:38px; height:38px; border:1px solid #2c6191; border-radius:11px; color:#99d5ff; background:#102c4a; font-size:18px; }
-.step-card h3 { margin-bottom:9px; font-size:19px; letter-spacing:-.04em; }
-.step-card p { margin:0; color:#a7bad1; font-size:12px; line-height:1.8; }
-.step-card p strong { color:#e7f3ff; }
+.dual-panels { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; }
+.role-card {
+  position:relative; min-width:0; padding:clamp(23px,3.7vw,39px); border:1px solid #203f60; border-radius:17px;
+  background:linear-gradient(145deg,#0a1b2f,#06111f); box-shadow:inset 0 1px #ffffff09; transition:border-color .25s,transform .25s;
+}
+.role-card:hover { border-color:#3677ad; transform:translateY(-3px); }
+.role-label { display:inline-flex; align-items:center; gap:9px; color:#82c9ff; font-size:10px; font-weight:900; letter-spacing:.17em; }
+.role-label:before { content:''; width:7px; height:7px; border-radius:50%; background:#69baff; box-shadow:0 0 13px #359bff9c; }
+.role-card h3 { margin:17px 0 11px; font-size:clamp(23px,3vw,33px); letter-spacing:-.055em; }
+.role-card p { margin:0; color:#a9bdd4; font-size:13px; line-height:1.85; }
+.role-card p strong { color:#eaf4ff; }
+.role-action { display:flex; align-items:center; gap:9px; margin-top:22px; padding-top:16px; border-top:1px solid #ffffff12; color:#c8e6ff; font-size:11px; font-weight:800; }
+.role-action span { color:#7ec7ff; font-size:17px; }
 
-.benefit-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; }
-.benefit-card { display:flex; gap:13px; align-items:flex-start; min-width:0; padding:21px; border:1px solid #1d3a59; border-radius:15px; background:#091727b5; }
-.benefit-symbol { display:grid; place-items:center; flex:0 0 34px; width:34px; height:34px; border:1px solid #2b6091; border-radius:10px; color:#86cbff; background:#0e2946; }
-.benefit-card h3 { margin:1px 0 6px; font-size:15px; letter-spacing:-.03em; }
-.benefit-card p { margin:0; color:#9fb2c9; font-size:11px; line-height:1.7; }
+.engine { padding-top:12px; }
+.engine-panel { border-top:1px solid #23496d; border-bottom:1px solid #23496d; padding:clamp(29px,5vw,50px) 0; }
+.engine-header { display:flex; align-items:flex-end; justify-content:space-between; gap:25px; margin-bottom:28px; }
+.engine-header .section-title { margin-bottom:0; }
+.engine-header p { max-width:320px; margin:0; color:#9fb4cd; font-size:12px; line-height:1.8; }
+.milestone-row { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; }
+.milestone { position:relative; padding:12px 18px 13px 0; }
+.milestone + .milestone { padding-left:24px; border-left:1px solid #ffffff17; }
+.milestone-number { display:block; color:#eef7ff; font:700 clamp(43px,7vw,75px)/1 'Space Grotesk',sans-serif; letter-spacing:-.07em; }
+.milestone-number span { color:#69bbff; }
+.milestone-label { display:block; margin-top:9px; color:#91a9c3; font-size:10px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+.engine-note { margin:22px 0 0; color:#b5c8de; font-size:13px; line-height:1.8; }
+.engine-note strong { color:#eff7ff; }
 
-.clarity { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:24px; padding:clamp(23px,4vw,38px); border:1px solid #2b5c8d; border-radius:20px; background:radial-gradient(ellipse at 100% 0,#1a5aa52c,transparent 50%),linear-gradient(125deg,#0d2540,#071322); }
-.clarity h2 { margin:0 0 8px; font-size:clamp(24px,3.4vw,36px); letter-spacing:-.055em; }
-.clarity p { max-width:650px; margin:0; color:#afc2d8; font-size:13px; line-height:1.8; }
-.clarity .btn { white-space:nowrap; }
+.scope { padding-top:clamp(35px,5vw,56px); }
+.scope-line { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:9px 15px; padding:clamp(25px,4vw,38px) 16px; border:1px solid #23517b; border-radius:16px; background:radial-gradient(ellipse at 50% 0,#1b6ac127,transparent 66%),#071629; text-align:center; }
+.scope-line span { color:#eaf5ff; font:700 clamp(19px,3vw,29px)/1.2 'Space Grotesk',sans-serif; letter-spacing:-.04em; }
+.scope-line span:last-child { color:#7dc7ff; }
+.scope-line i { color:#416a91; font-style:normal; font-size:18px; }
 
-.faq { max-width:780px; margin-inline:auto; }
-.faq-item { border-bottom:1px solid #ffffff17; }
-.faq-question { display:flex; width:100%; align-items:center; justify-content:space-between; gap:20px; padding:19px 0; color:#edf6ff; text-align:left; background:none; border:0; font:600 15px 'Space Grotesk',sans-serif; cursor:pointer; }
-.faq-question:hover { color:#86cbff; }
-.faq-plus { flex:0 0 auto; color:#78c6ff; font:400 22px 'DM Sans',sans-serif; transition:transform .2s; }
-.faq-item.open .faq-plus { transform:rotate(45deg); }
-.faq-answer { max-height:0; overflow:hidden; transition:max-height .25s ease; }
-.faq-answer p { max-width:700px; margin:0; padding:0 28px 17px 0; color:#a9bdd4; font-size:12px; line-height:1.8; }
+.closing { position:relative; overflow:hidden; padding:clamp(37px,6vw,68px) 0 clamp(60px,8vw,86px); }
+.closing-card { position:relative; overflow:hidden; padding:clamp(30px,5.5vw,58px) 22px; border:1px solid #2b6296; border-radius:21px; background:radial-gradient(ellipse at 50% 0,#1769b72b,transparent 56%),linear-gradient(145deg,#0b2039,#050e1d 75%); text-align:center; box-shadow:inset 0 1px #ffffff12,0 20px 55px #0004; }
+.closing-card:before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#8bd4ff,#3480ff,transparent); }
+.closing-card .eyebrow { justify-content:center; }
+.closing-card .eyebrow:before { display:none; }
+.closing h2 { max-width:760px; margin:14px auto 13px; font-size:clamp(32px,5.2vw,56px); letter-spacing:-.065em; }
+.closing-card > p { max-width:510px; margin:0 auto; color:#aabfd6; font-size:13px; line-height:1.8; }
+.closing-actions { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:23px; }
+footer { padding:21px 0; border-top:1px solid #ffffff11; }
+.footer-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; color:#768da8; font-size:10px; }
+.footer-brand { color:#dcecff; font:700 13px 'Space Grotesk',sans-serif; }
+.footer-copy { max-width:560px; text-align:right; }
 
-.final { padding:20px 0 clamp(58px,8vw,88px); }
-.final-card { position:relative; overflow:hidden; padding:clamp(30px,5.5vw,62px) 22px; border:1px solid #2c6cab; border-radius:23px; text-align:center; background:radial-gradient(ellipse at 50% 0,#177aff2d,transparent 58%),linear-gradient(145deg,#0d2541,#071323 72%); box-shadow:inset 0 1px #ffffff14,0 20px 60px #0004; }
-.final-card:before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#9addff,#3283ff,transparent); }
-.final-card .eyebrow { justify-content:center; }
-.final-card .eyebrow:before { display:none; }
-.final-card h2 { max-width:760px; margin:14px auto 12px; font-size:clamp(33px,5vw,53px); letter-spacing:-.06em; }
-.final-card h2 span { color:var(--blue); }
-.final-card > p { max-width:550px; margin:0 auto; color:#b2c7de; font-size:13px; }
-.final-card .actions { justify-content:center; margin-top:24px; }
-footer { padding:23px 0; border-top:1px solid #ffffff13; }
-.foot { display:flex; justify-content:space-between; align-items:center; gap:20px; color:#8197b1; font-size:10px; }
-.foot-brand { color:#deecfb; font:700 13px 'Space Grotesk',sans-serif; }
-.foot-note { max-width:600px; text-align:right; }
+.reveal { opacity:1; transform:none; }
+.js-ready .reveal { opacity:0; transform:translateY(15px); transition:opacity .65s ease,transform .65s cubic-bezier(.2,.8,.2,1); }
+.js-ready .reveal.is-visible { opacity:1; transform:translateY(0); }
+.js-ready .delay-1 { transition-delay:.08s; }
+.js-ready .delay-2 { transition-delay:.16s; }
 
-@keyframes halo-breathe { 0%,100% { opacity:.65; transform:scale(.96); } 50% { opacity:1; transform:scale(1.04); } }
-@keyframes card-arrive { from { opacity:0; transform:translateY(12px) scale(.99); } to { opacity:1; transform:translateY(0) scale(1); } }
-@keyframes progress-arrive { from { transform:scaleX(.08); } to { transform:scaleX(1); } }
-@media (min-width:1450px) { .hero-grid { gap:90px; } }
-@media (max-width:940px) {
-  .hero-grid { grid-template-columns:minmax(0,1fr) minmax(300px,.9fr); gap:30px; }
-  h1 { font-size:clamp(40px,5.4vw,58px); }
-  .reward-card { padding:22px; }
-  .steps { gap:10px; }
-  .step-card { padding:20px; }
-  .benefit-grid { grid-template-columns:1fr 1fr; }
-  .benefit-card:last-child { grid-column:1/-1; }
-  .clarity { grid-template-columns:1fr; }
-  .clarity .btn { width:max-content; }
+@media (min-width:1450px) { .hero-grid { gap:92px; } }
+@media (max-width:900px) {
+  .hero-grid { grid-template-columns:minmax(0,1fr) minmax(290px,.87fr); gap:28px; }
+  .hero h1 { font-size:clamp(40px,5.7vw,59px); }
+  .price-card { padding:22px; }
+  .engine-header { align-items:flex-start; flex-direction:column; gap:12px; }
+  .engine-header p { max-width:560px; }
 }
 @media (max-width:700px) {
   .wrap { width:calc(100% - 32px); }
-  .nav { height:68px; }
-  .nav-label { display:none; }
-  .hero { padding-top:49px; }
-  .hero-grid { grid-template-columns:minmax(0,1fr); gap:34px; }
-  .hero-copy { max-width:640px; }
-  h1 { max-width:620px; font-size:clamp(41px,9vw,61px); }
+  .nav { min-height:67px; }
+  .nav-note { display:none; }
+  .hero { padding-top:47px; }
+  .hero-grid { grid-template-columns:minmax(0,1fr); gap:30px; }
+  .hero-copy { max-width:650px; }
+  .hero h1 { font-size:clamp(42px,8.7vw,61px); }
   .hero-lead { font-size:15px; }
-  .reward-visual { width:100%; max-width:530px; margin-inline:auto; }
-  .reward-card { padding:clamp(19px,5vw,28px); }
-  .value-strip-inner { gap:10px; }
-  .value-item { font-size:11px; }
-  .steps { grid-template-columns:1fr; gap:10px; }
-  .step-card { display:grid; grid-template-columns:40px minmax(0,1fr); column-gap:13px; padding:19px; }
-  .step-top { display:contents; }
-  .step-number { grid-row:span 2; padding-top:4px; }
-  .step-symbol { display:none; }
-  .step-card h3 { margin-bottom:6px; }
-  .step-card p { grid-column:2; }
-  .benefit-grid { grid-template-columns:1fr; gap:9px; }
-  .benefit-card:last-child { grid-column:auto; }
-  .benefit-card { padding:17px; }
-  .section { padding:52px 0; }
-  .section-title { font-size:clamp(30px,7.5vw,42px); }
-  .section-description { font-size:13px; }
-  .final { padding-top:4px; }
-  .foot { align-items:flex-start; flex-direction:column; }
-  .foot-note { text-align:left; }
+  .price-card { max-width:560px; width:100%; margin-inline:auto; }
+  .qualifier-inner { align-items:flex-start; }
+  .dual-panels { grid-template-columns:1fr; }
+  .role-card { padding:24px; }
+  .section { padding:53px 0; }
+  .engine-header { margin-bottom:20px; }
+  .milestone + .milestone { padding-left:17px; }
+  .milestone-number { font-size:clamp(42px,11vw,67px); }
+  .scope { padding-top:4px; }
 }
 @media (max-width:430px) {
   .wrap { width:calc(100% - 26px); }
   .brand { font-size:16px; }
-  .brand-mark { width:32px; height:32px; }
-  .nav-login { padding:8px 10px; font-size:11px; }
-  .hero { padding:43px 0 42px; }
-  h1 { font-size:clamp(38px,10vw,46px); }
+  .brand-star { width:31px; height:31px; }
+  .nav-link { padding:8px 10px; font-size:11px; }
+  .hero { padding-top:39px; }
+  .hero h1 { font-size:clamp(38px,10vw,47px); }
   .hero-lead { font-size:14px; }
-  .actions { display:grid; grid-template-columns:1fr; gap:9px; }
+  .hero-actions { display:grid; grid-template-columns:1fr; }
   .btn { width:100%; }
-  .reward-card { padding:17px 13px; border-radius:18px; }
-  .reward-top { gap:7px; }
-  .reward-logo { width:29px; height:29px; }
-  .reward-brand b { font-size:11px; }
-  .reward-brand small { font-size:9px; }
-  .example-tag { padding:5px 7px; font-size:7px; }
-  .reward-stats { gap:7px; }
-  .reward-stat { padding:10px; }
-  .reward-stat strong { font-size:22px; }
-  .stamps { gap:5px; }
-  .stamp { height:27px; }
-  .reward-result { gap:9px; padding:11px 9px; }
-  .percent-icon { flex-basis:37px; width:37px; height:37px; }
-  .reward-result strong { font-size:19px; }
-  .reward-note { font-size:8px; }
-  .value-strip-inner { grid-template-columns:1fr; gap:10px; padding:15px 0; }
-  .value-item { justify-content:flex-start; }
-  .clarity { padding:22px 17px; }
-  .clarity .btn { width:100%; }
-  .faq-question { font-size:14px; }
-  .final-card { padding:29px 17px; border-radius:17px; }
-  .final-card h2 { font-size:34px; }
+  .price-card { padding:20px 16px; border-radius:16px; }
+  .price-card h2 { font-size:34px; }
+  .price-features { gap:10px; }
+  .qualifier { padding:19px 0; }
+  .qualifier p { font-size:11px; }
+  .section-title { font-size:clamp(30px,8vw,39px); }
+  .role-card { padding:21px 18px; }
+  .role-card h3 { font-size:25px; }
+  .role-card p { font-size:12px; }
+  .milestone { padding-right:9px; }
+  .milestone + .milestone { padding-left:11px; }
+  .milestone-number { font-size:clamp(39px,12vw,53px); }
+  .milestone-label { font-size:8px; letter-spacing:.08em; }
+  .engine-note { font-size:12px; }
+  .scope-line { gap:9px; }
+  .scope-line span { font-size:19px; }
+  .closing-card { padding:29px 16px; border-radius:17px; }
+  .closing h2 { font-size:34px; }
+  .closing-actions { display:grid; }
+  .footer-inner { align-items:flex-start; flex-direction:column; gap:8px; }
+  .footer-copy { text-align:left; }
 }
 @media (prefers-reduced-motion:reduce) {
-  *,*::before,*::after { animation:none!important; scroll-behavior:auto!important; transition:none!important; }
+  html { scroll-behavior:auto; }
+  *,*::before,*::after { animation:none!important; transition:none!important; }
+  .ambient { transform:none; }
 }
 </style>
 </head>
 <body>
+<div id="scroll-line" aria-hidden="true"></div>
+<div class="ambient" aria-hidden="true"></div>
+
 <header class="wrap nav" id="inicio">
-  <a class="brand" href="#inicio" aria-label="Barber VIP, inicio"><span class="brand-mark">✦</span> BARBER VIP</a>
-  <div class="nav-right"><span class="nav-label">Fidelización para barberos</span><a class="nav-login" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta ↗</a></div>
+  <a class="brand" href="#inicio" aria-label="Barber VIP, inicio"><span class="brand-star">✦</span> BARBER VIP</a>
+  <div class="nav-right"><span class="nav-note">Fidelización para barberos</span><a class="nav-link" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta ↗</a></div>
 </header>
 
 <main>
   <section class="hero wrap">
     <div class="hero-grid">
-      <div class="hero-copy">
+      <div class="hero-copy reveal is-visible">
         <div class="eyebrow">Fidelización digital para barberos</div>
-        <h1>Que tus clientes vuelvan.<br><span>Y tengan un motivo.</span></h1>
-        <p class="hero-lead"><strong>Vos registrás cada corte.</strong> Barber VIP muestra a tu cliente sus visitas, el descuento que alcanzó y cuánto le falta para el próximo beneficio.</p>
-        <div class="actions">
+        <h1>Que tus clientes vuelvan.<br><span>Que tengan un motivo.</span></h1>
+        <p class="hero-lead"><strong>Premiá la constancia.</strong> Vos registrás las visitas; tus clientes ven su progreso y los descuentos que vos configurás.</p>
+        <div class="hero-actions">
           <a class="btn btn-primary" href="https://barber-vip-three.vercel.app/">Probar 7 días gratis <span>↗</span></a>
           <a class="btn btn-secondary" href="#como-funciona">Ver cómo funciona ↓</a>
         </div>
-        <p class="microcopy"><span>✓</span> Vos elegís los hitos y los descuentos. El pago es manual.</p>
+        <p class="hero-note"><span>✓</span> Vos definís las reglas. Vos decidís los beneficios.</p>
       </div>
 
-      <div class="reward-visual" aria-label="Ejemplo ilustrativo de la tarjeta digital de un cliente">
-        <div class="reward-halo" aria-hidden="true"></div>
-        <div class="reward-card">
-          <div class="reward-top">
-            <div class="reward-brand"><span class="reward-logo">✦</span><span><b>BARBER VIP</b><small>Tu tarjeta de fidelización</small></span></div>
-            <span class="example-tag">EJEMPLO VISUAL</span>
-          </div>
-          <div class="reward-intro"><small>HOLA, SANTIAGO</small><h3>Tu progreso</h3><p>Cada visita te acerca al próximo beneficio.</p></div>
-          <div class="reward-stats">
-            <div class="reward-stat"><small>Visitas del ciclo</small><strong>4 <em>/ 6</em></strong></div>
-            <div class="reward-stat"><small>Avance</small><strong>67%</strong></div>
-          </div>
-          <div class="progress-label"><span>Tu ciclo actual</span><strong>4 de 6 visitas</strong></div>
-          <div class="progress-track"><span class="progress-fill"></span></div>
-          <div class="stamps" aria-label="Ejemplo de seis visitas, cuatro completadas"><span class="stamp done">1</span><span class="stamp done">2</span><span class="stamp done">3</span><span class="stamp reward">4</span><span class="stamp">5</span><span class="stamp">6</span></div>
-          <div class="reward-result"><span class="percent-icon">%</span><div><small>BENEFICIO ALCANZADO · EJEMPLO</small><strong>20% OFF</strong><p>El barbero configura sus propios descuentos e hitos.</p></div></div>
-        </div>
-        <p class="reward-note">Es una representación ilustrativa, no una captura ni datos reales.</p>
-      </div>
+      <aside class="price-card reveal delay-1">
+        <div class="price-eyebrow">Probala durante 7 días</div>
+        <h2>Gratis <small>por 7 días</small></h2>
+        <p class="price-intro">Después, $5.000 por mes.</p>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li>Hitos y descuentos a tu manera</li>
+          <li>Panel para vos y panel para tu cliente</li>
+          <li>Creá clientes o compartí tu enlace y código</li>
+          <li>Promociones para tus clientes</li>
+        </ul>
+        <a class="btn btn-primary" href="https://barber-vip-three.vercel.app/">Empezar ahora <span>↗</span></a>
+        <p class="price-foot"><strong>Sin débitos automáticos.</strong> Si no te sirve, no renovás.</p>
+      </aside>
     </div>
   </section>
 
-  <div class="value-strip">
-    <div class="wrap value-strip-inner">
-      <div class="value-item"><span class="value-icon">✓</span> Vos controlás los beneficios</div>
-      <div class="value-item"><span class="value-icon">↗</span> El cliente ve su progreso</div>
-      <div class="value-item"><span class="value-icon">✦</span> Una razón más para regresar</div>
+  <section class="qualifier" aria-label="Para quién es Barber VIP">
+    <div class="wrap qualifier-inner">
+      <span class="qualifier-mark">!</span>
+      <p><strong>Importante:</strong> Barber VIP es para barberos que quieren fidelizar con descuentos. Si no estás dispuesto a ofrecer beneficios, esta herramienta no es para vos.</p>
     </div>
-  </div>
+  </section>
 
   <section class="section wrap" id="como-funciona">
-    <div class="section-head">
-      <div class="eyebrow">Así de simple</div>
-      <h2 class="section-title">Tres pasos.<br><span>Todo más claro.</span></h2>
-      <p class="section-description">No tenés que llevar las cuentas de memoria ni explicar cada beneficio cada vez.</p>
+    <div class="section-head reveal">
+      <div class="eyebrow">Dos espacios. Un objetivo.</div>
+      <h2 class="section-title">Vos gestionás.<br><span>Tu cliente vuelve.</span></h2>
+      <p class="section-description">Cada uno tiene su propio panel, con lo que necesita y nada más.</p>
     </div>
-    <div class="steps">
-      <article class="step-card"><div class="step-top"><span class="step-number">01 / CONFIGURÁS</span><span class="step-symbol">⚙</span></div><h3>Elegís tus reglas</h3><p>Definís en qué visitas hay beneficios y qué descuento querés dar.</p></article>
-      <article class="step-card"><div class="step-top"><span class="step-number">02 / REGISTRÁS</span><span class="step-symbol">✓</span></div><h3>Sumás el corte</h3><p>Desde tu panel registrás la visita del cliente. Barber VIP actualiza su avance.</p></article>
-      <article class="step-card"><div class="step-top"><span class="step-number">03 / FIDELIZÁS</span><span class="step-symbol">✦</span></div><h3>Él ve su progreso</h3><p>Desde el celular consulta las visitas, el descuento alcanzado y los datos de su barbero.</p></article>
+
+    <div class="dual-panels">
+      <article class="role-card reveal">
+        <div class="role-label">01 / PANEL BARBERO</div>
+        <h3>Vos llevás el control.</h3>
+        <p>Creás a tus clientes desde la app o les compartís tu enlace y código para que se registren solos. Cuando vienen a cortarse, <strong>sumás la visita</strong>.</p>
+        <div class="role-action">Tu panel. Tus clientes. Tus reglas. <span>↗</span></div>
+      </article>
+      <article class="role-card reveal delay-1">
+        <div class="role-label">02 / PANEL CLIENTE</div>
+        <h3>Él ve por qué volver.</h3>
+        <p>Desde su celular consulta las visitas que lleva, su progreso, los beneficios alcanzados y los datos de contacto de su barbero.</p>
+        <div class="role-action">Su progreso, siempre a mano. <span>↗</span></div>
+      </article>
     </div>
   </section>
 
-  <section class="section wrap" id="beneficios">
-    <div class="section-head">
-      <div class="eyebrow">Lo esencial</div>
-      <h2 class="section-title">Hecha para tu relación<br><span>con cada cliente.</span></h2>
-    </div>
-    <div class="benefit-grid">
-      <article class="benefit-card"><span class="benefit-symbol">↗</span><div><h3>Visitas y descuentos</h3><p>El cliente sabe qué logró y cuánto le falta para el siguiente hito.</p></div></article>
-      <article class="benefit-card"><span class="benefit-symbol">✳</span><div><h3>Promociones puntuales</h3><p>Creá una promo especial cuando quieras impulsar una acción.</p></div></article>
-      <article class="benefit-card"><span class="benefit-symbol">◎</span><div><h3>Tu espacio, tus clientes</h3><p>La fidelización se vincula con vos y con los beneficios que vos definís.</p></div></article>
-    </div>
-  </section>
-
-  <section class="section wrap" style="padding-top:0">
-    <div class="clarity">
-      <div><h2>No es una agenda.<br><span>Es para que vuelvan.</span></h2><p>Barber VIP se enfoca en visitas, beneficios y promociones. No reemplaza tu agenda ni garantiza clientes nuevos: te ayuda a darles una razón para regresar a quienes ya te conocen.</p></div>
-      <a class="btn btn-primary" href="https://barber-vip-three.vercel.app/">Empezar prueba gratis ↗</a>
-    </div>
-  </section>
-
-  <section class="section wrap" id="preguntas">
-    <div class="section-head center">
-      <div class="eyebrow">Sin vueltas</div>
-      <h2 class="section-title">Lo que necesitás saber.</h2>
-    </div>
-    <div class="faq">
-      <div class="faq-item"><button class="faq-question" aria-expanded="false">¿Puedo elegir los descuentos?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Sí. Vos definís los hitos de visitas y los descuentos que querés ofrecer. Los porcentajes de esta página son solo un ejemplo.</p></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false">¿Mis clientes tienen que descargar una app?<span class="faq-plus">+</span></button><div class="faq-answer"><p>La primera vez, abren el enlace desde el navegador y pueden agregar Barber VIP a la pantalla de inicio. Después entran desde su ícono, sin buscarla en una tienda de aplicaciones.</p></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false">¿Cómo funciona la prueba y el pago?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Tenés 7 días de prueba. El pago es manual, sin débitos automáticos. Cuando Mercado Pago lo aprueba, comienza el período de 30 días. Si vence tu período, hay 5 días de gracia.</p></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false">¿Me garantiza conseguir más clientes?<span class="faq-plus">+</span></button><div class="faq-answer"><p>No garantiza clientes nuevos. Está pensada para trabajar la fidelidad de quienes ya te conocen, dando un motivo para que vuelvan.</p></div></div>
+  <section class="section wrap engine" id="hitos">
+    <div class="engine-panel reveal">
+      <div class="engine-header">
+        <div>
+          <div class="eyebrow">El motor de Barber VIP</div>
+          <h2 class="section-title">La regla la <span>elegís vos.</span></h2>
+        </div>
+        <p>Configurás los hitos y el descuento de cada uno. Por ejemplo:</p>
+      </div>
+      <div class="milestone-row" aria-label="Ejemplos de visitas como hitos: 2, 4 y 6">
+        <div class="milestone"><strong class="milestone-number">02<span>.</span></strong><span class="milestone-label">Visita</span></div>
+        <div class="milestone"><strong class="milestone-number">04<span>.</span></strong><span class="milestone-label">Visita</span></div>
+        <div class="milestone"><strong class="milestone-number">06<span>.</span></strong><span class="milestone-label">Visita</span></div>
+      </div>
+      <p class="engine-note">Vos definís <strong>cuándo premiar</strong> y <strong>cuánto ofrecer</strong>. Barber VIP le muestra al cliente cuánto le falta para llegar al próximo beneficio.</p>
     </div>
   </section>
 
-  <section class="final">
+  <section class="section wrap scope">
+    <div class="scope-line reveal">
+      <span>Sin turnos.</span><i>•</i><span>Sin caja.</span><i>•</i><span>Sin señas.</span><i>•</i><span>Solo fidelización.</span>
+    </div>
+  </section>
+
+  <section class="closing">
     <div class="wrap">
-      <div class="final-card">
-        <div class="eyebrow">Probala en tu barbería</div>
-        <h2>Empezá con tus clientes de hoy.<br><span>Construí motivos para mañana.</span></h2>
-        <p>Configurá tus beneficios, registrá visitas y conocé la herramienta con tus propios clientes.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="https://barber-vip-three.vercel.app/">Probar 7 días gratis ↗</a>
+      <div class="closing-card reveal">
+        <div class="eyebrow">Empezá con tus clientes actuales</div>
+        <h2>Un corte puede ser una visita.<br><span>La próxima, una razón para volver.</span></h2>
+        <p>Probá Barber VIP durante 7 días y conocé si encaja con tu forma de trabajar.</p>
+        <div class="closing-actions">
+          <a class="btn btn-primary" href="https://barber-vip-three.vercel.app/">Empezar 7 días gratis ↗</a>
           <a class="btn btn-secondary" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta</a>
         </div>
       </div>
@@ -383,31 +353,51 @@ footer { padding:23px 0; border-top:1px solid #ffffff13; }
   </section>
 </main>
 
-<footer><div class="wrap foot"><span class="foot-brand">✦ BARBER VIP</span><span class="foot-note">Fidelización digital para barberos. Beneficios configurados por cada barbero.</span></div></footer>
+<footer>
+  <div class="wrap footer-inner">
+    <span class="footer-brand">✦ BARBER VIP</span>
+    <span class="footer-copy">Fidelización digital para barberos. Los beneficios los definís vos.</span>
+  </div>
+</footer>
+
 <script>
 (() => {
-  const items = [...document.querySelectorAll('.faq-item')];
-  items.forEach(item => {
-    const button = item.querySelector('.faq-question');
-    const answer = item.querySelector('.faq-answer');
-    button.addEventListener('click', () => {
-      const willOpen = !item.classList.contains('open');
-      items.forEach(other => {
-        other.classList.remove('open');
-        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-        other.querySelector('.faq-answer').style.maxHeight = '0px';
+  const root = document.documentElement;
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealEls = [...document.querySelectorAll('.reveal')];
+
+  if ('IntersectionObserver' in window) {
+    root.classList.add('js-ready');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
       });
-      if (willOpen) {
-        item.classList.add('open');
-        button.setAttribute('aria-expanded', 'true');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-      }
+    }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+    revealEls.forEach(el => {
+      if (!el.classList.contains('is-visible')) observer.observe(el);
+      else el.classList.add('is-visible');
     });
-  });
-  window.addEventListener('resize', () => {
-    const open = document.querySelector('.faq-item.open .faq-answer');
-    if (open) open.style.maxHeight = open.scrollHeight + 'px';
-  });
+  }
+
+  if (!prefersReduced) {
+    let scheduled = false;
+    const updateScroll = () => {
+      if (scheduled) return;
+      scheduled = true;
+      window.requestAnimationFrame(() => {
+        const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        const ratio = Math.min(1, Math.max(0, window.scrollY / maxScroll));
+        root.style.setProperty('--scroll-progress', (ratio * 100).toFixed(2) + '%');
+        root.style.setProperty('--scroll-shift', (window.scrollY * 0.055).toFixed(1) + 'px');
+        scheduled = false;
+      });
+    };
+    window.addEventListener('scroll', updateScroll, { passive: true });
+    updateScroll();
+  }
 })();
 </script>
 </body>
