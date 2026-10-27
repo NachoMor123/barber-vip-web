@@ -70,8 +70,8 @@ a:focus-visible,button:focus-visible { outline: 3px solid #d0eeff; outline-offse
 .nav-link:hover { border-color:#83ceff; background:#0d2340; }
 
 .hero { padding:clamp(52px,8vw,96px) 0 clamp(48px,6.5vw,76px); }
-.hero-grid { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr); align-items:center; gap:clamp(36px,6vw,82px); }
-.hero-copy { max-width:680px; }
+.hero-grid { display:grid; grid-template-columns:minmax(0,1fr); align-items:center; gap:0; }
+.hero-copy { max-width:900px; }
 .eyebrow { display:inline-flex; align-items:center; gap:9px; color:#80c9ff; font-size:10px; font-weight:800; letter-spacing:.17em; text-transform:uppercase; }
 .eyebrow:before { content:''; width:22px; height:1px; background:currentColor; box-shadow:0 0 12px #6dbdff6b; }
 .hero h1 { margin:20px 0 18px; font-size:clamp(43px,6.2vw,76px); letter-spacing:-.067em; }
@@ -172,6 +172,15 @@ footer { padding:21px 0; border-top:1px solid #ffffff11; }
 .footer-brand { color:#dcecff; font:700 13px 'Space Grotesk',sans-serif; }
 .footer-copy { max-width:560px; text-align:right; }
 
+
+.faq-list { max-width:900px; border-top:1px solid #244566; }
+.faq-item { border-bottom:1px solid #244566; }
+.faq-item summary { position:relative; cursor:pointer; list-style:none; padding:20px 42px 20px 2px; color:#eaf4ff; font:600 clamp(15px,1.8vw,18px)/1.45 'Space Grotesk',sans-serif; letter-spacing:-.025em; }
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary:after { content:'+'; position:absolute; right:5px; top:50%; transform:translateY(-50%); display:grid; place-items:center; width:27px; height:27px; border:1px solid #2c5a82; border-radius:50%; color:#8dd3ff; font:500 20px/1 'DM Sans',sans-serif; transition:transform .2s,background .2s; }
+.faq-item[open] summary:after { content:'−'; background:#102c49; transform:translateY(-50%) rotate(180deg); }
+.faq-item p { max-width:790px; margin:0; padding:0 38px 22px 2px; color:#a9bdd4; font-size:13px; line-height:1.9; }
+
 .reveal { opacity:1; transform:none; }
 .js-ready .reveal { opacity:0; transform:translateY(15px); transition:opacity .65s ease,transform .65s cubic-bezier(.2,.8,.2,1); }
 .js-ready .reveal.is-visible { opacity:1; transform:translateY(0); }
@@ -180,7 +189,7 @@ footer { padding:21px 0; border-top:1px solid #ffffff11; }
 
 @media (min-width:1450px) { .hero-grid { gap:92px; } }
 @media (max-width:900px) {
-  .hero-grid { grid-template-columns:minmax(0,1fr) minmax(290px,.87fr); gap:28px; }
+  .hero-grid { grid-template-columns:minmax(0,1fr); gap:0; }
   .hero h1 { font-size:clamp(40px,5.7vw,59px); }
   .price-card { padding:22px; }
   .engine-header { align-items:flex-start; flex-direction:column; gap:12px; }
@@ -191,7 +200,7 @@ footer { padding:21px 0; border-top:1px solid #ffffff11; }
   .nav { min-height:67px; }
   .nav-note { display:none; }
   .hero { padding-top:47px; }
-  .hero-grid { grid-template-columns:minmax(0,1fr); gap:30px; }
+  .hero-grid { grid-template-columns:minmax(0,1fr); gap:0; }
   .hero-copy { max-width:650px; }
   .hero h1 { font-size:clamp(42px,8.7vw,61px); }
   .hero-lead { font-size:15px; }
@@ -250,7 +259,7 @@ footer { padding:21px 0; border-top:1px solid #ffffff11; }
 
 <header class="wrap nav" id="inicio">
   <a class="brand" href="#inicio" aria-label="Barber VIP, inicio"><span class="brand-star">✦</span> BARBER VIP</a>
-  <div class="nav-right"><span class="nav-note">Fidelización para barberos</span><a class="nav-link" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta ↗</a></div>
+  <div class="nav-right"><span class="nav-note">Fidelización para barberos</span><a class="nav-link" href="#preguntas">Preguntas frecuentes</a><a class="nav-link" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta ↗</a></div>
 </header>
 
 <main>
@@ -265,22 +274,10 @@ footer { padding:21px 0; border-top:1px solid #ffffff11; }
           <a class="btn btn-secondary" href="#como-funciona">Ver cómo funciona ↓</a>
         </div>
         <p class="hero-note"><span>✓</span> Vos definís las reglas. Vos decidís los beneficios.</p>
+        <p class="hero-note"><span>↳</span> Una sola app, dos accesos: uno para vos y otro para tus clientes.</p>
       </div>
 
-      <aside class="price-card reveal delay-1">
-        <div class="price-eyebrow">Probala durante 7 días</div>
-        <h2>Gratis <small>por 7 días</small></h2>
-        <p class="price-intro">Después, $5.000 por mes.</p>
-        <div class="price-divider"></div>
-        <ul class="price-features">
-          <li>Hitos y descuentos a tu manera</li>
-          <li>Panel para vos y panel para tu cliente</li>
-          <li>Creá clientes o compartí tu enlace y código</li>
-          <li>Promociones para tus clientes</li>
-        </ul>
-        <a class="btn btn-primary" href="https://barber-vip-three.vercel.app/">Empezar ahora <span>↗</span></a>
-        <p class="price-foot"><strong>Sin débitos automáticos.</strong> Si no te sirve, no renovás.</p>
-      </aside>
+
     </div>
   </section>
 
@@ -335,6 +332,49 @@ footer { padding:21px 0; border-top:1px solid #ffffff11; }
   <section class="section wrap scope">
     <div class="scope-line reveal">
       <span>Sin turnos.</span><i>•</i><span>Sin caja.</span><i>•</i><span>Sin señas.</span><i>•</i><span>Solo fidelización.</span>
+    </div>
+  </section>
+
+
+  <section class="section wrap faq-section" id="preguntas">
+    <div class="section-head reveal">
+      <div class="eyebrow">Lo importante, sin vueltas</div>
+      <h2 class="section-title">Preguntas <span>frecuentes.</span></h2>
+      <p class="section-description">Lo esencial para saber si Barber VIP encaja con tu forma de trabajar.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>¿Por qué usar Barber VIP?</summary>
+        <p>Porque tus clientes actuales tienen un motivo extra para volver, y quienes vienen por primera vez pueden empezar a construir su progreso desde esa visita. Convertís la constancia en un beneficio concreto y mantenés tu barbería presente en su celular.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tengo que cambiar mi forma de trabajar?</summary>
+        <p>No. Seguís atendiendo como siempre. Barber VIP no es un sistema de turnos, caja ni señas: se suma a tu rutina para registrar visitas y premiar la fidelidad.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Por qué hay dos paneles en la misma aplicación?</summary>
+        <p>Porque cada uno tiene su acceso. Vos entrás como barbero para gestionar clientes, visitas, hitos y promociones. Tu cliente entra como cliente para consultar sus visitas, su progreso y los beneficios que vos configuraste.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuál es el motor principal de Barber VIP?</summary>
+        <p>Los hitos de visitas que vos configurás. Por ejemplo, podés elegir premiar en la visita 2, 4 y 6, y definir el descuento de cada hito. El progreso le muestra al cliente cuánto le falta para alcanzar el próximo beneficio.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿También puedo hacer promociones especiales?</summary>
+        <p>Sí. Las promociones son independientes de los premios por hitos. Podés crear una acción por tiempo limitado —por ejemplo, una promoción de una semana— y usar tu creatividad para incentivar visitas en un momento concreto.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Mis clientes pueden registrarse solos?</summary>
+        <p>Sí. La aplicación te da un enlace y un código para compartir por WhatsApp, Instagram o donde quieras. También podés crear desde tu panel las cuentas de tus clientes actuales.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tengo que ofrecer descuentos sí o sí?</summary>
+        <p>Barber VIP está pensado para fidelizar mediante beneficios. Vos elegís los hitos y definís qué descuento ofrecer; si no querés dar ningún beneficio, probablemente no sea la herramienta indicada para vos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo funcionan la prueba y los pagos?</summary>
+        <p>Tenés 7 días gratis. Después, el plan cuesta $5.000 por mes. No hay débito automático: no se te cobra una renovación sin que la hagas. Si no te sirve, no pagás la renovación.</p>
+      </details>
     </div>
   </section>
 
