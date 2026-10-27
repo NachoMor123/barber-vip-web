@@ -3,651 +3,412 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#07111f">
-<meta name="description" content="Fidelizá clientes con Barber VIP: configurá hitos de visita, descuentos y promociones. Cada cliente consulta su progreso desde el celular.">
-<title>Barber VIP — Fidelización digital para barberos</title>
+<meta name="theme-color" content="#050b17">
+<meta name="description" content="Barber VIP ayuda a los barberos a fidelizar clientes con visitas, beneficios y promociones que cada barbero configura.">
+<title>Barber VIP — Un motivo más para volver</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:dark;--bg:#07111f;--panel:#0d1a2b;--panel2:#10233a;--line:#203b59;--blue:#48a5ff;--blue2:#1976ed;--text:#f3f8ff;--muted:#a9bad0;--max:1080px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.55;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}::selection{background:var(--blue);color:#03101e}.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}.brand{display:flex;align-items:center;gap:10px;font:700 19px 'Space Grotesk',sans-serif;letter-spacing:-.6px}.mark{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:linear-gradient(145deg,#80c6ff,var(--blue2));color:#03101e;box-shadow:0 0 25px #2996ff35}.nav-note{font-size:12px;color:var(--muted)}.hero{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:32px;align-items:center;padding:82px 0 70px;min-height:600px}.hero:before{content:"";position:absolute;z-index:-1;width:500px;height:500px;right:0;top:0;background:radial-gradient(circle,#1689ff22,transparent 68%);pointer-events:none}.eyebrow{color:var(--blue);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:9px}.eyebrow:before{content:"";width:22px;height:1px;background:var(--blue)}h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-1.4px;line-height:1.06;margin-top:0}h1{font-size:clamp(42px,5.6vw,69px);margin:20px 0;max-width:660px}h1 em{font-style:normal;color:var(--blue);text-shadow:0 0 34px #2996ff35}.lead{max-width:510px;font-size:16px;color:#c0d0e2;line-height:1.75}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:27px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:13px 18px;border-radius:10px;font-size:13px;font-weight:700;border:1px solid transparent;transition:transform .2s,border-color .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(135deg,#67bdff,#2386f4);color:#03101e;box-shadow:0 8px 28px #1689ff30}.primary:hover{box-shadow:0 10px 34px #1689ff55}.secondary{border-color:#426181;background:#0d1a2b;color:var(--text)}.secondary:hover{border-color:var(--blue)}.micro{font-size:11px;color:#8fa4bd;margin-top:14px}.visual{position:relative;min-height:400px;display:grid;place-items:center}.halo{position:absolute;width:350px;max-width:100%;aspect-ratio:1;border:1px solid #329bff35;border-radius:50%;box-shadow:0 0 75px #1689ff0c,inset 0 0 60px #1689ff0b}.halo:before,.halo:after{content:"";position:absolute;inset:28px;border:1px dashed #329bff28;border-radius:50%}.halo:after{inset:65px;border-style:solid}.phone{position:relative;width:252px;border:1px solid #416183;border-radius:29px;padding:9px;background:linear-gradient(145deg,#213a56,#07111f 55%,#1a3654);box-shadow:0 35px 90px #0009,0 0 45px #1689ff13;transform:rotate(-3deg);animation:float 6s ease-in-out infinite}.screen{border-radius:21px;background:#091522;padding:19px 14px 16px;min-height:365px}.appname{font:700 12px 'Space Grotesk';margin-bottom:25px;display:flex;align-items:center;gap:7px}.appname i{font-style:normal;background:var(--blue);color:#03101e;border-radius:6px;padding:5px}.subtle{color:#93a9c2;font-size:10px}.client{font:700 22px 'Space Grotesk';margin:3px 0 16px}.reward{border-radius:14px;padding:15px;background:linear-gradient(140deg,#8bd0ff,#398ff2);color:#06162a;box-shadow:0 7px 24px #1689ff25}.reward small{font-size:9px;letter-spacing:1.5px;font-weight:700}.reward b{display:block;font:700 24px 'Space Grotesk';margin:8px 0}.progresslabel{display:flex;justify-content:space-between;font-size:10px;margin:16px 0 7px}.progress{height:6px;border-radius:99px;background:#1e3855;overflow:hidden}.progress span{display:block;width:66%;height:100%;background:var(--blue);border-radius:99px}.stamps{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin-top:12px}.stamps i{font-style:normal;display:grid;place-items:center;height:28px;border-radius:6px;border:1px solid #284b70;font-size:10px;color:#9bb4d0}.stamps i.done{background:#1b71c4;border-color:#1b71c4;color:white}.float-card{position:absolute;right:-3%;bottom:9%;background:#10233a;border:1px solid #2a527a;padding:12px 15px;border-radius:12px;box-shadow:0 15px 40px #0007;font-size:11px}.float-card strong{display:block;color:var(--blue);font-size:13px}.float-tag{position:absolute;left:-1%;top:16%;padding:9px 12px;background:#0f2740;border:1px solid #28547c;border-radius:99px;font-size:10px;color:#d8eaff;transform:rotate(-5deg)}@keyframes float{50%{transform:rotate(-3deg) translateY(-9px)}}section{padding:76px 0}.section-head{max-width:700px;margin-bottom:32px}.section-head h2{font-size:clamp(31px,4.2vw,48px);margin:13px 0}.section-head p{color:var(--muted);max-width:600px}.strip{border-block:1px solid #ffffff12;background:#0a1727}.strip-inner{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;padding:18px 0;color:#b9cce0;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase}.strip b{color:var(--blue)}.pain-grid,.steps,.fit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.tile{border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#102138,#0a1524);padding:23px;min-height:170px}.symbol{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:#2386f41c;color:var(--blue);font-size:19px;margin-bottom:19px}.tile h3{font-size:18px;letter-spacing:-.5px;margin-bottom:8px}.tile p{font-size:13px;color:var(--muted);margin:0}.statement{background:linear-gradient(110deg,#0e3155,#0b1b2d);border-block:1px solid #234b73;padding:47px 0}.statement h2{font-size:clamp(30px,4vw,47px);max-width:850px;margin:0}.statement h2 span{color:var(--blue)}.how{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}.steps{grid-template-columns:1fr;gap:0}.step{display:flex;gap:14px;padding:17px 0;border-bottom:1px solid #ffffff12}.num{flex:0 0 32px;height:32px;display:grid;place-items:center;border:1px solid #315c83;border-radius:50%;color:var(--blue);font-size:12px;font-weight:700}.step h3{font-size:17px;letter-spacing:-.4px;margin:2px 0 5px}.step p{font-size:13px;color:var(--muted);margin:0}.idea-box{background:#0c1a2b;border:1px solid var(--line);border-radius:16px;padding:22px}.idea-box h3{font-size:22px;margin-bottom:7px}.idea-box>p{font-size:13px;color:var(--muted)}.ideas{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:17px}.idea{padding:12px;border:1px solid #1c3855;border-radius:10px;background:#0a1524;font-size:12px;color:#c4d4e6}.idea b{color:var(--blue);display:block;font-size:11px;margin-bottom:4px}.fit-grid{grid-template-columns:1fr 1fr}.fit{padding:24px;border-radius:15px;background:#0d1b2c;border:1px solid var(--line)}.fit.good{border-color:#2868a0;background:linear-gradient(145deg,#102944,#0b1726)}.fit h3{font-size:21px;margin:11px 0}.fit ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}.fit li{font-size:13px;color:#c0d0e1}.fit li:before{content:"✓";color:var(--blue);font-weight:700;margin-right:9px}.fit:not(.good) li:before{content:"—";color:#859bb2}.faq{max-width:820px}.faq-item{border-bottom:1px solid #ffffff16}.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:15px;text-align:left;padding:20px 0;background:none;border:0;color:var(--text);font:600 16px 'Space Grotesk';letter-spacing:-.2px}.plus{font-size:23px;color:var(--blue);transition:transform .2s}.faq-item.open .plus{transform:rotate(45deg)}.faq-a{max-height:0;overflow:hidden;transition:max-height .25s}.faq-a p{font-size:13px;color:var(--muted);line-height:1.75;margin:0;padding:0 30px 19px 0}.paynote{padding:19px 21px;border:1px solid #264d72;background:#0d2034;border-radius:13px;margin-top:24px}.paynote strong{color:var(--blue)}.paynote p{font-size:12px;color:#b8cbe0;margin:6px 0 0}.final{padding:70px 0 82px}.final-card{text-align:center;padding:clamp(27px,5vw,54px) 20px;border:1px solid #285783;border-radius:21px;background:radial-gradient(ellipse at 50% 0%,#1689ff20,transparent 60%),#0b192a}.final-card h2{font-size:clamp(34px,5vw,56px);max-width:760px;margin:15px auto}.final-card p{max-width:520px;margin:0 auto;color:var(--muted);font-size:14px}.final-card .actions{justify-content:center}footer{border-top:1px solid #ffffff12;padding:24px 0;color:#8196ae;font-size:11px}.foot{display:flex;justify-content:space-between;gap:18px;align-items:center}.foot b{font:700 14px 'Space Grotesk';color:#eaf4ff}.foot span:last-child{text-align:right;max-width:450px}
-@media(max-width:780px){.hero{grid-template-columns:1fr;padding:60px 0 30px;gap:0}.hero-copy{max-width:650px}.visual{min-height:380px}.halo{width:310px}.float-card{right:2%}.float-tag{left:3%}.how{grid-template-columns:1fr;gap:22px}.pain-grid{grid-template-columns:1fr 1fr}.tile:last-child{grid-column:1/-1}.nav-note{display:none}}
-@media(max-width:520px){.wrap{width:calc(100% - 28px)}.nav{height:65px}.brand{font-size:17px}.hero{padding-top:43px}.hero h1{font-size:43px}.lead{font-size:14px}.actions{display:grid;grid-template-columns:1fr;gap:9px}.btn{width:100%}.visual{min-height:345px}.phone{width:225px}.screen{min-height:340px;padding:16px 12px}.halo{width:270px}.float-card{right:-1%;bottom:4%;padding:9px 11px}.float-tag{top:10%;left:-1%}section{padding:57px 0}.pain-grid{grid-template-columns:1fr}.tile,.tile:last-child{grid-column:auto;min-height:0}.strip-inner{gap:10px 17px;font-size:10px}.ideas{grid-template-columns:1fr}.fit-grid{grid-template-columns:1fr}.faq-q{font-size:15px}.foot{align-items:flex-start;flex-direction:column}.foot span:last-child{text-align:left}.final-card .actions{display:grid}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+:root {
+  color-scheme: dark;
+  --bg: #050b17;
+  --panel: #0a1728;
+  --panel2: #0d2037;
+  --line: #203c5e;
+  --blue: #68bdff;
+  --blue-bright: #388aff;
+  --text: #f4f8ff;
+  --muted: #a6bad3;
+  --soft: #7f96b2;
+  --max: 1180px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 78% 5%, #0d3c7629 0, transparent 33rem),
+    radial-gradient(ellipse at 15% 35%, #10295218 0, transparent 30rem),
+    var(--bg);
+  font: 400 16px/1.6 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+.wrap { width: min(var(--max), calc(100% - clamp(28px, 6vw, 96px))); margin-inline: auto; }
+h1,h2,h3,p { margin-top: 0; }
+h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; line-height: 1.08; letter-spacing: -.045em; }
+a:focus-visible,button:focus-visible { outline: 3px solid #b8e2ff; outline-offset: 4px; }
+::selection { background: #63b4ff; color: #041020; }
 
-/* Product previews: close to the real admin/client flows and fully responsive */
-.product-preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:28px;align-items:stretch}
-.app-preview{min-width:0;border:1px solid #28517a;border-radius:17px;padding:22px;background:linear-gradient(145deg,#10243b,#091625);box-shadow:0 18px 50px #0003;overflow:hidden}
-.preview-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-bottom:16px;border-bottom:1px solid #ffffff12}
-.preview-top h3{font-size:19px;letter-spacing:-.5px;margin:7px 0 0}
-.preview-pill{flex:0 0 auto;padding:5px 9px;border:1px solid #2f5b84;border-radius:99px;color:#a9d6ff;font-size:10px}
-.preview-greeting{font:600 14px 'Space Grotesk',sans-serif;margin:17px 0 13px;color:#eaf4ff}
-.preview-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
-.preview-stat{border:1px solid #244361;border-radius:10px;background:#081522;padding:11px 9px;min-width:0}
-.preview-stat span,.preview-stat small{display:block;color:#9ab0c9;font-size:10px}
-.preview-stat strong{display:block;font:700 23px 'Space Grotesk',sans-serif;color:#f4f8ff;margin:3px 0}
-.preview-section-label{font-size:9px;letter-spacing:1.3px;font-weight:800;color:#80c5ff}
-.preview-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
-.preview-actions span{display:block;padding:10px 9px;border:1px solid #2a4c6c;border-radius:9px;background:#0b1c2d;color:#dcecff;font-size:11px;font-weight:700}
-.preview-caption{font-size:11px;line-height:1.65;color:#9fb2c9;margin:15px 0 0}
-.customer-reward{padding:16px;border:1px solid #2e6ba0;border-radius:13px;background:linear-gradient(145deg,#133a60,#0b2137);margin-top:3px}
-.customer-reward>strong{display:block;font:700 31px 'Space Grotesk',sans-serif;color:#83c9ff;margin:6px 0 2px}
-.customer-reward p{font-size:11px;line-height:1.5;color:#d2e5f8;margin:0 0 12px}
-.customer-progress{height:7px;border-radius:99px;background:#1b3854;overflow:hidden}
-.customer-progress span{display:block;width:67%;height:100%;border-radius:99px;background:linear-gradient(90deg,#398ff2,#7dc7ff)}
-.customer-progress-label{display:flex;justify-content:space-between;gap:8px;margin-top:7px;color:#b7cee5;font-size:10px}
-.customer-progress-label b{color:#7dc7ff}
-.customer-detail{display:flex;justify-content:space-between;gap:10px;padding:12px 0 10px;border-bottom:1px solid #ffffff12;font-size:11px;color:#9eb4cc}
-.customer-detail strong{color:#e5f1ff;text-align:right}
-.customer-whatsapp{margin-top:11px;text-align:center;padding:11px 12px;border-radius:9px;background:#12345a;border:1px solid #2b608e;color:#b8ddff;font-size:11px;font-weight:700}
-.mini-cta{margin-top:12px;border:1px solid #2d5e89;border-radius:8px;background:#102a45;color:#bcdfff;text-align:center;font-size:10px;font-weight:700;padding:9px 7px}
-.promo-highlight{display:flex;align-items:flex-start;gap:14px;padding:19px 21px;margin-top:17px;border:1px solid #254a6b;border-radius:13px;background:#0c1d30}
-.promo-icon{width:35px;height:35px;flex:0 0 35px;border-radius:10px;background:#1689ff20;color:#82c7ff;display:grid;place-items:center}
-.promo-highlight strong{font:700 16px 'Space Grotesk',sans-serif;color:#eff7ff}
-.promo-highlight p{font-size:12px;color:#aebfd3;margin:5px 0 0;line-height:1.65}
-.preview-note{font-size:10px;color:#849bb5;margin:11px 2px 0;line-height:1.6}
-@media(max-width:780px){.product-preview-grid{grid-template-columns:1fr}.app-preview{padding:19px}}
-@media(max-width:520px){.product-preview-grid{gap:12px}.preview-top h3{font-size:17px}.preview-stat{padding:10px 7px}.preview-stat strong{font-size:20px}.preview-stat small{font-size:9px}.promo-highlight{padding:15px}.customer-reward{padding:13px}}
-.customer-applied-reward{display:grid;gap:5px;margin-top:9px;padding:12px 14px;border:1px solid rgba(76,145,255,.48);border-radius:12px;background:rgba(12,37,82,.37)}
-.customer-applied-reward span{font-size:9px;letter-spacing:.12em;font-weight:900;color:#91c5ff}
-.customer-applied-reward strong{font-size:13px;color:#e7f2ff}
-.customer-applied-reward small{font-size:10px;line-height:1.5;color:#a9bdd8}
-.admin-status-banner{display:grid;gap:7px;padding:12px 13px;border:1px solid #2a5b93;border-radius:11px;background:linear-gradient(145deg,#0b2038,#071323);margin:13px 0 9px}
-.admin-status-banner>span{font-size:8px;letter-spacing:1.2px;color:#8abfff;font-weight:850;display:flex;align-items:center;gap:7px}
-.admin-status-banner i,.customer-attendance i{display:inline-block;width:7px;height:7px;background:#5eacff;border-radius:50%;box-shadow:0 0 9px rgba(68,145,255,.65)}
-.admin-status-banner strong{font:700 14px 'Space Grotesk',sans-serif;color:#eef6ff}
-.admin-status-banner small{font-size:9px;color:#93abc9}
-.admin-register-cta{display:flex;align-items:center;gap:10px;padding:13px;border-radius:11px;border:1px solid #3c85ce;background:linear-gradient(110deg,#1457bd,#12315c);margin-bottom:16px}
-.admin-register-cta>span{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;border:1px solid rgba(185,220,255,.28);background:rgba(255,255,255,.07);color:#c6e3ff;font-size:17px}
-.admin-register-cta div{display:grid;gap:3px;flex:1}
-.admin-register-cta strong{font:700 13px 'Space Grotesk',sans-serif;color:#f4f9ff}
-.admin-register-cta small{font-size:9px;line-height:1.45;color:#d0e4ff}
-.admin-register-cta>b{color:#b9ddff;font-size:18px}
-.customer-attendance{display:flex;align-items:center;gap:7px;width:max-content;max-width:100%;padding:7px 9px;border:1px solid rgba(67,209,145,.3);border-radius:99px;background:rgba(21,130,86,.08);font-size:8px;font-weight:850;letter-spacing:.05em;color:#94e8c1;margin:0 0 11px}
-.customer-attendance i{background:#4ee0a0;box-shadow:0 0 8px rgba(78,224,160,.65)}
-.customer-mini-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0 0 11px}
-.customer-mini-stats>div{display:grid;align-content:start;gap:5px;min-width:0;padding:9px 7px;border:1px solid #244361;border-radius:9px;background:#081522}
-.customer-mini-stats span{font-size:8px;line-height:1.35;color:#9ab0c9}
-.customer-mini-stats strong{font:700 12px 'Space Grotesk',sans-serif;color:#eff6ff;overflow-wrap:anywhere}
-@media(max-width:520px){.customer-mini-stats span{font-size:7px}.customer-mini-stats strong{font-size:11px}.admin-register-cta{padding:10px}.customer-attendance{font-size:7px}}
+.nav {
+  height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  border-bottom: 1px solid #ffffff12;
+}
+.brand { display: inline-flex; align-items: center; gap: 11px; font: 700 18px 'Space Grotesk', sans-serif; letter-spacing: -.5px; }
+.brand-mark {
+  display: grid; place-items: center; width: 35px; height: 35px; border-radius: 11px;
+  color: #051226; background: linear-gradient(145deg,#9cddff,#3988ff);
+  box-shadow: 0 0 28px #288fff30; font-size: 18px;
+}
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-label { color: var(--soft); font-size: 12px; }
+.nav-login {
+  display: inline-flex; align-items: center; justify-content: center; padding: 9px 13px;
+  border: 1px solid #315a83; border-radius: 10px; color: #c9e7ff;
+  background: #0a1a2d; font-size: 12px; font-weight: 800; transition: .2s ease;
+}
+.nav-login:hover { border-color: #7bc9ff; background: #102947; }
 
-/* Product story: real capabilities, no fictional app screenshots */
-.visual.product-summary{min-height:0;display:flex;align-items:center;justify-content:center;padding:12px 0}
-.product-summary-card{position:relative;width:100%;max-width:450px;margin-left:auto;padding:26px;border:1px solid #285987;border-radius:22px;background:radial-gradient(ellipse at 100% 0,#10335a55,transparent 52%),linear-gradient(145deg,#0c1d31,#07111f);box-shadow:0 22px 65px #0005}
-.summary-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.summary-pill{flex:0 0 auto;padding:7px 10px;border:1px solid #2b5b89;border-radius:99px;color:#9bceff;font-size:10px}
-.product-summary-card h2{font:700 clamp(23px,2.8vw,31px)/1.12 'Space Grotesk',sans-serif;letter-spacing:-.9px;margin:21px 0 22px;color:#f0f7ff}
-.product-summary-card h2 span{color:#84c6ff}
-.summary-item{display:flex;align-items:flex-start;gap:12px;padding:15px 0;border-top:1px solid #ffffff12}
-.summary-index{display:grid;place-items:center;flex:0 0 31px;width:31px;height:31px;border-radius:10px;background:#1689ff18;border:1px solid #2c6398;color:#8bcaff;font-size:10px;font-weight:800}
-.summary-item strong{display:block;color:#e8f3ff;font-size:12px;margin:1px 0 5px}
-.summary-item small{display:block;color:#9bb1ca;font-size:11px;line-height:1.55}
-.summary-note{border-top:1px solid #ffffff12;padding-top:15px;margin:7px 0 0;color:#88a2bf;font-size:10px;line-height:1.6}
-.product-preview-grid.explainer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.feature-panel{min-width:0;padding:24px;border:1px solid #254b6e;border-radius:17px;background:linear-gradient(145deg,#0e2137,#081421);box-shadow:0 16px 42px #0002}
-.feature-overline{display:flex;align-items:center;gap:9px;color:#8ccaff;font-size:9px;font-weight:850;letter-spacing:1.3px}
-.feature-overline span{display:grid;place-items:center;width:27px;height:27px;border-radius:8px;border:1px solid #2e5e8c;background:#123050;color:#b8ddff;letter-spacing:0}
-.feature-panel h3{font:700 clamp(19px,2.1vw,24px)/1.2 'Space Grotesk',sans-serif;letter-spacing:-.6px;color:#f0f7ff;margin:20px 0 11px}
-.feature-panel p{font-size:12px;line-height:1.75;color:#a8bad0;margin:0}
-.feature-list{display:grid;gap:10px;list-style:none;padding:17px 0 0;margin:17px 0 0;border-top:1px solid #ffffff12}
-.feature-list li{position:relative;padding-left:20px;color:#d2e2f3;font-size:11px;line-height:1.6}
-.feature-list li:before{content:"✓";position:absolute;left:0;top:0;color:#78bfff;font-weight:900}
-@media(max-width:780px){.visual.product-summary{padding:0}.product-summary-card{max-width:none;margin:0;padding:23px}.product-preview-grid.explainer-grid{grid-template-columns:1fr}}
-@media(max-width:520px){.product-summary-card{padding:20px;border-radius:18px}.product-summary-card h2{font-size:24px}.feature-panel{padding:20px}.feature-panel h3{font-size:21px}}
+.hero { position: relative; padding: clamp(56px,8vw,104px) 0 clamp(46px,6vw,78px); }
+.hero-grid { display: grid; grid-template-columns: minmax(0,1.08fr) minmax(360px,.92fr); align-items: center; gap: clamp(38px,6vw,84px); }
+.hero-copy { max-width: 650px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; color: #83c9ff; font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow:before { content: ''; display: block; width: 23px; height: 1px; background: currentColor; box-shadow: 0 0 12px #59adff70; }
+h1 { margin: 20px 0 18px; font-size: clamp(42px,5.8vw,72px); letter-spacing: -.065em; }
+h1 span, .section-title span { color: var(--blue); text-shadow: 0 0 32px #328bff30; }
+.hero-lead { max-width: 550px; margin-bottom: 0; color: #c0d0e4; font-size: clamp(15px,1.4vw,18px); line-height: 1.8; }
+.hero-lead strong { color: #f4f8ff; font-weight: 700; }
+.actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 28px; }
+.btn {
+  display: inline-flex; min-height: 49px; align-items: center; justify-content: center; gap: 10px;
+  padding: 13px 19px; border: 1px solid transparent; border-radius: 11px; font-size: 13px;
+  line-height: 1.2; font-weight: 800; transition: transform .2s, box-shadow .2s, border-color .2s, background .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary {
+  color: #031126; background: linear-gradient(120deg,#9bdcff,#50a5ff 48%,#337cff);
+  border-color: #a1dcff; box-shadow: 0 8px 28px #147dff30, inset 0 1px #ffffffb0;
+}
+.btn-primary:hover { box-shadow: 0 12px 36px #147dff4a, 0 0 0 3px #4ea5ff1b; }
+.btn-secondary { color: #d4e9ff; background: #0a1728; border-color: #294c70; }
+.btn-secondary:hover { border-color: #69bfff; background: #0e2239; }
+.microcopy { display: flex; align-items: center; gap: 8px; margin: 15px 0 0; color: #859db8; font-size: 11px; }
+.microcopy span { color: #8ccaff; font-size: 14px; }
 
+.reward-visual { position: relative; min-width: 0; }
+.reward-halo {
+  position: absolute; inset: 5% -8%; z-index: -1; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 48%,#177fff32 0, #1375ff0d 42%,transparent 70%);
+  filter: blur(10px); animation: halo-breathe 6s ease-in-out infinite;
+}
+.reward-card {
+  position: relative; padding: clamp(22px,3vw,32px); overflow: hidden; isolation: isolate;
+  border: 1px solid #2b5f92; border-radius: 24px;
+  background: radial-gradient(ellipse at 100% 0,#2059a32d 0,transparent 48%),linear-gradient(145deg,#10243d,#091628 70%,#06101e);
+  box-shadow: inset 0 1px #ffffff16, 0 26px 70px #0006;
+  animation: card-arrive .8s cubic-bezier(.2,.75,.25,1) both;
+}
+.reward-card:before { content:''; position:absolute; left:0; top:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#a4e1ff,#3687ff,transparent); opacity:.9; }
+.reward-top { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-bottom:18px; border-bottom:1px solid #ffffff12; }
+.reward-brand { display:flex; align-items:center; gap:9px; }
+.reward-logo { width:32px; height:32px; display:grid; place-items:center; border-radius:10px; background:linear-gradient(145deg,#9de0ff,#398bff); color:#031226; }
+.reward-brand b { display:block; font:700 12px 'Space Grotesk',sans-serif; letter-spacing:.04em; }
+.reward-brand small { display:block; margin-top:2px; color:#91a9c5; font-size:10px; }
+.example-tag { padding:6px 9px; border:1px solid #2f5b84; border-radius:99px; color:#a5d8ff; font-size:8px; font-weight:800; letter-spacing:.1em; white-space:nowrap; }
+.reward-intro { padding:22px 0 16px; }
+.reward-intro small { color:#72bdff; font-size:9px; font-weight:800; letter-spacing:.16em; }
+.reward-intro h3 { margin:6px 0 5px; font-size:27px; letter-spacing:-.05em; }
+.reward-intro p { margin:0; color:#98adc6; font-size:11px; }
+.reward-stats { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.reward-stat { padding:13px 14px; border:1px solid #254664; border-radius:12px; background:#050f1d9c; }
+.reward-stat small { display:block; color:#91a7c2; font-size:10px; }
+.reward-stat strong { display:block; margin-top:3px; color:#f6faff; font:700 25px 'Space Grotesk',sans-serif; }
+.reward-stat strong em { color:#8aa2be; font:500 13px 'DM Sans',sans-serif; font-style:normal; }
+.progress-label { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:19px; color:#a5bad3; font-size:10px; }
+.progress-label strong { color:#a6d9ff; }
+.progress-track { height:8px; margin-top:9px; overflow:hidden; border-radius:99px; background:#1a3451; }
+.progress-fill { display:block; width:66.666%; height:100%; border-radius:inherit; background:linear-gradient(90deg,#2a7dff,#8cd7ff); box-shadow:0 0 18px #329aff80; transform-origin:left; animation:progress-arrive 1.2s .3s cubic-bezier(.18,.78,.2,1) both; }
+.stamps { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:7px; margin-top:11px; }
+.stamp { display:grid; place-items:center; height:30px; min-width:0; border:1px solid #25415f; border-radius:8px; color:#7a91ad; background:#071321; font:700 10px 'Space Grotesk',sans-serif; }
+.stamp.done { border-color:#286bb4; background:#123d6d; color:#d5edff; }
+.stamp.reward { border-color:#8dd6ff; color:#06152a; background:linear-gradient(145deg,#9ce0ff,#3788fa); box-shadow:0 0 20px #278dff38; }
+.reward-result { display:flex; align-items:center; gap:12px; margin-top:19px; padding:14px; border:1px solid #2b6497; border-radius:13px; background:linear-gradient(110deg,#12395e,#0a1d32); }
+.percent-icon { display:grid; place-items:center; flex:0 0 43px; width:43px; height:43px; border:1px solid #397cb4; border-radius:12px; color:#a9ddff; background:#174572; font:700 22px 'Space Grotesk',sans-serif; }
+.reward-result small { display:block; color:#9dcefa; font-size:8px; font-weight:800; letter-spacing:.1em; }
+.reward-result strong { display:block; margin:2px 0; color:#f2f8ff; font:700 22px 'Space Grotesk',sans-serif; }
+.reward-result p { margin:0; color:#aec6df; font-size:10px; line-height:1.5; }
+.reward-note { margin:11px 0 0; color:#748da9; text-align:center; font-size:9px; }
+
+.value-strip { border-block:1px solid #ffffff12; background:linear-gradient(90deg,#081323,#0b1b30,#081323); }
+.value-strip-inner { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; padding:20px 0; }
+.value-item { display:flex; align-items:center; justify-content:center; gap:10px; color:#c9dced; font-size:12px; font-weight:700; }
+.value-icon { display:grid; place-items:center; flex:0 0 29px; width:29px; height:29px; border:1px solid #284f78; border-radius:9px; background:#102844; color:#81c8ff; font-size:14px; }
+
+.section { padding: clamp(54px,7vw,88px) 0; }
+.section-head { max-width:730px; margin-bottom:clamp(25px,4vw,38px); }
+.section-head.center { margin-inline:auto; text-align:center; }
+.section-head.center .eyebrow { justify-content:center; }
+.section-head.center .eyebrow:before { display:none; }
+.section-title { margin:14px 0 12px; font-size:clamp(31px,4.6vw,49px); letter-spacing:-.06em; }
+.section-description { max-width:630px; margin:0; color:var(--muted); font-size:14px; line-height:1.8; }
+.section-head.center .section-description { margin-inline:auto; }
+
+.steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.step-card { min-width:0; padding:clamp(20px,2.6vw,29px); border:1px solid #203f60; border-radius:17px; background:linear-gradient(145deg,#0d2036,#081320); box-shadow:inset 0 1px #ffffff09; transition:transform .25s,border-color .25s,box-shadow .25s; }
+.step-card:hover { transform:translateY(-4px); border-color:#397bb4; box-shadow:0 15px 35px #0003,0 0 23px #1b75ff0b; }
+.step-top { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:23px; }
+.step-number { color:#84caff; font:700 12px 'Space Grotesk',sans-serif; letter-spacing:.12em; }
+.step-symbol { display:grid; place-items:center; width:38px; height:38px; border:1px solid #2c6191; border-radius:11px; color:#99d5ff; background:#102c4a; font-size:18px; }
+.step-card h3 { margin-bottom:9px; font-size:19px; letter-spacing:-.04em; }
+.step-card p { margin:0; color:#a7bad1; font-size:12px; line-height:1.8; }
+.step-card p strong { color:#e7f3ff; }
+
+.benefit-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; }
+.benefit-card { display:flex; gap:13px; align-items:flex-start; min-width:0; padding:21px; border:1px solid #1d3a59; border-radius:15px; background:#091727b5; }
+.benefit-symbol { display:grid; place-items:center; flex:0 0 34px; width:34px; height:34px; border:1px solid #2b6091; border-radius:10px; color:#86cbff; background:#0e2946; }
+.benefit-card h3 { margin:1px 0 6px; font-size:15px; letter-spacing:-.03em; }
+.benefit-card p { margin:0; color:#9fb2c9; font-size:11px; line-height:1.7; }
+
+.clarity { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:24px; padding:clamp(23px,4vw,38px); border:1px solid #2b5c8d; border-radius:20px; background:radial-gradient(ellipse at 100% 0,#1a5aa52c,transparent 50%),linear-gradient(125deg,#0d2540,#071322); }
+.clarity h2 { margin:0 0 8px; font-size:clamp(24px,3.4vw,36px); letter-spacing:-.055em; }
+.clarity p { max-width:650px; margin:0; color:#afc2d8; font-size:13px; line-height:1.8; }
+.clarity .btn { white-space:nowrap; }
+
+.faq { max-width:780px; margin-inline:auto; }
+.faq-item { border-bottom:1px solid #ffffff17; }
+.faq-question { display:flex; width:100%; align-items:center; justify-content:space-between; gap:20px; padding:19px 0; color:#edf6ff; text-align:left; background:none; border:0; font:600 15px 'Space Grotesk',sans-serif; cursor:pointer; }
+.faq-question:hover { color:#86cbff; }
+.faq-plus { flex:0 0 auto; color:#78c6ff; font:400 22px 'DM Sans',sans-serif; transition:transform .2s; }
+.faq-item.open .faq-plus { transform:rotate(45deg); }
+.faq-answer { max-height:0; overflow:hidden; transition:max-height .25s ease; }
+.faq-answer p { max-width:700px; margin:0; padding:0 28px 17px 0; color:#a9bdd4; font-size:12px; line-height:1.8; }
+
+.final { padding:20px 0 clamp(58px,8vw,88px); }
+.final-card { position:relative; overflow:hidden; padding:clamp(30px,5.5vw,62px) 22px; border:1px solid #2c6cab; border-radius:23px; text-align:center; background:radial-gradient(ellipse at 50% 0,#177aff2d,transparent 58%),linear-gradient(145deg,#0d2541,#071323 72%); box-shadow:inset 0 1px #ffffff14,0 20px 60px #0004; }
+.final-card:before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#9addff,#3283ff,transparent); }
+.final-card .eyebrow { justify-content:center; }
+.final-card .eyebrow:before { display:none; }
+.final-card h2 { max-width:760px; margin:14px auto 12px; font-size:clamp(33px,5vw,53px); letter-spacing:-.06em; }
+.final-card h2 span { color:var(--blue); }
+.final-card > p { max-width:550px; margin:0 auto; color:#b2c7de; font-size:13px; }
+.final-card .actions { justify-content:center; margin-top:24px; }
+footer { padding:23px 0; border-top:1px solid #ffffff13; }
+.foot { display:flex; justify-content:space-between; align-items:center; gap:20px; color:#8197b1; font-size:10px; }
+.foot-brand { color:#deecfb; font:700 13px 'Space Grotesk',sans-serif; }
+.foot-note { max-width:600px; text-align:right; }
+
+@keyframes halo-breathe { 0%,100% { opacity:.65; transform:scale(.96); } 50% { opacity:1; transform:scale(1.04); } }
+@keyframes card-arrive { from { opacity:0; transform:translateY(12px) scale(.99); } to { opacity:1; transform:translateY(0) scale(1); } }
+@keyframes progress-arrive { from { transform:scaleX(.08); } to { transform:scaleX(1); } }
+@media (min-width:1450px) { .hero-grid { gap:90px; } }
+@media (max-width:940px) {
+  .hero-grid { grid-template-columns:minmax(0,1fr) minmax(300px,.9fr); gap:30px; }
+  h1 { font-size:clamp(40px,5.4vw,58px); }
+  .reward-card { padding:22px; }
+  .steps { gap:10px; }
+  .step-card { padding:20px; }
+  .benefit-grid { grid-template-columns:1fr 1fr; }
+  .benefit-card:last-child { grid-column:1/-1; }
+  .clarity { grid-template-columns:1fr; }
+  .clarity .btn { width:max-content; }
+}
+@media (max-width:700px) {
+  .wrap { width:calc(100% - 32px); }
+  .nav { height:68px; }
+  .nav-label { display:none; }
+  .hero { padding-top:49px; }
+  .hero-grid { grid-template-columns:minmax(0,1fr); gap:34px; }
+  .hero-copy { max-width:640px; }
+  h1 { max-width:620px; font-size:clamp(41px,9vw,61px); }
+  .hero-lead { font-size:15px; }
+  .reward-visual { width:100%; max-width:530px; margin-inline:auto; }
+  .reward-card { padding:clamp(19px,5vw,28px); }
+  .value-strip-inner { gap:10px; }
+  .value-item { font-size:11px; }
+  .steps { grid-template-columns:1fr; gap:10px; }
+  .step-card { display:grid; grid-template-columns:40px minmax(0,1fr); column-gap:13px; padding:19px; }
+  .step-top { display:contents; }
+  .step-number { grid-row:span 2; padding-top:4px; }
+  .step-symbol { display:none; }
+  .step-card h3 { margin-bottom:6px; }
+  .step-card p { grid-column:2; }
+  .benefit-grid { grid-template-columns:1fr; gap:9px; }
+  .benefit-card:last-child { grid-column:auto; }
+  .benefit-card { padding:17px; }
+  .section { padding:52px 0; }
+  .section-title { font-size:clamp(30px,7.5vw,42px); }
+  .section-description { font-size:13px; }
+  .final { padding-top:4px; }
+  .foot { align-items:flex-start; flex-direction:column; }
+  .foot-note { text-align:left; }
+}
+@media (max-width:430px) {
+  .wrap { width:calc(100% - 26px); }
+  .brand { font-size:16px; }
+  .brand-mark { width:32px; height:32px; }
+  .nav-login { padding:8px 10px; font-size:11px; }
+  .hero { padding:43px 0 42px; }
+  h1 { font-size:clamp(38px,10vw,46px); }
+  .hero-lead { font-size:14px; }
+  .actions { display:grid; grid-template-columns:1fr; gap:9px; }
+  .btn { width:100%; }
+  .reward-card { padding:17px 13px; border-radius:18px; }
+  .reward-top { gap:7px; }
+  .reward-logo { width:29px; height:29px; }
+  .reward-brand b { font-size:11px; }
+  .reward-brand small { font-size:9px; }
+  .example-tag { padding:5px 7px; font-size:7px; }
+  .reward-stats { gap:7px; }
+  .reward-stat { padding:10px; }
+  .reward-stat strong { font-size:22px; }
+  .stamps { gap:5px; }
+  .stamp { height:27px; }
+  .reward-result { gap:9px; padding:11px 9px; }
+  .percent-icon { flex-basis:37px; width:37px; height:37px; }
+  .reward-result strong { font-size:19px; }
+  .reward-note { font-size:8px; }
+  .value-strip-inner { grid-template-columns:1fr; gap:10px; padding:15px 0; }
+  .value-item { justify-content:flex-start; }
+  .clarity { padding:22px 17px; }
+  .clarity .btn { width:100%; }
+  .faq-question { font-size:14px; }
+  .final-card { padding:29px 17px; border-radius:17px; }
+  .final-card h2 { font-size:34px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation:none!important; scroll-behavior:auto!important; transition:none!important; }
+}
 </style>
-<style id="barber-vip-conversion-layout">
-  /* Página comercial: lectura primero; una única captura auténtica del producto. */
-  .nav{gap:16px}
-  .bv-nav-login{font-size:12px;font-weight:700;color:#b7d9ff;border:1px solid #315e8b;border-radius:9px;padding:9px 13px;white-space:nowrap}
-  .bv-nav-login:hover{border-color:#62b0ff;background:#0d2035}
-  .bv-hero{padding:92px 0 70px;min-height:0;display:block}
-  .bv-hero-copy{max-width:820px;margin:0 auto}
-  .bv-hero h1{max-width:820px;font-size:clamp(42px,6.6vw,72px);line-height:1.02;margin:22px 0 19px;letter-spacing:-2.4px}
-  .bv-hero h1 em{color:#77bcff;text-shadow:none}
-  .bv-lead{max-width:720px;color:#c1d0e2;font-size:17px;line-height:1.75;margin:0}
-  .bv-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-  .bv-note{font-size:12px;color:#8fa9c4;margin:16px 0 0}
-  .bv-section{padding-top:75px;padding-bottom:75px}
-  .bv-section-head{max-width:760px;margin-bottom:28px}
-  .bv-section-head h2{font-size:clamp(30px,4.6vw,46px);line-height:1.09;letter-spacing:-1.6px;margin:15px 0 14px}
-  .bv-section-head h2 span{color:#78bdff}
-  .bv-section-head>p{max-width:690px;color:#aebfd2;font-size:14px;line-height:1.8;margin:0}
-  .bv-milestones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:27px}
-  .bv-milestone{border:1px solid #2b5278;background:linear-gradient(145deg,#0c2036,#091421);border-radius:15px;padding:20px 21px}
-  .bv-milestone>span{font-size:10px;font-weight:800;letter-spacing:1.5px;color:#8ec8ff}
-  .bv-milestone strong{display:block;font:700 34px/1.1 'Space Grotesk',sans-serif;letter-spacing:-1.2px;margin:12px 0 8px;color:#f2f8ff}
-  .bv-milestone strong small{font-size:15px;color:#86c6ff}
-  .bv-milestone p{font-size:12px;color:#9fb4cb;margin:0}
-  .bv-footnote{font-size:11px;line-height:1.65;color:#8fa7c0;margin:15px 0 0}
-  .bv-how-section,.bv-join-section{background:linear-gradient(180deg,#091827,#07111f)}
-  .bv-how-section>.wrap,.bv-join-section>.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
-  .bv-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:30px}
-  .bv-step,.bv-join-card{min-width:0;border:1px solid #203e5c;border-radius:15px;padding:21px;background:#0a1929}
-  .bv-step-number{display:grid;place-items:center;width:35px;height:35px;border-radius:10px;border:1px solid #2e6599;background:#102c49;color:#a5d4ff;font-size:11px;font-weight:800}
-  .bv-step h3,.bv-join-card h3{font:700 18px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.4px;margin:17px 0 9px;color:#f2f7ff}
-  .bv-step p,.bv-join-card p{font-size:12px;line-height:1.75;color:#aabdd2;margin:0}
-  .bv-service-note{display:flex;align-items:flex-start;gap:12px;padding:17px 19px;margin-top:18px;border:1px solid #2a5a81;border-radius:13px;background:#0c2034}
-  .bv-service-mark{display:grid;place-items:center;flex:0 0 27px;width:27px;height:27px;border-radius:8px;background:#13385b;color:#9bcfff;font-weight:900}
-  .bv-service-note p{margin:0;color:#b8c9dc;font-size:12px;line-height:1.75}
-  .bv-service-note strong{color:#f2f7ff}
-  .bv-client-benefits{display:grid;gap:0}
-  .bv-client-benefits article{display:flex;gap:13px;padding:19px 0;border-bottom:1px solid #ffffff12}
-  .bv-client-benefits article:first-child{border-top:1px solid #ffffff12}
-  .bv-list-number{display:grid;place-items:center;flex:0 0 30px;width:30px;height:30px;border-radius:9px;border:1px solid #2b5a83;color:#88c8ff;font-size:10px;font-weight:800}
-  .bv-client-benefits h3{font:700 17px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.3px;margin:1px 0 6px}
-  .bv-client-benefits p{margin:0;font-size:12px;line-height:1.7;color:#a9bbd0}
-  .bv-join-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-  .bv-join-card{padding:23px}
-  .bv-clarity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-  .bv-clarity-card{padding:22px;border:1px solid #203f60;border-radius:15px;background:#0a1929}
-  .bv-clarity-yes{border-color:#2e6595;background:linear-gradient(145deg,#0c2138,#0a1828)}
-  .bv-clarity-symbol{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:#13385c;color:#9acfff;font-weight:900}
-  .bv-clarity-card h3{font:700 18px/1.2 'Space Grotesk',sans-serif;margin:16px 0 8px}
-  .bv-clarity-card p{font-size:12px;line-height:1.75;color:#a9bbd0;margin:0}
-  .bv-faq-section{padding-top:75px;padding-bottom:64px}
-  .bv-faq{max-width:850px}
-  .bv-faq .faq-q{font-size:15px;line-height:1.45}
-  .bv-faq .faq-a p{font-size:12px;line-height:1.8}
-  .bv-final-section{padding:25px 0 80px}
-  .bv-final-card{border:1px solid #2a5984;border-radius:20px;padding:clamp(25px,5vw,46px);background:radial-gradient(ellipse at 95% 0,#123a6055,transparent 50%),linear-gradient(145deg,#0c2035,#081321)}
-  .bv-final-card .bv-eyebrow{justify-content:flex-start}
-  .bv-final-card h2{font-size:clamp(31px,4.7vw,48px);line-height:1.08;letter-spacing:-1.6px;margin:16px 0 13px}
-  .bv-final-card h2 span{color:#78bdff}
-  .bv-final-card>p{font-size:13px;line-height:1.8;color:#b1c4d9;max-width:670px;margin:0}
-  .bv-final-card .bv-actions{margin-top:22px}
-  footer .foot{gap:18px}
-  @media(max-width:780px){
-    .nav{height:67px}
-    .nav-note{display:none}
-    .bv-hero{padding:67px 0 49px}
-    .bv-hero h1{font-size:clamp(39px,8vw,57px)}
-    .bv-lead{font-size:15px}
-    .bv-section{padding-top:58px;padding-bottom:58px}
-    .bv-steps{grid-template-columns:1fr}
-    .bv-step{display:grid;grid-template-columns:37px minmax(0,1fr);column-gap:13px;padding:18px}
-    .bv-step-number{grid-row:span 2}
-    .bv-step h3{margin:2px 0 7px}
-    .bv-step p{grid-column:2}
-    .bv-client-benefits{max-width:620px;width:100%;margin:auto}
-  }
-  @media(max-width:520px){
-    .wrap{width:calc(100% - 30px)}
-    .bv-nav-login{padding:8px 10px;font-size:11px}
-    .bv-hero{padding:56px 0 38px}
-    .bv-hero h1{font-size:clamp(37px,10vw,49px);letter-spacing:-1.8px;margin:19px 0 16px}
-    .bv-lead{font-size:14px;line-height:1.75}
-    .bv-actions{display:grid;grid-template-columns:1fr;margin-top:21px}
-    .bv-actions .btn{width:100%}
-    .bv-note{font-size:11px;line-height:1.7}
-    .bv-section{padding-top:48px;padding-bottom:48px}
-    .bv-section-head{margin-bottom:22px}
-    .bv-section-head h2{font-size:clamp(29px,8vw,37px);letter-spacing:-1px}
-    .bv-section-head>p{font-size:13px}
-    .bv-milestones{gap:8px}
-    .bv-milestone{padding:14px 10px}
-    .bv-milestone>span{font-size:8px;letter-spacing:.8px}
-    .bv-milestone strong{font-size:26px;margin:10px 0 6px}
-    .bv-milestone strong small{font-size:11px}
-    .bv-milestone p{font-size:10px;line-height:1.5}
-    .bv-steps{gap:9px;margin-top:20px}
-    .bv-step p,.bv-join-card p,.bv-clarity-card p{font-size:11px}
-    .bv-service-note{padding:14px;gap:9px}
-    .bv-service-note p{font-size:11px}
-    .bv-join-grid,.bv-clarity-grid{grid-template-columns:1fr}
-    .bv-join-card{padding:19px}
-    .bv-faq-section{padding-top:52px;padding-bottom:42px}
-    .bv-faq .faq-q{font-size:14px;padding:17px 0}
-    .bv-final-section{padding:18px 0 52px}
-    .bv-final-card{padding:24px 19px;border-radius:16px}
-    .bv-final-card h2{font-size:31px;letter-spacing:-1px}
-    .bv-final-card>p{font-size:12px}
-    .foot{padding:20px 0}
-  }
-</style>
-<style id="barber-vip-neon-polish">
-  :root{--bg:#020713;--panel:#071326;--panel2:#0a1b35;--line:#1b3f6f;--blue:#4aa3ff;--blue2:#176bff;--text:#f4f8ff;--muted:#9cb2cf}
-  html{background:#020713;scroll-padding-top:80px}
-  body{background:radial-gradient(ellipse at 48% -14%,#0c2852 0,transparent 42%),radial-gradient(ellipse at 100% 44%,#06152e 0,transparent 34%),#020713;color:#f4f8ff}
-  .wrap{isolation:isolate}
-  .nav{border-bottom:1px solid #23518a66;background:linear-gradient(180deg,#040b18f2,#020713bb);backdrop-filter:blur(14px)}
-  .brand{font-size:20px;color:#f3f8ff;text-shadow:0 0 20px #318aff18}
-  .mark{background:linear-gradient(145deg,#7bceff,#277bff 65%,#1747bf);color:#031023;border:1px solid #80c8ff8c;box-shadow:0 0 0 4px #1a72ff12,0 0 30px #1479ff44}
-  .bv-nav-login{border-color:#3278c4;color:#c5e3ff;background:#06152a;box-shadow:inset 0 0 18px #1685ff0d}
-  .bv-nav-login:hover{border-color:#7ac6ff;background:#0a2343;box-shadow:0 0 20px #187bff30}
-  .bv-hero{position:relative;padding-top:clamp(66px,9vw,108px);padding-bottom:clamp(52px,7vw,82px)}
-  .bv-hero:before{content:"";position:absolute;z-index:-1;left:-8%;right:-8%;top:0;height:390px;pointer-events:none;background:radial-gradient(ellipse at 34% 16%,#1769ff26,transparent 52%),radial-gradient(ellipse at 80% 0,#00a5ff0c,transparent 38%)}
-  .bv-eyebrow{color:#66b8ff;text-shadow:0 0 18px #1686ff28}
-  .bv-hero h1{font-size:clamp(42px,6.4vw,72px);letter-spacing:-2.5px;text-shadow:0 3px 30px #0007}
-  .bv-hero h1 em{color:#64b3ff;text-shadow:0 0 34px #1979ff3b}
-  .bv-lead{color:#c2d5ec}
-  .bv-note{display:flex;align-items:center;gap:9px;color:#9cb6d5}
-  .bv-note:before{content:"✓";display:grid;place-items:center;width:19px;height:19px;flex:0 0 19px;border:1px solid #327dcc;border-radius:50%;color:#73c5ff;font-weight:800;font-size:11px;background:#0a2445}
-  .btn{border-radius:11px;transition:transform .18s,border-color .18s,box-shadow .18s,filter .18s}
-  .btn.primary{background:linear-gradient(135deg,#85d1ff 0%,#3e91ff 38%,#2062ff 100%);border:1px solid #80caff;color:#021025;box-shadow:0 7px 26px #146aff30,inset 0 1px #ffffff88}
-  .btn.primary:hover{filter:brightness(1.08);box-shadow:0 10px 32px #167aff55,0 0 0 3px #2385ff18}
-  .btn.secondary{background:linear-gradient(145deg,#0a1d37,#050d1b);border-color:#2a5c92;color:#dbeeff;box-shadow:inset 0 1px #ffffff08}
-  .btn.secondary:hover{border-color:#69b8ff;box-shadow:0 0 24px #1778ff20}
-  .bv-section{position:relative;padding-top:clamp(52px,7vw,84px);padding-bottom:clamp(52px,7vw,84px)}
-  .bv-section-head h2{letter-spacing:-1.8px;text-shadow:0 3px 25px #0008}
-  .bv-section-head h2 span{color:#68baff;text-shadow:0 0 28px #197bff26}
-  .bv-section-head>p{color:#b0c4de}
-  #hitos:before,#vista-cliente:before,#sin-vueltas:before{content:"";position:absolute;z-index:-1;left:0;right:0;top:25px;bottom:20px;border-radius:26px;background:linear-gradient(125deg,#06142b6e,#050c1955);border:1px solid #18477d40;box-shadow:0 20px 70px #0002}
-  .bv-milestones{gap:15px;margin-top:30px}
-  .bv-milestone{position:relative;overflow:hidden;border:1px solid #2562a0;border-radius:16px;background:linear-gradient(145deg,#0d2342 0%,#07152a 58%,#050d1c 100%);box-shadow:inset 0 1px #b8e3ff17,0 12px 32px #0003;transition:transform .2s,border-color .2s,box-shadow .2s}
-  .bv-milestone:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,#51b5ff,#3a76ff,transparent);opacity:.8}
-  .bv-milestone:hover{transform:translateY(-3px);border-color:#69bbff;box-shadow:inset 0 1px #ffffff1f,0 14px 36px #116bff22}
-  .bv-milestone>span{color:#83c9ff}
-  .bv-milestone strong{color:#f4f9ff;text-shadow:0 0 22px #328fff20}
-  .bv-milestone strong small{color:#78c3ff}
-  .bv-footnote{color:#9bb4d2}
-  .bv-how-section,.bv-join-section{background:linear-gradient(180deg,#061226 0%,#030917 55%,#040b18 100%);border-top:1px solid #1e47741f;border-bottom:1px solid #1e47741f}
-  .bv-step,.bv-join-card{border:1px solid #214b7b;border-radius:16px;background:linear-gradient(145deg,#0b1d37 0%,#071327 70%,#040b17 100%);box-shadow:inset 0 1px #ffffff0c,0 12px 32px #0003}
-  .bv-step-number{border-color:#3b82c1;background:linear-gradient(145deg,#123661,#071a34);color:#b4e0ff;box-shadow:0 0 17px #1979ff1c}
-  .bv-step h3,.bv-join-card h3,.bv-client-benefits h3,.bv-clarity-card h3{color:#f5f9ff}
-  .bv-step p,.bv-join-card p,.bv-client-benefits p,.bv-clarity-card p{color:#b1c5df}
-  .bv-service-note{border-color:#2876ba;background:linear-gradient(115deg,#0c2342,#071529);box-shadow:inset 0 1px #ffffff0d,0 0 30px #1064ff10}
-  .bv-service-mark{border:1px solid #3076b5;background:#0d3159;color:#8dd0ff;box-shadow:0 0 20px #1879ff22}
-  .bv-service-note strong{color:#eff8ff}
-  .bv-client-benefits article{border-color:#ffffff15}
-  .bv-client-benefits article:first-child{border-color:#ffffff15}
-  .bv-list-number{border-color:#3274ad;color:#93d0ff;background:#0b1f38;box-shadow:inset 0 1px #ffffff09}
-  .bv-clarity-card{border-color:#234d7b;background:linear-gradient(145deg,#0a1c35,#050d1c);box-shadow:inset 0 1px #ffffff0b,0 14px 38px #0002}
-  .bv-clarity-yes{border-color:#327bc0;background:radial-gradient(ellipse at 0 0,#1547804d,transparent 63%),linear-gradient(145deg,#0a2340,#050d1c);box-shadow:inset 0 1px #ffffff12,0 0 32px #126dff0d}
-  .bv-clarity-symbol{background:#0c3155;border:1px solid #347bb7;color:#93d5ff}
-  .bv-faq .faq-item{border-color:#1c3f68}
-  .bv-faq .faq-q{color:#edf6ff}
-  .bv-faq .faq-q:hover{color:#8dceff}
-  .bv-faq .plus{color:#76c5ff;text-shadow:0 0 15px #298aff66}
-  .bv-faq .faq-a p{color:#b0c4de}
-  .bv-final-section{position:relative}
-  .bv-final-card{position:relative;overflow:hidden;border:1px solid #2b6ca8;background:radial-gradient(ellipse at 100% 0,#1258a745,transparent 48%),radial-gradient(ellipse at 0 100%,#0a347333,transparent 45%),linear-gradient(145deg,#0c2340,#061326 60%,#030a16);box-shadow:inset 0 1px #ffffff15,0 25px 65px #0005}
-  .bv-final-card:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,#75caff,#277bff,transparent)}
-  .bv-final-card h2{color:#f5f9ff}
-  .bv-final-card h2 span{color:#72c0ff;text-shadow:0 0 25px #1980ff30}
-  .bv-final-card>p{color:#b7cbe0}
-  @media(max-width:780px){
-    .bv-hero{padding-top:65px}
-    .bv-section{padding-top:58px;padding-bottom:58px}
-    #hitos:before,#vista-cliente:before,#sin-vueltas:before{left:-4px;right:-4px;border-radius:20px}
-    .bv-milestones{gap:10px}
-  }
-  @media(max-width:520px){
-    body{background:radial-gradient(ellipse at 55% -5%,#0c2852 0,transparent 37%),#020713}
-    .bv-hero{padding-top:52px;padding-bottom:43px}
-    .bv-hero h1{font-size:clamp(36px,9.4vw,47px);letter-spacing:-1.6px}
-    .bv-milestones{gap:8px}
-    .bv-milestone{padding:15px 10px;border-radius:13px}
-    .bv-milestone strong{font-size:25px}
-    .bv-service-note{box-shadow:inset 0 1px #ffffff0d}
-    .bv-final-card{box-shadow:inset 0 1px #ffffff15,0 18px 40px #0005}
-  }
-</style>
-
-<style id="dynamic-client-story">
-  :root { --max: 1240px; }
-  .wrap { width: min(var(--max), calc(100% - clamp(24px, 5vw, 88px))); margin-inline: auto; }
-
-  .bv-dynamic-section { width: min(1240px, calc(100% - clamp(24px, 5vw, 88px))); }
-  .bv-dynamic-intro { max-width: 830px; margin: 0 auto clamp(28px, 4vw, 48px); text-align: center; }
-  .bv-dynamic-intro .bv-eyebrow { justify-content: center; }
-  .bv-dynamic-intro .bv-eyebrow:before { display: none; }
-  .bv-dynamic-intro h2 { font-size: clamp(34px, 4.6vw, 54px); line-height: 1.04; letter-spacing: -2px; margin: 16px 0; }
-  .bv-dynamic-intro h2 span { color: #70bdff; }
-  .bv-dynamic-intro > p { max-width: 710px; margin: 0 auto; color: #b0c5df; font-size: clamp(13px, 1.25vw, 16px); line-height: 1.8; }
-
-  .bv-dynamic-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5.5vw, 76px); align-items: center; }
-  .bv-dynamic-copy { min-width: 0; max-width: 510px; }
-  .bv-demo-kicker { display: flex; align-items: center; gap: 9px; font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #89c9ff; }
-  .bv-live-dot { width: 8px; height: 8px; flex: 0 0 8px; border-radius: 50%; background: #69c5ff; box-shadow: 0 0 12px #309aff; animation: bv-live-pulse 2s ease-in-out infinite; }
-  .bv-dynamic-copy > h3 { font: 700 clamp(26px, 3.4vw, 40px)/1.1 'Space Grotesk', sans-serif; letter-spacing: -1.4px; margin: 18px 0 14px; color: #f1f7ff; }
-  .bv-dynamic-copy > p { margin: 0; font-size: 14px; line-height: 1.85; color: #aebfd4; }
-  .bv-dynamic-points { display: grid; gap: 0; margin-top: 24px; }
-  .bv-dynamic-points article { display: flex; align-items: flex-start; gap: 13px; padding: 17px 0; border-top: 1px solid #ffffff12; }
-  .bv-dynamic-number { display: grid; place-items: center; flex: 0 0 34px; width: 34px; height: 34px; border: 1px solid #2d659d; border-radius: 10px; background: #0b2441; color: #8dceff; font: 800 10px 'Space Grotesk', sans-serif; }
-  .bv-dynamic-points strong { display: block; font: 700 15px 'Space Grotesk', sans-serif; color: #eaf4ff; margin: 1px 0 5px; }
-  .bv-dynamic-points p { margin: 0; font-size: 12px; line-height: 1.7; color: #9fb3cc; }
-
-  .bv-demo-wrap { position: relative; min-width: 0; isolation: isolate; }
-  .bv-demo-glow { position: absolute; inset: 12% -8%; z-index: -1; pointer-events: none; background: radial-gradient(ellipse at 50% 46%, #167dff1d, transparent 68%); filter: blur(14px); }
-  .bv-demo-card { position: relative; overflow: hidden; border: 1px solid #2c5f91; border-radius: 22px; padding: clamp(18px, 2.4vw, 29px); background: radial-gradient(ellipse at 100% 0, #1456a328, transparent 45%), linear-gradient(145deg, #0d2038 0%, #081629 70%, #050d19 100%); box-shadow: inset 0 1px #ffffff13, 0 24px 65px #0006; }
-  .bv-demo-card:before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #7acbff, #327bff, transparent); opacity: .9; }
-  .bv-demo-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 17px; border-bottom: 1px solid #ffffff12; }
-  .bv-demo-brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
-  .bv-demo-mark { display: grid; place-items: center; flex: 0 0 33px; width: 33px; height: 33px; border-radius: 10px; background: linear-gradient(145deg,#94d8ff,#2780f5); color: #041428; box-shadow: 0 0 22px #218aff32; }
-  .bv-demo-brand b,.bv-demo-brand small { display: block; }
-  .bv-demo-brand b { font: 700 12px 'Space Grotesk',sans-serif; letter-spacing: .3px; color: #f0f7ff; }
-  .bv-demo-brand small { font-size: 10px; color: #91a9c6; margin-top: 3px; }
-  .bv-demo-badge { flex: 0 0 auto; border: 1px solid #2c5d8e; border-radius: 99px; padding: 6px 9px; color: #9bcfff; font-size: 8px; font-weight: 800; letter-spacing: .7px; }
-  .bv-demo-welcome { margin: 22px 0 15px; }
-  .bv-demo-welcome > small { font-size: 9px; font-weight: 800; letter-spacing: 1.6px; color: #72baff; }
-  .bv-demo-welcome h4 { font: 700 clamp(22px, 2.5vw, 28px)/1.1 'Space Grotesk',sans-serif; letter-spacing: -.7px; color: #f3f8ff; margin: 7px 0 5px; }
-  .bv-demo-welcome p { margin: 0; font-size: 11px; color: #9eb2cb; }
-  .bv-demo-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .bv-demo-stats > div { min-width: 0; padding: 13px 14px; border: 1px solid #224160; border-radius: 12px; background: #061321a8; }
-  .bv-demo-stats > div > span { display: block; font-size: 10px; color: #9bb1ca; }
-  .bv-demo-stats strong { display: block; margin-top: 5px; color: #f3f8ff; font: 700 25px 'Space Grotesk',sans-serif; }
-  .bv-demo-stats strong i { color: #91a8c1; font: 500 13px 'DM Sans',sans-serif; font-style: normal; }
-  .bv-demo-progress { height: 8px; margin-top: 17px; border-radius: 99px; background: #1a3552; overflow: hidden; }
-  .bv-demo-progress > span { display: block; height: 100%; width: 66.67%; border-radius: inherit; background: linear-gradient(90deg,#277dff,#75caff); box-shadow: 0 0 18px #2789ff65; transition: width .42s cubic-bezier(.2,.8,.2,1); }
-  .bv-demo-milestones { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 7px; margin-top: 10px; }
-  .bv-demo-milestones > span { display: grid; place-items: center; min-width: 0; height: 30px; border: 1px solid #25415f; border-radius: 8px; background: #081525; color: #6f87a4; font: 700 10px 'Space Grotesk',sans-serif; transition: background .25s,border-color .25s,color .25s,transform .25s; }
-  .bv-demo-milestones > span.is-done { border-color: #286bb4; background: #123d6d; color: #d6edff; }
-  .bv-demo-milestones > span.is-reward { border-color: #72c6ff; background: linear-gradient(145deg,#86d2ff,#2b89f7); color: #03162c; box-shadow: 0 0 18px #188bff24; }
-  .bv-demo-milestones > span.just-reached { transform: translateY(-3px); }
-  .bv-demo-reward { display: flex; align-items: center; gap: 12px; margin-top: 19px; padding: 14px; border: 1px solid #2d5d8c; border-radius: 13px; background: linear-gradient(110deg,#103354,#0b1e33); transition: border-color .25s,background .25s; }
-  .bv-demo-reward.is-complete { border-color: #68baff; background: linear-gradient(110deg,#144778,#0d2544); }
-  .bv-demo-reward-icon { display: grid; place-items: center; flex: 0 0 43px; width: 43px; height: 43px; border: 1px solid #3a79b0; border-radius: 12px; background: #174774; color: #9cd5ff; font: 700 23px 'Space Grotesk',sans-serif; }
-  .bv-demo-reward small,.bv-demo-reward strong { display: block; }
-  .bv-demo-reward small { font-size: 8px; line-height: 1.5; font-weight: 800; letter-spacing: .7px; color: #a0d4ff; }
-  .bv-demo-reward strong { font: 700 21px 'Space Grotesk',sans-serif; color: #f1f8ff; margin: 2px 0; }
-  .bv-demo-reward p { font-size: 10px; line-height: 1.5; margin: 0; color: #b2c9e2; }
-  .bv-demo-next { display: flex; align-items: center; gap: 9px; margin-top: 13px; font-size: 11px; line-height: 1.6; color: #b7cce2; }
-  .bv-next-icon { display: grid; place-items: center; flex: 0 0 25px; width: 25px; height: 25px; border-radius: 8px; background: #102a45; color: #8acbff; }
-  .bv-demo-button { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; min-height: 45px; margin-top: 15px; border: 1px solid #78c8ff; border-radius: 10px; background: linear-gradient(120deg,#83d2ff,#388dff 60%,#2464ff); color: #031126; font: 800 12px 'DM Sans',sans-serif; box-shadow: 0 8px 28px #167dff30,inset 0 1px #ffffff82; transition: filter .2s,transform .2s,box-shadow .2s; }
-  .bv-demo-button:hover { filter: brightness(1.07); transform: translateY(-1px); box-shadow: 0 10px 32px #167dff45; }
-  .bv-demo-button:focus-visible { outline: 3px solid #e0f3ff; outline-offset: 3px; }
-  .bv-demo-disclaimer { margin: 11px 0 0; color: #758da9; font-size: 9px; text-align: center; line-height: 1.55; }
-  .bv-dynamic-bottom { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 13px; margin-top: clamp(26px, 4vw, 44px); }
-  .bv-dynamic-bottom > div { min-width: 0; position: relative; padding: 20px; border: 1px solid #214469; border-radius: 14px; background: linear-gradient(145deg,#0b1d34,#06111e); }
-  .bv-bottom-icon { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; margin-bottom: 14px; border: 1px solid #2b659a; background: #0e2d4d; color: #8bcaff; }
-  .bv-dynamic-bottom strong { display: block; font: 700 14px 'Space Grotesk',sans-serif; color: #ebf5ff; }
-  .bv-dynamic-bottom p { margin: 6px 0 0; color: #95acc6; font-size: 11px; line-height: 1.65; }
-  @keyframes bv-live-pulse { 50% { opacity: .48; box-shadow: 0 0 3px #309aff; } }
-
-  @media (min-width: 1400px) {
-    .bv-dynamic-layout { gap: 76px; }
-    .bv-demo-card { padding: 30px; }
-  }
-  @media (max-width: 1100px) {
-    .bv-dynamic-section { width: calc(100% - 52px); }
-    .bv-dynamic-layout { grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); gap: 26px; }
-    .bv-demo-card { padding: 20px; }
-    .bv-demo-stats > div { padding: 11px; }
-    .bv-demo-stats strong { font-size: 23px; }
-    .bv-dynamic-bottom > div { padding: 17px; }
-  }
-  @media (max-width: 780px) {
-    .wrap, .bv-dynamic-section { width: calc(100% - 32px); }
-    .bv-dynamic-intro { text-align: left; margin-bottom: 27px; }
-    .bv-dynamic-intro .bv-eyebrow { justify-content: flex-start; }
-    .bv-dynamic-intro .bv-eyebrow:before { display: block; }
-    .bv-dynamic-intro h2 { font-size: clamp(33px, 6vw, 43px); letter-spacing: -1.4px; }
-    .bv-dynamic-layout { grid-template-columns: minmax(0,1fr); gap: 27px; }
-    .bv-dynamic-copy { max-width: 680px; }
-    .bv-dynamic-copy > h3 { font-size: clamp(27px,5vw,36px); }
-    .bv-demo-wrap { width: 100%; max-width: 620px; margin-inline: auto; }
-    .bv-demo-card { padding: clamp(18px, 4vw, 26px); }
-    .bv-dynamic-bottom { grid-template-columns: 1fr; gap: 10px; }
-    .bv-dynamic-bottom > div { display: grid; grid-template-columns: 34px minmax(0,1fr); column-gap: 12px; align-items: center; padding: 15px; }
-    .bv-bottom-icon { grid-row: span 2; margin: 0; }
-    .bv-dynamic-bottom strong { align-self: end; }
-    .bv-dynamic-bottom p { align-self: start; margin-top: 3px; }
-  }
-  @media (max-width: 520px) {
-    .wrap, .bv-dynamic-section { width: calc(100% - 24px); }
-    .bv-dynamic-intro h2 { font-size: clamp(30px, 8vw, 37px); line-height: 1.08; letter-spacing: -.9px; }
-    .bv-dynamic-intro > p { font-size: 13px; }
-    .bv-dynamic-copy > p { font-size: 13px; }
-    .bv-dynamic-points article { padding: 14px 0; }
-    .bv-dynamic-points p { font-size: 11px; }
-    .bv-demo-card { padding: 16px 13px; border-radius: 17px; }
-    .bv-demo-top { gap: 7px; }
-    .bv-demo-mark { flex-basis: 29px; width: 29px; height: 29px; }
-    .bv-demo-brand b { font-size: 11px; }
-    .bv-demo-brand small { font-size: 9px; }
-    .bv-demo-badge { padding: 5px 7px; font-size: 7px; letter-spacing: .35px; }
-    .bv-demo-stats { gap: 7px; }
-    .bv-demo-stats > div { padding: 10px; }
-    .bv-demo-stats strong { font-size: 22px; }
-    .bv-demo-milestones { gap: 5px; }
-    .bv-demo-milestones > span { height: 27px; }
-    .bv-demo-reward { gap: 10px; padding: 12px 10px; }
-    .bv-demo-reward-icon { flex-basis: 37px; width: 37px; height: 37px; }
-    .bv-demo-reward strong { font-size: 19px; }
-    .bv-demo-next { font-size: 10px; }
-    .bv-demo-disclaimer { font-size: 8px; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .bv-live-dot { animation: none; }
-    .bv-demo-progress > span, .bv-demo-milestones > span, .bv-demo-reward { transition: none; }
-  }
-</style>
-
 </head>
 <body>
 <header class="wrap nav" id="inicio">
-<a class="brand" href="#inicio" aria-label="Barber VIP inicio"><span class="mark">✦</span> BARBER VIP</a>
-<div class="nav-note">Fidelización para barberos</div>
-<a class="bv-nav-login" href="https://barber-vip-three.vercel.app/">Ingresar ↗</a>
+  <a class="brand" href="#inicio" aria-label="Barber VIP, inicio"><span class="brand-mark">✦</span> BARBER VIP</a>
+  <div class="nav-right"><span class="nav-label">Fidelización para barberos</span><a class="nav-login" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta ↗</a></div>
 </header>
+
 <main>
-<section class="bv-hero wrap">
-  <div class="bv-hero-copy">
-    <div class="bv-eyebrow">Fidelización digital para barberos</div>
-    <h1>Dales un motivo para volver.<br><em>Sin regalar tu trabajo.</em></h1>
-    <p class="bv-lead">Barber VIP convierte las visitas en un programa de descuentos que vos configurás. Tu cliente ve su progreso desde el celular y sabe cuánto le falta para el próximo beneficio.</p>
-    <div class="bv-actions">
-      <a class="btn primary" href="https://barber-vip-three.vercel.app/">Probar 7 días gratis <span>↗</span></a>
-      <a class="btn secondary" href="#como-funciona">Ver cómo funciona</a>
-    </div>
-    <p class="bv-note">Sin instalar otra app en el celular de tus clientes. Vos definís los beneficios.</p>
-  </div>
-</section>
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Fidelización digital para barberos</div>
+        <h1>Que tus clientes vuelvan.<br><span>Y tengan un motivo.</span></h1>
+        <p class="hero-lead"><strong>Vos registrás cada corte.</strong> Barber VIP muestra a tu cliente sus visitas, el descuento que alcanzó y cuánto le falta para el próximo beneficio.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://barber-vip-three.vercel.app/">Probar 7 días gratis <span>↗</span></a>
+          <a class="btn btn-secondary" href="#como-funciona">Ver cómo funciona ↓</a>
+        </div>
+        <p class="microcopy"><span>✓</span> Vos elegís los hitos y los descuentos. El pago es manual.</p>
+      </div>
 
-<section class="bv-section wrap" id="hitos">
-  <div class="bv-section-head">
-    <div class="bv-eyebrow">El motor de Barber VIP</div>
-    <h2>Vos elegís los hitos.<br><span>La app muestra el progreso.</span></h2>
-    <p>En cada hito configurás el porcentaje de descuento que querés ofrecer. El cliente ve cuánto avanzó y cuál es el siguiente beneficio.</p>
-  </div>
-  <div class="bv-milestones" aria-label="Ejemplo de hitos de descuento">
-    <article class="bv-milestone"><span>VISITA 2</span><strong>10% <small>OFF</small></strong><p>Primer beneficio</p></article>
-    <article class="bv-milestone"><span>VISITA 4</span><strong>20% <small>OFF</small></strong><p>Un nuevo hito</p></article>
-    <article class="bv-milestone"><span>VISITA 6</span><strong>Tu % <small>OFF</small></strong><p>Lo definís vos</p></article>
-  </div>
-  <p class="bv-footnote">Es solo un ejemplo: elegís las visitas y los porcentajes según tu forma de trabajar y el margen que quieras cuidar.</p>
-</section>
-
-<section class="bv-section bv-how-section" id="como-funciona">
-  <div class="wrap">
-    <div class="bv-section-head">
-      <div class="bv-eyebrow">Simple en el día a día</div>
-      <h2>Vos registrás la visita.<br><span>Tu cliente sigue su avance.</span></h2>
-    </div>
-    <div class="bv-steps">
-      <article class="bv-step"><span class="bv-step-number">01</span><div><h3>Configurás tus hitos</h3><p>Definís en qué visitas se habilita cada descuento y qué porcentaje corresponde. Además, podés crear promociones puntuales cuando quieras hacer una acción especial.</p></div></article>
-      <article class="bv-step"><span class="bv-step-number">02</span><div><h3>Sumás la visita</h3><p>Desde tu panel elegís al cliente y registrás el corte. No tenés que calcular a mano cuánto le falta para el próximo hito.</p></div></article>
-      <article class="bv-step"><span class="bv-step-number">03</span><div><h3>El cliente ve su progreso</h3><p>En su propio espacio consulta las visitas, el ciclo actual, el descuento aplicado y el próximo beneficio.</p></div></article>
-    </div>
-    <div class="bv-service-note"><span class="bv-service-mark">✓</span><p><strong>Los hitos cuentan visitas, no tipos de servicio.</strong> Corte, corte + barba u otro servicio que tengas configurado: registrás la visita y el descuento se aplica según los servicios y precios configurados.</p></div>
-  </div>
-</section>
-
-<section class="bv-section wrap bv-client-section bv-dynamic-section" id="vista-cliente">
-  <div class="bv-dynamic-intro">
-    <div class="bv-eyebrow">La experiencia del cliente</div>
-    <h2>Cada visita lo acerca<br><span>a su próximo beneficio.</span></h2>
-    <p>El cliente puede seguir su progreso, saber qué beneficio alcanzó y consultar los datos de su barbero, todo desde su celular.</p>
-  </div>
-
-  <div class="bv-dynamic-layout">
-    <div class="bv-dynamic-copy">
-      <div class="bv-demo-kicker"><span class="bv-live-dot"></span> Un sistema fácil de entender</div>
-      <h3>La fidelización se vuelve visible.</h3>
-      <p>Cuando el avance es claro, el cliente sabe cuánto recorrió y qué le falta para llegar al siguiente hito. Vos definís las visitas y los beneficios.</p>
-      <div class="bv-dynamic-points">
-        <article>
-          <span class="bv-dynamic-number">01</span>
-          <div><strong>Progreso a la vista</strong><p>Consulta sus visitas registradas y el avance de su ciclo.</p></div>
-        </article>
-        <article>
-          <span class="bv-dynamic-number">02</span>
-          <div><strong>Beneficios claros</strong><p>Puede ver el descuento que alcanzó y el siguiente objetivo.</p></div>
-        </article>
-        <article>
-          <span class="bv-dynamic-number">03</span>
-          <div><strong>Contacto directo</strong><p>Encuentra los datos y las vías de contacto de su propio barbero.</p></div>
-        </article>
+      <div class="reward-visual" aria-label="Ejemplo ilustrativo de la tarjeta digital de un cliente">
+        <div class="reward-halo" aria-hidden="true"></div>
+        <div class="reward-card">
+          <div class="reward-top">
+            <div class="reward-brand"><span class="reward-logo">✦</span><span><b>BARBER VIP</b><small>Tu tarjeta de fidelización</small></span></div>
+            <span class="example-tag">EJEMPLO VISUAL</span>
+          </div>
+          <div class="reward-intro"><small>HOLA, SANTIAGO</small><h3>Tu progreso</h3><p>Cada visita te acerca al próximo beneficio.</p></div>
+          <div class="reward-stats">
+            <div class="reward-stat"><small>Visitas del ciclo</small><strong>4 <em>/ 6</em></strong></div>
+            <div class="reward-stat"><small>Avance</small><strong>67%</strong></div>
+          </div>
+          <div class="progress-label"><span>Tu ciclo actual</span><strong>4 de 6 visitas</strong></div>
+          <div class="progress-track"><span class="progress-fill"></span></div>
+          <div class="stamps" aria-label="Ejemplo de seis visitas, cuatro completadas"><span class="stamp done">1</span><span class="stamp done">2</span><span class="stamp done">3</span><span class="stamp reward">4</span><span class="stamp">5</span><span class="stamp">6</span></div>
+          <div class="reward-result"><span class="percent-icon">%</span><div><small>BENEFICIO ALCANZADO · EJEMPLO</small><strong>20% OFF</strong><p>El barbero configura sus propios descuentos e hitos.</p></div></div>
+        </div>
+        <p class="reward-note">Es una representación ilustrativa, no una captura ni datos reales.</p>
       </div>
     </div>
+  </section>
 
-    <div class="bv-demo-wrap" data-loyalty-demo>
-      <div class="bv-demo-card">
-        <div class="bv-demo-top">
-          <div class="bv-demo-brand"><span class="bv-demo-mark">✦</span><span><b>BARBER VIP</b><small>Tu tarjeta de fidelización</small></span></div>
-          <span class="bv-demo-badge">DEMO INTERACTIVA</span>
+  <div class="value-strip">
+    <div class="wrap value-strip-inner">
+      <div class="value-item"><span class="value-icon">✓</span> Vos controlás los beneficios</div>
+      <div class="value-item"><span class="value-icon">↗</span> El cliente ve su progreso</div>
+      <div class="value-item"><span class="value-icon">✦</span> Una razón más para regresar</div>
+    </div>
+  </div>
+
+  <section class="section wrap" id="como-funciona">
+    <div class="section-head">
+      <div class="eyebrow">Así de simple</div>
+      <h2 class="section-title">Tres pasos.<br><span>Todo más claro.</span></h2>
+      <p class="section-description">No tenés que llevar las cuentas de memoria ni explicar cada beneficio cada vez.</p>
+    </div>
+    <div class="steps">
+      <article class="step-card"><div class="step-top"><span class="step-number">01 / CONFIGURÁS</span><span class="step-symbol">⚙</span></div><h3>Elegís tus reglas</h3><p>Definís en qué visitas hay beneficios y qué descuento querés dar.</p></article>
+      <article class="step-card"><div class="step-top"><span class="step-number">02 / REGISTRÁS</span><span class="step-symbol">✓</span></div><h3>Sumás el corte</h3><p>Desde tu panel registrás la visita del cliente. Barber VIP actualiza su avance.</p></article>
+      <article class="step-card"><div class="step-top"><span class="step-number">03 / FIDELIZÁS</span><span class="step-symbol">✦</span></div><h3>Él ve su progreso</h3><p>Desde el celular consulta las visitas, el descuento alcanzado y los datos de su barbero.</p></article>
+    </div>
+  </section>
+
+  <section class="section wrap" id="beneficios">
+    <div class="section-head">
+      <div class="eyebrow">Lo esencial</div>
+      <h2 class="section-title">Hecha para tu relación<br><span>con cada cliente.</span></h2>
+    </div>
+    <div class="benefit-grid">
+      <article class="benefit-card"><span class="benefit-symbol">↗</span><div><h3>Visitas y descuentos</h3><p>El cliente sabe qué logró y cuánto le falta para el siguiente hito.</p></div></article>
+      <article class="benefit-card"><span class="benefit-symbol">✳</span><div><h3>Promociones puntuales</h3><p>Creá una promo especial cuando quieras impulsar una acción.</p></div></article>
+      <article class="benefit-card"><span class="benefit-symbol">◎</span><div><h3>Tu espacio, tus clientes</h3><p>La fidelización se vincula con vos y con los beneficios que vos definís.</p></div></article>
+    </div>
+  </section>
+
+  <section class="section wrap" style="padding-top:0">
+    <div class="clarity">
+      <div><h2>No es una agenda.<br><span>Es para que vuelvan.</span></h2><p>Barber VIP se enfoca en visitas, beneficios y promociones. No reemplaza tu agenda ni garantiza clientes nuevos: te ayuda a darles una razón para regresar a quienes ya te conocen.</p></div>
+      <a class="btn btn-primary" href="https://barber-vip-three.vercel.app/">Empezar prueba gratis ↗</a>
+    </div>
+  </section>
+
+  <section class="section wrap" id="preguntas">
+    <div class="section-head center">
+      <div class="eyebrow">Sin vueltas</div>
+      <h2 class="section-title">Lo que necesitás saber.</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item"><button class="faq-question" aria-expanded="false">¿Puedo elegir los descuentos?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Sí. Vos definís los hitos de visitas y los descuentos que querés ofrecer. Los porcentajes de esta página son solo un ejemplo.</p></div></div>
+      <div class="faq-item"><button class="faq-question" aria-expanded="false">¿Mis clientes tienen que descargar una app?<span class="faq-plus">+</span></button><div class="faq-answer"><p>La primera vez, abren el enlace desde el navegador y pueden agregar Barber VIP a la pantalla de inicio. Después entran desde su ícono, sin buscarla en una tienda de aplicaciones.</p></div></div>
+      <div class="faq-item"><button class="faq-question" aria-expanded="false">¿Cómo funciona la prueba y el pago?<span class="faq-plus">+</span></button><div class="faq-answer"><p>Tenés 7 días de prueba. El pago es manual, sin débitos automáticos. Cuando Mercado Pago lo aprueba, comienza el período de 30 días. Si vence tu período, hay 5 días de gracia.</p></div></div>
+      <div class="faq-item"><button class="faq-question" aria-expanded="false">¿Me garantiza conseguir más clientes?<span class="faq-plus">+</span></button><div class="faq-answer"><p>No garantiza clientes nuevos. Está pensada para trabajar la fidelidad de quienes ya te conocen, dando un motivo para que vuelvan.</p></div></div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <div class="final-card">
+        <div class="eyebrow">Probala en tu barbería</div>
+        <h2>Empezá con tus clientes de hoy.<br><span>Construí motivos para mañana.</span></h2>
+        <p>Configurá tus beneficios, registrá visitas y conocé la herramienta con tus propios clientes.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://barber-vip-three.vercel.app/">Probar 7 días gratis ↗</a>
+          <a class="btn btn-secondary" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta</a>
         </div>
-
-        <div class="bv-demo-welcome"><small>HOLA, SANTIAGO</small><h4>Tu progreso</h4><p>Un ejemplo de cómo se muestran las visitas.</p></div>
-
-        <div class="bv-demo-stats">
-          <div><span>Visitas del ciclo</span><strong><span data-demo-count>4</span><i>/ 6</i></strong></div>
-          <div><span>Progreso</span><strong data-demo-percent>67%</strong></div>
-        </div>
-
-        <div class="bv-demo-progress" role="progressbar" aria-label="Progreso ilustrativo del ciclo" aria-valuemin="0" aria-valuemax="6" aria-valuenow="4">
-          <span data-demo-bar></span>
-        </div>
-        <div class="bv-demo-milestones" aria-label="Visitas del ejemplo">
-          <span class="is-done">1</span><span class="is-done">2</span><span class="is-done">3</span><span class="is-done is-reward">4</span><span>5</span><span>6</span>
-        </div>
-
-        <div class="bv-demo-reward" data-demo-reward>
-          <div class="bv-demo-reward-icon">%</div>
-          <div><small data-demo-reward-label>BENEFICIO ALCANZADO · EJEMPLO</small><strong data-demo-reward-value>20% OFF</strong><p data-demo-reward-description>Un descuento de ejemplo configurado para un hito anterior.</p></div>
-        </div>
-
-        <div class="bv-demo-next" aria-live="polite"><span class="bv-next-icon">↗</span><span data-demo-status>Te faltan 2 visitas para llegar al hito de ejemplo.</span></div>
-
-        <button class="bv-demo-button" type="button" data-demo-next>Simular próxima visita <span>＋</span></button>
-        <p class="bv-demo-disclaimer">Simulación ilustrativa: no modifica datos reales. Cada barbero configura sus propios hitos y descuentos.</p>
       </div>
-      <div class="bv-demo-glow" aria-hidden="true"></div>
     </div>
-  </div>
-
-  <div class="bv-dynamic-bottom">
-    <div><span class="bv-bottom-icon">↗</span><strong>Vos registrás la visita.</strong><p>El avance se actualiza en el programa.</p></div>
-    <div><span class="bv-bottom-icon">◎</span><strong>El cliente ve su avance.</strong><p>No tiene que llevar la cuenta de memoria.</p></div>
-    <div><span class="bv-bottom-icon">✦</span><strong>Vos definís el premio.</strong><p>Los beneficios se adaptan a tu forma de trabajar.</p></div>
-  </div>
-</section>
-
-<section class="bv-section bv-join-section" id="sumar-clientes">
-  <div class="wrap">
-    <div class="bv-section-head"><div class="bv-eyebrow">Empezá con tus clientes actuales</div><h2>Sumarlos es simple.</h2><p>Podés hacerlo de la manera que mejor encaje con tu rutina.</p></div>
-    <div class="bv-join-grid">
-      <article class="bv-join-card"><span class="bv-step-number">01</span><h3>Los registrás vos</h3><p>Desde tu panel creás el cliente y lo vinculás a tu espacio de Barber VIP.</p></article>
-      <article class="bv-join-card"><span class="bv-step-number">02</span><h3>Se registra el cliente</h3><p>Le compartís el enlace a la app y tu código de acceso. Elige «Cliente», ingresa el código y crea su cuenta.</p></article>
-    </div>
-    <p class="bv-footnote">También podés colocar un QR externo que abra la aplicación y mostrar el código de acceso junto a él. El registro sigue necesitando ese código para vincular al cliente con vos.</p>
-  </div>
-</section>
-
-<section class="bv-section wrap bv-clarity-section" id="sin-vueltas">
-  <div class="bv-section-head"><div class="bv-eyebrow">Al pan, pan</div><h2>Una herramienta enfocada en una cosa.</h2></div>
-  <div class="bv-clarity-grid">
-    <article class="bv-clarity-card bv-clarity-yes"><span class="bv-clarity-symbol">✓</span><h3>Para fidelizar</h3><p>Registrar visitas, configurar hitos de descuento y dar al cliente un motivo concreto para volver.</p></article>
-    <article class="bv-clarity-card"><span class="bv-clarity-symbol">—</span><h3>No reemplaza tus otras herramientas</h3><p>No es una agenda de turnos, caja ni facturación. Tampoco promete conseguir clientes nuevos por sí sola: te ayuda a trabajar la fidelidad de quienes ya te conocen.</p></article>
-  </div>
-</section>
-
-<section class="bv-section wrap bv-faq-section" id="preguntas">
-  <div class="bv-section-head"><div class="bv-eyebrow">Antes de probarla</div><h2>Preguntas frecuentes.</h2><p>Lo importante, claro y sin vueltas.</p></div>
-  <div class="faq bv-faq">
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Puedo definir mis propios descuentos?<span class="plus">+</span></button><div class="faq-a"><p>Sí. En Configuración definís los hitos de visitas y el porcentaje de descuento que corresponde a cada uno. Los porcentajes del ejemplo de esta página no son obligatorios.</p></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">¿El descuento depende de si hago corte o corte + barba?<span class="plus">+</span></button><div class="faq-a"><p>Los hitos se basan en las visitas registradas, no en un tipo de servicio específico. El descuento se aplica según los servicios y precios que tengas configurados para tu actividad.</p></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Cómo se suma un cliente?<span class="plus">+</span></button><div class="faq-a"><p>Podés crearlo desde tu panel o compartir el enlace a Barber VIP junto con tu código de acceso para que él mismo cree su cuenta y se vincule con vos.</p></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Puedo crear promociones puntuales?<span class="plus">+</span></button><div class="faq-a"><p>Sí. Además del programa de hitos, podés crear promociones puntuales. Ahí entra tu creatividad: pensá qué acción puede tener sentido para tus clientes y configurá la promoción con las opciones disponibles en Barber VIP.</p></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Tengo que instalar algo en el celular?<span class="plus">+</span></button><div class="faq-a"><p>Sí: la primera vez, Barber VIP te guía para instalarla en el celular desde el navegador. No necesitás buscarla en una tienda de aplicaciones. Una vez instalada, la abrís desde el ícono de Barber VIP y entrás a tu espacio como en una app.</p></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Barber VIP me garantiza más clientes?<span class="plus">+</span></button><div class="faq-a"><p>No te garantiza clientes nuevos, pero sí está pensada para aumentar las posibilidades de que alguien que te visitó una vez tenga un motivo concreto para volver en lugar de no regresar. Podés registrar a tus clientes actuales desde tu panel o compartir tu enlace y código para que se vinculen con vos. El resultado también depende de tu servicio y de cómo uses los beneficios.</p></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Cuánto dura la prueba y qué pasa después?<span class="plus">+</span></button><div class="faq-a"><p>Al crear tu cuenta tenés 7 días de prueba. Si pagás durante la prueba, los 30 días pagos empiezan cuando Mercado Pago aprueba el pago y la prueba se reemplaza por ese período. Si vence la prueba o tu período pago, tenés 5 días de gracia durante los que la app sigue funcionando con normalidad. Si pagás en ese lapso, se habilitan 30 días desde la aprobación. Si termina la gracia sin pago, la cuenta queda vencida y se bloquean las operaciones de gestión hasta renovar. El pago es manual: no hay débitos automáticos mensuales.</p></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Qué pasa si el pago queda pendiente o no se refleja?<span class="plus">+</span></button><div class="faq-a"><p>El período se actualiza cuando Mercado Pago confirma el pago como aprobado. Si queda pendiente o falla, no se suman los 30 días. Revisá el estado del pago antes de volver a intentarlo para no generar un pago duplicado. Si figura aprobado y la cuenta no se actualiza, guardá el comprobante y volvé a cargar Barber VIP.</p></div></div>
-  </div>
-</section>
-
-<section class="bv-final-section">
-  <div class="wrap">
-    <div class="bv-final-card">
-      <div class="bv-eyebrow">Tu próximo paso</div>
-      <h2>Probala con tus clientes.<br><span>Decidí con experiencia propia.</span></h2>
-      <p>Configurá tus hitos, registrá las visitas y fijate si este sistema encaja con tu manera de trabajar.</p>
-      <div class="bv-actions"><a class="btn primary" href="https://barber-vip-three.vercel.app/">Probar 7 días gratis ↗</a><a class="btn secondary" href="https://barber-vip-three.vercel.app/">Ya tengo cuenta</a></div>
-    </div>
-  </div>
-</section>
+  </section>
 </main>
-<footer><div class="wrap foot"><b>✦ BARBER VIP</b><span>Fidelización digital para barberos. Sin promesas mágicas: una herramienta para premiar la constancia.</span></div></footer>
+
+<footer><div class="wrap foot"><span class="foot-brand">✦ BARBER VIP</span><span class="foot-note">Fidelización digital para barberos. Beneficios configurados por cada barbero.</span></div></footer>
 <script>
 (() => {
- const items=[...document.querySelectorAll('.faq-item')];
- items.forEach(item=>{const q=item.querySelector('.faq-q'),a=item.querySelector('.faq-a');q.addEventListener('click',()=>{const open=item.classList.contains('open');items.forEach(other=>{other.classList.remove('open');other.querySelector('.faq-q').setAttribute('aria-expanded','false');other.querySelector('.faq-a').style.maxHeight='0px'});if(!open){item.classList.add('open');q.setAttribute('aria-expanded','true');a.style.maxHeight=a.scrollHeight+'px'}})});
- window.addEventListener('resize',()=>{const open=document.querySelector('.faq-item.open .faq-a');if(open)open.style.maxHeight=open.scrollHeight+'px'});
-})();
-</script>
-
-<script>
-(() => {
-  const demo = document.querySelector('[data-loyalty-demo]');
-  if (!demo) return;
-
-  let visits = 4;
-  const goal = 6;
-  const count = demo.querySelector('[data-demo-count]');
-  const percent = demo.querySelector('[data-demo-percent]');
-  const bar = demo.querySelector('[data-demo-bar]');
-  const progress = demo.querySelector('[role="progressbar"]');
-  const milestones = [...demo.querySelectorAll('.bv-demo-milestones > span')];
-  const status = demo.querySelector('[data-demo-status]');
-  const button = demo.querySelector('[data-demo-next]');
-  const reward = demo.querySelector('[data-demo-reward]');
-  const rewardLabel = demo.querySelector('[data-demo-reward-label]');
-  const rewardValue = demo.querySelector('[data-demo-reward-value]');
-  const rewardDescription = demo.querySelector('[data-demo-reward-description]');
-
-  const render = () => {
-    const value = Math.min(visits, goal);
-    const ratio = (value / goal) * 100;
-    count.textContent = String(value);
-    percent.textContent = Math.round(ratio) + '%';
-    bar.style.width = ratio + '%';
-    progress.setAttribute('aria-valuenow', String(value));
-
-    milestones.forEach((item, index) => {
-      const visit = index + 1;
-      item.classList.toggle('is-done', visit <= value);
-      item.classList.toggle('is-reward', visit === 4 && value >= 4);
-      item.classList.toggle('just-reached', visit === value && value > 4);
+  const items = [...document.querySelectorAll('.faq-item')];
+  items.forEach(item => {
+    const button = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    button.addEventListener('click', () => {
+      const willOpen = !item.classList.contains('open');
+      items.forEach(other => {
+        other.classList.remove('open');
+        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        other.querySelector('.faq-answer').style.maxHeight = '0px';
+      });
+      if (willOpen) {
+        item.classList.add('open');
+        button.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
     });
-
-    if (value >= goal) {
-      reward.classList.add('is-complete');
-      rewardLabel.textContent = 'HITO ALCANZADO · EJEMPLO';
-      rewardValue.textContent = '¡Llegaste a 6!';
-      rewardDescription.textContent = 'El barbero define qué beneficio corresponde a este hito.';
-      status.textContent = '¡Objetivo alcanzado! Reiniciá el ejemplo para volver a probarlo.';
-      button.innerHTML = 'Reiniciar ejemplo <span>↻</span>';
-      button.setAttribute('aria-label', 'Reiniciar demostración de fidelización');
-    } else {
-      reward.classList.remove('is-complete');
-      rewardLabel.textContent = 'BENEFICIO ALCANZADO · EJEMPLO';
-      rewardValue.textContent = '20% OFF';
-      rewardDescription.textContent = 'Un descuento de ejemplo configurado para un hito anterior.';
-      status.textContent = 'Te faltan ' + (goal - value) + ' ' + ((goal - value) === 1 ? 'visita' : 'visitas') + ' para llegar al hito de ejemplo.';
-      button.innerHTML = 'Simular próxima visita <span>＋</span>';
-      button.setAttribute('aria-label', 'Simular una visita más en la demostración');
-    }
-  };
-
-  button.addEventListener('click', () => {
-    visits = visits >= goal ? 4 : visits + 1;
-    render();
   });
-  render();
+  window.addEventListener('resize', () => {
+    const open = document.querySelector('.faq-item.open .faq-answer');
+    if (open) open.style.maxHeight = open.scrollHeight + 'px';
+  });
 })();
 </script>
-
 </body>
 </html>
