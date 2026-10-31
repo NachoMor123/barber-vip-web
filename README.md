@@ -17,3 +17,14 @@ La web comercial no inicia sesión, no crea cuentas, no procesa pagos ni se cone
 
 ## Editar textos
 La web está en un único `index.html` para que sea fácil de mover y editar. La demo de ciclos de cortes es ilustrativa; no guarda datos reales.
+
+## Migración preparada a Firebase Hosting
+La configuración de esta rama publica esta web en el sitio `barber-vip-comercial-309dc` dentro del proyecto Firebase existente `barbervip-309dc`. No hace falta crear otro proyecto ni agregar variables de entorno. Una vez creado ese sitio desde Firebase Console, desde esta carpeta se ejecuta:
+
+```bash
+firebase use barbervip-309dc
+firebase deploy --only hosting:commercial
+```
+
+El botón de acceso dirige a la app principal en `https://barbervip-309dc.web.app/`. No publicar esta rama en producción hasta que la aplicación principal esté desplegada y validada en ese dominio.
+
