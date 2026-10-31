@@ -1,19 +1,30 @@
-# Barber VIP — Web comercial independiente
+# Barber VIP — web comercial (Firebase Spark)
 
-Esta carpeta contiene una web comercial estática para Barber VIP. No incluye ni modifica el código de la aplicación original.
+Sitio estático comercial de Barber VIP. No contiene cuentas, base de datos ni lógica de pagos: enlaza a la aplicación principal.
 
-## Publicar en Vercel
-1. Descargá y descomprimí el ZIP.
-2. Creá un repositorio nuevo en GitHub, separado del repositorio de la aplicación.
-3. Subí `index.html`, `README.md` y `vercel.json` a la raíz del repositorio.
-4. En Vercel, importá ese repositorio nuevo y desplegá. No hace falta configurar variables de entorno ni Firebase.
-5. Vercel detecta la web estática automáticamente.
+## Firebase
 
-## Acceso a la aplicación
-Los dos botones del cuadro de acceso apuntan a la misma URL:
-https://barber-vip-three.vercel.app/
+- Proyecto existente: `barbervip-309dc`
+- Hosting target: `commercial`
+- Site ID: `barber-vip-comercial-309dc`
+- Dirección prevista: `https://barber-vip-comercial-309dc.web.app`
+- CTA principal: `https://barbervip-309dc.web.app`
 
-La web comercial no inicia sesión, no crea cuentas, no procesa pagos ni se conecta a Firebase. Solo presenta el producto y enlaza con la aplicación.
+No crear otro proyecto Firebase ni registrar otra app web. Crear únicamente el segundo sitio de Hosting con ese Site ID.
 
-## Editar textos
-La web está en un único `index.html` para que sea fácil de mover y editar. La demo de ciclos de cortes es ilustrativa; no guarda datos reales.
+## Publicación
+
+Desde esta carpeta, una vez creado el sitio en Firebase Console:
+
+```bash
+npm install -g firebase-tools
+firebase login
+firebase use barbervip-309dc
+firebase deploy --only hosting:commercial
+```
+
+La web es HTML/CSS/JS estático. No necesita funciones de servidor, secretos ni facturación Blaze.
+
+## Precio
+
+La oferta visible es de ARS 8.000 mensuales. En Firebase Spark las renovaciones de los profesionales se verifican y activan manualmente; la web no procesa cobros ni débitos automáticos.
