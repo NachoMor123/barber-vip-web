@@ -23,8 +23,8 @@ firebase use barbervip-309dc
 firebase deploy --only hosting:commercial
 ```
 
-La web es HTML/CSS/JS estático. No necesita funciones de servidor, secretos ni facturación Blaze.
+La web es HTML/CSS/JS estático. No necesita funciones de servidor, secretos ni facturación Blaze. La aplicación conectada a este sitio utiliza Cloudflare Workers para Checkout y confirmación automática de Mercado Pago; esta web sólo enlaza a la app.
 
 ## Precio
 
-La oferta visible es de ARS 8.000 mensuales. En Firebase Spark las renovaciones de los profesionales se verifican y activan manualmente; la web no procesa cobros ni débitos automáticos.
+La oferta visible es de ARS 8.000 por 30 días. El profesional paga desde el Checkout de Mercado Pago; cuando Mercado Pago confirma la acreditación, el Worker de la aplicación renueva automáticamente el acceso. No hay débitos automáticos.
