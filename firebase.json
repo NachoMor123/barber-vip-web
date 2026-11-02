@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "target": "commercial",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "**/.*",
+      "**/node_modules/**",
+      "README.md",
+      "vercel.json"
+    ]
+  }
+}
